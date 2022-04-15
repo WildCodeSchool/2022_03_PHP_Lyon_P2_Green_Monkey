@@ -6,7 +6,11 @@ use App\Model\QuestionManager;
 
 class QuestionController extends AbstractController
 {
-    //tableau de questions et réponses en propriétés
-
-    // function show
+    /**
+     * Display home page
+     */
+    public function index(): string
+    {
+        return $this->twig->render('Calculator/index.html.twig');
+    }
 }
