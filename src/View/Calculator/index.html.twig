@@ -4,4 +4,45 @@
 	{{parent()}}- Questionnaire
 {% endblock %}
 
-{% block content %}{% endblock %}
+{% block content %}
+
+	<h1 class="display-1">Calculez votre empreinte carbone</h1>
+	<form action="results.php" method="post">
+
+		{% for question in questions %}
+			<p>
+				<label for="q{{ loop.index }}">{{ loop.index }}.
+					{{ question.title }}</label>
+			</p>
+
+			<div>
+
+				<p class="form-check">
+					<input class="form-check-input" type="radio" id="choice1" name="q{{ loop.index }}" value="xxx" required>
+					<label class="form-check-label" for="q{{ loop.index }}">{{ question.choice1 }}</label>
+				</p>
+
+				<p class="form-check">
+					<input class="form-check-input" type="radio" id="choice2" name="q{{ loop.index }}" value="xxx" required>
+					<label class="form-check-label" for="q{{ loop.index }}">{{ question.choice2 }}</label>
+				</p>
+
+				<p class="form-check">
+					<input class="form-check-input" type="radio" id="choice3" name="q{{ loop.index }}" value="xxx" required>
+					<label class="form-check-label" for="q{{ loop.index }}">{{ question.choice3 }}</label>
+				</p>
+
+				<p class="form-check">
+					<input class="form-check-input" type="radio" id="choice4" name="q{{ loop.index }}" value="xxx" required>
+					<label class="form-check-label" for="q{{ loop.index }}">{{ question.choice4 }}</label>
+				</p>
+
+			{% endfor %}
+
+			<p>
+				<input class="btn btn-primary btn-lg" type="submit" value="Soumettre"/>
+			</p>
+
+		</div>
+
+	{% endblock %}
