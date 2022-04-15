@@ -4,5 +4,5 @@ namespace App\Model;
 
 class QuestionManager
 {
-    public const TABLE = '';
+    public const TABLE = 'answer';
 }
