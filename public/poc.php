@@ -195,6 +195,7 @@ $questions = [
 </head>
 
 <body>
+  <h1 class="display-1">Calculez votre empreinte carbone</h1>
   <form action="results.php" method="post">
 
     <?php
@@ -205,7 +206,7 @@ $questions = [
 
             <div>
         <p>
-          <label for="q<?= $i ?>"><?= $question["title"] ?></label>
+          <label for="q<?= $i ?>"><?= $i . ". " . $question["title"] ?></label>
         </p>
         <p class="form-check">
           <input class="form-check-input" type="radio" id="choice1" name="q<?= $i ?>"
@@ -232,7 +233,7 @@ $questions = [
     <?php } ?>
 
     <p>
-      <input class="btn btn-primary" type="submit" value="send" />
+      <input class="btn btn-primary btn-lg" type="submit" value="Soumettre" />
     </p>
   </form>
 </body>
