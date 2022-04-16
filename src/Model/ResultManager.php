@@ -28,8 +28,7 @@ class ResultManager extends AbstractManager
     public function calculateTotalFootprint(array $values): float
     {
         // a simple sum of all values we got in the fetchValuesByAnswer function
-        $totalFootprint = array_sum($values);
-        return $totalFootprint;
+        return array_sum($values);
     }
 
     public function calculateFootprintByCat(array $values): array
