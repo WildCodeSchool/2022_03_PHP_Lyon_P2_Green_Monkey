@@ -13,6 +13,10 @@ class ResultController extends AbstractController
         $totalFootprint = $resultManager->calculateTotalFootprint($values);
         $footprintByCategory = $resultManager->calculateFootprintByCat($values);
 
-        return $this->twig->render('Results/results.html.twig', ['values' => $values, 'totalFootprint' => $totalFootprint, 'footprintByCategory' => $footprintByCategory]);
+        return $this->twig->render('Results/results.html.twig', [
+            'values' => $values,
+            'totalFootprint' => $totalFootprint,
+            'footprintByCategory' => $footprintByCategory
+        ]);
     }
 }
