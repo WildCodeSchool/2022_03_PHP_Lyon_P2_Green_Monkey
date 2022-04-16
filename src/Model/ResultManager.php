@@ -28,12 +28,14 @@ class ResultManager extends AbstractManager
     public function calculateTotalFootprint(array $values): float
     {
         // a simple sum of all values we got in the fetchValuesByAnswer function
-        return $totalFootprint = array_sum($values);
+        $totalFootprint = array_sum($values);
+        return $totalFootprint;
     }
 
     public function calculateFootprintByCat(array $values): array
     {
         // dividing the values array in smaller arrays (4)
+        // WON'T WORK if questions are added
         $slicedResults = array_chunk($values, 4, false);
 
         // initializing footprintByCategory array
