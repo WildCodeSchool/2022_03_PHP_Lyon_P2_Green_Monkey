@@ -1,0 +1,18 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+	{{parent()}}- Résultats
+{% endblock %}
+
+{% block content %}
+
+	{% for test in tests %}
+		<br>
+	{% endfor %}
+
+	{% for value in values %}
+		{{ value }}
+		<br>
+	{% endfor %}
+
+{% endblock %}

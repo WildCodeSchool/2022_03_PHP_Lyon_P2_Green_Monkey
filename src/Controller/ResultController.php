@@ -6,7 +6,14 @@ use App\Model\ResultManager;
 
 class ResultController extends AbstractController
 {
-    //function show
-    // function calc result
-    // appel twig page
+
+    public function index(): string
+    {
+        $resultManager = new ResultManager();
+        $values = $resultManager->fetchValuesByAnswer($_POST);
+
+        $tests = $_POST;
+
+        return $this->twig->render('Results/results.html.twig', ['values' => $values, 'tests' => $tests]);
+    }
 }
