@@ -6,13 +6,27 @@
 
 {% block content %}
 
-	{% for test in tests %}
-		<br>
-	{% endfor %}
+	<h1>
+		Votre empreinte carbone :
+		{{ totalFootprint }}
+		kg de CO2 par an
+	</h1>
 
-	{% for value in values %}
-		{{ value }}
+	<p>
+		Par catégorie :
 		<br>
-	{% endfor %}
+		Alimentation :
+		{{ footprintByCategory[0] }}
+		<br>
+		Transports :
+		{{ footprintByCategory[1] }}
+		<br>
+		Logement :
+		{{ footprintByCategory[2] }}
+		<br>
+		Numérique :
+		{{ footprintByCategory[3] }}
+		<br>
+	</p>
 
 {% endblock %}
