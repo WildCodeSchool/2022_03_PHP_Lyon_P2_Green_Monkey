@@ -5,6 +5,20 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Modifier le questionnaire</h1>
+    <h1>Espace administrateur</h1>
     <p>Vous souhaitez modifier la valeur d'une question ? C'est par ici !</p>
+
+    <form method="post">
+        {% for value in values %}
+
+    <p>{{ value.label }} : {{value.answer_value}}
+    </p>
+    <p>
+        <input type="hidden" id="id" name="id" value="{{ value.id }}">
+        <label for="answer_value">Nouvelle valeur de réponse :</label>
+        <input type="number" step=".01" id="answer_value" name="answer_value">
+        <input type="submit" value="Modifier les valeurs">
+    </p>
+    </form>
+        {% endfor %}
 {% endblock %}
