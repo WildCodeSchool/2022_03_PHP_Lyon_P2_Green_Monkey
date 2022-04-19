@@ -1,0 +1,64 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+	{{parent()}}- Calculateur
+{% endblock %}
+
+{% block content %}
+
+	<h1 class="display-1">Calculez votre empreinte carbone</h1>
+	<form action="results.php" method="post">
+
+		{% for question in questions %}
+			<div class="d-flex justify-content-center">
+				<div class="shadow p-3 mb-5 bg-body rounded">
+					<div>
+						<p>
+							<h2>
+								{{ loop.index }}.
+								{{ question.title }}
+							</h2>
+						</p>
+
+						<p class="form-check">
+							<input class="form-check-input" type="radio" id="choice1" name="q{{ loop.index }}" value="q{{ loop.index }}_choice1" required>
+							<label class="form-check-label" for="q{{ loop.index }}">{{ question.choice1 }}</label>
+						</p>
+
+						<p class="form-check">
+							<input class="form-check-input" type="radio" id="choice2" name="q{{ loop.index }}" value="q{{ loop.index }}_choice2" required>
+							<label class="form-check-label" for="q{{ loop.index }}">{{ question.choice2 }}</label>
+						</p>
+
+						<p class="form-check">
+							<input class="form-check-input" type="radio" id="choice3" name="q{{ loop.index }}" value="q{{ loop.index }}_choice3" required>
+							<label class="form-check-label" for="q{{ loop.index }}">{{ question.choice3 }}</label>
+						</p>
+
+						<p class="form-check">
+							<input class="form-check-input" type="radio" id="choice4" name="q{{ loop.index }}" value="q{{ loop.index }}_choice4" required>
+							<label class="form-check-label" for="q{{ loop.index }}">{{ question.choice4 }}</label>
+						</p>
+
+						<div class="d-flex justify-content-center">
+							<input class="btn btn-primary" type="button" value="←">
+							<p>{{ loop.index }}/16</p>
+							<input class="btn btn-primary" type="button" value="→">
+						</div>
+					</div>
+				</div>
+
+				<div class="funfact shadow p-3 mb-5 bg-body rounded">
+					<h2>Le saviez-tu ?</h2>
+					<p>{{ question.fact }}</p>
+				</div>
+			</div>
+		{% endfor %}
+
+		<p>
+			<input class="btn btn-primary btn-lg" type="submit" value="Soumettre"/>
+		</p>
+
+	</form>
+
+{% endblock %}
