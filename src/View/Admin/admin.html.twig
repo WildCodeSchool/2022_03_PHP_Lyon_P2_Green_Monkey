@@ -4,12 +4,15 @@
 	{{parent()}}- Admin
 {% endblock %}
 
+{% block stylesheet %}<link rel="stylesheet" href="/assets/css/styleadmin.css">
+{% endblock %}
+
 {% block content %}
-    <h1>Espace administrateur</h1>
-    <p>Vous souhaitez modifier la valeur d'une question ? C'est par ici !</p>
+    <h1 class="text-center">Espace administrateur</h1>
+    <p class="text-center">Vous souhaitez modifier la valeur d'une question ? C'est par ici !</p>
     
     
-      <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion accordion-flush container-fluid" id="accordionFlushExample">
       {% for items in values|batch(4) %}
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingOne">
@@ -19,16 +22,16 @@
             </button>
           </h2>
           <div id="flush-collapse{{ loop.index }}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
+            <div class="accordion-body row row-cols-1 row-cols-md-4">
             {% for value in items %}
             <form method="post">
-              <p>{{ value.label }} : {{value.answer_value}}
+              <p>{{ value.label }} : <span class="oldAnswerValue">{{value.answer_value}}</span>
               </p>
               <p>
                     <input type="hidden" id="id" name="id" value="{{ value.id }}">
                     <label for="answer_value">Nouvelle valeur de réponse :</label>
-                    <input type="number" step=".01" id="answer_value" name="answer_value">
-                    <input type="submit" value="Modifier la valeur">
+                    <input class="input-group-text m-2" type="number" step=".01" id="answer_value" name="answer_value">
+                    <input class="btn btn-change-value m-2" type="submit" value="Modifier la valeur">
               </p>
             </form> 
             {% endfor %}
