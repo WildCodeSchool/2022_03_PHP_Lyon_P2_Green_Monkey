@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,400;0,700;1,200&family=Open+Sans:wght@400;700&display=swap');
+
+:root{
+    --font-family:'Grandstander', cursive;
+    --text-color: #ecf0f1;
+    --bs-yellow-dark: #f39c12;
+    --bs-yellow-light: #f1c40f;
+    --bs-breen-dark: #27ae60;
+    --bs-green-light: #2ecc71;
+    --box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    background-color: var(--text-color);
+    font-size: 10px;
+    min-height: 100vh;
+  }
+
+
+  .navbar{
+    background-color: var(--bs-green-light);
+    box-shadow: var(--box-shadow);
+  }
+
+  #navbar-title {
+    font-weight: bold;
+    font-size: 3.6em;
+    line-height: 0.8em;
+    color: var(--text-color);
+  }
+
+  .offcanvas {
+      background-color: var(--bs-breen-dark);
+  }
+
+  #offcanvasNavbarLabel {
+    color: var(--text-color);
+    font-size: 4em;
+    font-weight: bold;
+  }
+
+
+.nav-link{
+    font-size: 2.6em;
+}
+
+#nav-li-color a {
+    color: var(--text-color);
+}
+
+.logo-top-nav{
+    vertical-align: middle;
+    width: 6em;
+}
