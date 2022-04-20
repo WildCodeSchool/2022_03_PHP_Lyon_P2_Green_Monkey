@@ -1,0 +1,26 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+	{{parent()}}- Résultats
+{% endblock %}
+
+{% block content %}
+
+	<h1>
+		Votre empreinte carbone :
+		{{ totalFootprint }}
+		kg de CO2 par an
+	</h1>
+
+	<h2>Par catégorie :</h2>
+
+	<p>Alimentation :
+		{{ footprintByCategory[0] }}</p>
+	<p>Transports :
+		{{ footprintByCategory[1] }}</p>
+	<p>Logement :
+		{{ footprintByCategory[2] }}</p>
+	<p>Numérique :
+		{{ footprintByCategory[3] }}</p>
+
+{% endblock %}

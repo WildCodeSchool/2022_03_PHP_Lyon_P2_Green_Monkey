@@ -9,6 +9,6 @@
 return [
     '' => ['HomeController', 'index',],
     'calculator' => ['QuestionController', 'index',],
-    'resultat' => ['ResultController', 'show',],
+    'resultats' => ['ResultController', 'index',],
     'admin' => ['AdminController', 'index']
 ];
