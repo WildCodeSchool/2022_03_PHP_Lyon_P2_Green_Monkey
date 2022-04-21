@@ -20,6 +20,7 @@ body {
   color: var(--text-color);
 }
 
+/* classes used in the admin page*/
 .accordion {
     color: var(--text-color);
 }
@@ -27,7 +28,6 @@ body {
 :active.accordion-button, :focus.accordion-button {
     background-color: var(--bs-green-light);
     color: var(--text-color);
-
 }
 
 .accordion-collapse {
@@ -44,4 +44,9 @@ body {
     background-color: var(--bs-green-dark);
     color: var(--text-color);
     box-shadow: var(--box-shadow);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--bs-green-dark)!important;
+    color: var(--text-color)!important;
 }
