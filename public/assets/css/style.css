@@ -17,30 +17,29 @@ body {
     font-family: var(--font-family);
     color: var(--text-color);
 }
+.waitingforHeader {
+    margin-top: 4em;
+}
 
-.container2 {
+.mobileContainer {
     background-color: var(--bs-yellow-light);
-    margin: 1em;    
-    margin-right: 100px;
     border-radius: 25px;
-    box-shadow: var(--box-shadow);
-    height: 112vh;
+    height: 100vh;
     font-family: var(--font-family);
-    width: 66vh;
+    width: 66vw;
     box-shadow: 3px 1px 10px black;
 }
 
-body {
-    background-image: url('/assets/images/naturebackgroundmobile.png')
+.mobilebodybackground {
+    background: no-repeat url("/assets/images/foliage_bg.png");
+    background-size: auto 180%;
+    background-position: left left;
 }
 
-container1 {
-    background-color: purple;
-    border-radius: 25px;
-    box-shadow: var(--box-shadow);
-    height: 180vh;
-    font-family: var(--font-family);
-    width: 76vh;
+.desktopbodybackground {
+    background-color: var(--text-color);
+    height: 100vh;
+    background-size: cover;
 }
 
 .textcolorlogo {
@@ -67,8 +66,8 @@ form .btnclass {
     color: var(--text-color);
     border-radius: 25px;
     height: 7rem;
-    width: 40rem;
-    font-size: 2.9rem;
+    width: 50rem;
+    font-size: 3.9rem;
     font-family: var(--font-family);
 }
 #pcolorgreen {
@@ -76,10 +75,11 @@ form .btnclass {
 }
 
 form {
-    padding-top: 4em;
+    padding-top: 6em;
 }
 
 .logorezisehomepage {
     width: 25%;
-    filter: invert(27%) sepia(14%) saturate(4421%) hue-rotate(72deg) brightness(93%) contrast(104%);
+    filter: invert(27%) sepia(14%) saturate(4421%) hue-rotate(72deg)
+        brightness(93%) contrast(104%);
 }
