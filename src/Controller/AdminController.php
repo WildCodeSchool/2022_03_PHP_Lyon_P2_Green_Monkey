@@ -31,6 +31,6 @@ class AdminController extends AbstractController
             // we are redirecting so we don't want any content rendered
             return null;
         }
-        return $this->twig->render('Admin/admin.html.twig', ['values' => $values]);
+        return $this->twig->render('Admin/admin.html.twig', ['values' => $values,]);
     }
 }
