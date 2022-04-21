@@ -50,6 +50,7 @@ body {
     font-family: var(--font-family);
     width: auto;
     box-shadow: 3px 1px 10px black;
+    margin-top: 10vh;
 }
 
 .resultsContainer h1, h2 {
@@ -132,7 +133,7 @@ form {
         brightness(93%) contrast(104%);
 }
 
-/* ---------- RESULTS PAGE ---------- */
+/* ---------- NAVBAR ---------- */
 .navbar {
     background-color: var(--bs-green-light);
     box-shadow: var(--box-shadow);
@@ -146,7 +147,7 @@ form {
 }
 
 .offcanvas {
-    background-color: var(--bs-breen-dark);
+    background-color: var(--bs-green-dark);
 }
 
 #offcanvasNavbarLabel {
