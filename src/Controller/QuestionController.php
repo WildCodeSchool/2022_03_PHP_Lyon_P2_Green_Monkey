@@ -149,6 +149,6 @@ class QuestionController extends AbstractController
     public function index(): string
     {
         $questions = $this->questions;
-        return $this->twig->render('Calculator/index.html.twig', ['questions' => $questions]);
+        return $this->twig->render('Calculator/calculator.html.twig', ['questions' => $questions]);
     }
 }
