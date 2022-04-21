@@ -4,14 +4,18 @@
 	{{parent()}}- Calculateur
 {% endblock %}
 
+{% block stylesheet %}<link rel="stylesheet" href="/assets/css/styleadmin.css">
+{% endblock %}
+
 {% block content %}
 
+<main class="question-container">
 	<h1 class="display-1">Calculez votre empreinte carbone</h1>
 	<form action="resultats" method="post">
 
 		{% for question in questions %}
 			<div class="d-flex justify-content-center">
-				<div class="shadow p-3 mb-5 bg-body rounded">
+				<div class="shadow p-3 m-3 rounded question w-50">
 					<div>
 						<p>
 							<h2>
@@ -41,24 +45,25 @@
 						</p>
 
 						<div class="d-flex justify-content-center">
-							<input class="btn btn-primary" type="button" value="←">
+							<input class="btn btn-arrow" type="button" value="←">
 							<p>{{ loop.index }}/16</p>
-							<input class="btn btn-primary" type="button" value="→">
+							<input class="btn btn-arrow" type="button" value="→">
 						</div>
 					</div>
 				</div>
 
-				<div class="funfact shadow p-3 mb-5 bg-body rounded">
+				<div class="funfact shadow p-3 m-3 rounded w-25">
 					<h2>Le saviez-tu ?</h2>
 					<p>{{ question.fact }}</p>
 				</div>
 			</div>
 		{% endfor %}
 
-		<p>
-			<input class="btn btn-primary btn-lg" type="submit" value="Soumettre"/>
+		<p class="d-flex justify-content-center">
+			<input class="btn btn-question" type="submit" value="Soumettre"/>
 		</p>
 
 	</form>
+</main>
 
 {% endblock %}

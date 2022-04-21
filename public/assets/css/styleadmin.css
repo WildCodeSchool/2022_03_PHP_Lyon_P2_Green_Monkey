@@ -50,3 +50,23 @@ body {
     background-color: var(--bs-green-dark)!important;
     color: var(--text-color)!important;
 }
+
+/* classes on calculator page*/
+.question {
+    background-color: var(--bs-yellow-light);
+    color: var(--bs-green-dark);
+}
+
+.funfact {
+    background-color: var(--bs-green-dark);
+}
+
+.btn-arrow {
+    background-color: var(--bs-green-dark);
+    color: var(--text-color);
+}
+
+.btn-question {
+    background-color: var(--bs-green-dark);
+    color: var(--text-color);
+}
