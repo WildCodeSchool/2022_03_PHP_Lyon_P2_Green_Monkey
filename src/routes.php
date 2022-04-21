@@ -10,5 +10,5 @@ return [
     '' => ['HomeController', 'index',],
     'calculator' => ['QuestionController', 'index',],
     'resultats' => ['ResultController', 'index',],
-    'admin' => ['AdminController', 'index']
+    'admin' => ['AdminController', 'edit'],
 ];

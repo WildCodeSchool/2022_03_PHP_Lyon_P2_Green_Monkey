@@ -1,0 +1,52 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,400;0,700;1,100&display=swap');
+
+
+:root {
+  --font-family: 'Grandstander', cursive;
+  --bs-green-dark: #27ae60;
+  --bs-green-light: #2ecc71;
+  --bs-yellow-dark: #f39c12;
+  --bs-yellow-light: #f1c40f;
+  --text-color: #ecf0f1;
+  --box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+html,
+body {
+  font-size: 10px;
+  font-family: var(--font-family);
+  color: var(--text-color);
+}
+
+/* classes used in the admin page*/
+.accordion {
+    color: var(--text-color);
+}
+
+:active.accordion-button, :focus.accordion-button {
+    background-color: var(--bs-green-light);
+    color: var(--text-color);
+}
+
+.accordion-collapse {
+    background-color: var(--bs-yellow-light);
+    color: var(--text-color);
+}
+
+.oldAnswerValue {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn-change-value {
+    background-color: var(--bs-green-dark);
+    color: var(--text-color);
+    box-shadow: var(--box-shadow);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--bs-green-dark)!important;
+    color: var(--text-color)!important;
+}

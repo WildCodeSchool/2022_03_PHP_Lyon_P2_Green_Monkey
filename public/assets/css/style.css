@@ -11,27 +11,24 @@
         rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html,
 body {
     font-size: 10px;
     font-family: var(--font-family);
     color: var(--text-color);
-}
-
-.container2 {
-    background-color: var(--bs-yellow-light);
-    margin: 1em;
-    margin-right: 100px;
-    border-radius: 25px;
-    box-shadow: var(--box-shadow);
-    height: 112vh;
-    font-family: var(--font-family);
-    width: 66vh;
-    box-shadow: 3px 1px 10px black;
+    background-color: var(--text-color);
+    min-height: 100vh;
 }
 
 /* ---------- RESULTS PAGE ---------- */
-.mainResultsContainer, .question-container {
+.mainResultsContainer,
+.question-container {
     background: no-repeat url("/assets/images/foliage_bg.png");
     background-size: cover;
     background-position: center top;
@@ -65,6 +62,7 @@ body {
     margin-top: 3vh;
 }
 
+/* ---------- HOME PAGE ---------- */
 .container1 {
     background-color: purple;
     border-radius: 25px;
@@ -72,6 +70,18 @@ body {
     height: 180vh;
     font-family: var(--font-family);
     width: 76vh;
+}
+
+.container2 {
+    background-color: var(--bs-yellow-light);
+    margin: 1em;
+    margin-right: 100px;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow);
+    height: 112vh;
+    font-family: var(--font-family);
+    width: 66vh;
+    box-shadow: 3px 1px 10px black;
 }
 
 .textcolorlogo {
@@ -118,5 +128,42 @@ form {
 
 .logorezisehomepage {
     width: 25%;
-    filter: invert(27%) sepia(14%) saturate(4421%) hue-rotate(72deg) brightness(93%) contrast(104%);
+    filter: invert(27%) sepia(14%) saturate(4421%) hue-rotate(72deg)
+        brightness(93%) contrast(104%);
+}
+
+/* ---------- RESULTS PAGE ---------- */
+.navbar {
+    background-color: var(--bs-green-light);
+    box-shadow: var(--box-shadow);
+}
+
+#navbar-title {
+    font-weight: bold;
+    font-size: 3.6em;
+    line-height: 0.8em;
+    color: var(--text-color);
+}
+
+.offcanvas {
+    background-color: var(--bs-breen-dark);
+}
+
+#offcanvasNavbarLabel {
+    color: var(--text-color);
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.nav-link {
+    font-size: 2.6em;
+}
+
+#nav-li-color a {
+    color: var(--text-color);
+}
+
+.logo-top-nav {
+    vertical-align: middle;
+    width: 6em;
 }
