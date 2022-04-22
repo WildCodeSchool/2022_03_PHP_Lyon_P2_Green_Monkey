@@ -96,6 +96,7 @@ form {
         brightness(93%) contrast(104%);
 }
 
+
 /* ---------- CALCULATOR PAGE ---------- */
 
 .calculatorMainTitle {
@@ -166,8 +167,12 @@ form {
 .mainResultsContainer,
 .question-container {
     background: url("/assets/images/foliage_bg.png");
-    background-size: contain;
+    background-size: cover;
     background-position: center top;
+}
+
+.mainResultsContainer {
+    height: 100vh;
 }
 
 .results {
