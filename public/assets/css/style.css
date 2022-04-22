@@ -167,7 +167,7 @@ form {
 .mainResultsContainer,
 .question-container {
     background: url("/assets/images/foliage_bg.png");
-    background-size: cover;
+    background-size: contain;
     background-position: center top;
 }
 
