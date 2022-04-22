@@ -26,42 +26,6 @@ body {
     min-height: 100vh;
 }
 
-/* ---------- RESULTS PAGE ---------- */
-.mainResultsContainer,
-.question-container {
-    background: no-repeat url("/assets/images/foliage_bg.png");
-    background-size: cover;
-    background-position: center top;
-    height: 100vh;
-}
-
-.results {
-    display: flex;
-    justify-content: center;
-}
-
-.resultsContainer {
-    background-color: var(--bs-yellow-light);
-    margin: 1em;
-    padding: 3vh;
-    border-radius: 25px;
-    box-shadow: var(--box-shadow);
-    text-align: center;
-    font-family: var(--font-family);
-    width: auto;
-    box-shadow: 3px 1px 10px black;
-    margin-top: 10vh;
-}
-
-.resultsContainer h1, h2 {
-    font-size: 5em;
-}
-
-.resultsByCategory {
-    font-size: 2.5em;
-    margin-bottom: 3vh;
-    margin-top: 3vh;
-}
 
 /* ---------- HOME PAGE ---------- */
 .container1 {
@@ -132,6 +96,100 @@ form {
     filter: invert(27%) sepia(14%) saturate(4421%) hue-rotate(72deg)
         brightness(93%) contrast(104%);
 }
+
+
+/* ---------- CALCULATOR PAGE ---------- */
+
+.calculatorMainTitle {
+    margin-top: 10vh;
+    text-align: center;
+}
+
+.questionTitle {
+    font-size: 4rem;
+}
+
+.question {
+    background-color: var(--bs-yellow-light);
+    color: var(--bs-green-dark);
+    margin: 1em;
+    padding: 3vh;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow);
+}
+
+.questionChoice {
+    font-size: 2rem;
+    margin-left: 2vw;
+}
+
+.funfact {
+    background-color: var(--bs-green-dark);
+    margin: 1em;
+    padding: 3vh;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow);
+}
+
+.funfact h2 {
+    font-size: 3.5rem;
+}
+
+.funfact p {
+    font-size: 2rem;
+}
+
+.btnHidden {
+    display: none;
+}
+
+.btn-arrow {
+    background-color: var(--bs-green-dark);
+    color: var(--text-color);
+}
+
+.btn-question {
+    background-color: var(--bs-green-dark);
+    color: var(--text-color);
+width: 200px;
+}
+
+/* ---------- RESULTS PAGE ---------- */
+.mainResultsContainer,
+.question-container {
+    background: url("/assets/images/foliage_bg.png");
+    background-size: contain;
+    background-position: center top;
+}
+
+.results {
+    display: flex;
+    justify-content: center;
+}
+
+.resultsContainer {
+    background-color: var(--bs-yellow-light);
+    margin: 1em;
+    padding: 3vh;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    font-family: var(--font-family);
+    width: auto;
+    box-shadow: 3px 1px 10px black;
+    margin-top: 10vh;
+}
+
+.resultsContainer h1, h2 {
+    font-size: 5em;
+}
+
+.resultsByCategory {
+    font-size: 2.5em;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
+}
+
 
 /* ---------- NAVBAR ---------- */
 .navbar {
