@@ -4,65 +4,74 @@
 	{{parent()}}- Calculateur
 {% endblock %}
 
-{% block stylesheet %}<link rel="stylesheet" href="/assets/css/styleadmin.css">
+{% block stylesheet %}
+<link rel="stylesheet" href="/assets/css/styleadmin.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 {% endblock %}
 
 {% block content %}
 
 <main class="question-container">
 	<h1 class="display-1">Calculez votre empreinte carbone</h1>
-	<form action="resultats" method="post">
 
-		{% for question in questions %}
-			<div class="d-flex justify-content-center">
-				<div class="shadow p-3 m-3 rounded question w-50">
-					<div>
-						<p>
-							<h2>
-								{{ loop.index }}.
-								{{ question.title }}
-							</h2>
-						</p>
-
-						<p class="form-check">
-							<input class="form-check-input" type="radio" id="choice1" name="q{{ loop.index }}" value="q{{ loop.index }}_choice1" required>
-							<label class="form-check-label" for="q{{ loop.index }}">{{ question.choice1 }}</label>
-						</p>
-
-						<p class="form-check">
-							<input class="form-check-input" type="radio" id="choice2" name="q{{ loop.index }}" value="q{{ loop.index }}_choice2" required>
-							<label class="form-check-label" for="q{{ loop.index }}">{{ question.choice2 }}</label>
-						</p>
-
-						<p class="form-check">
-							<input class="form-check-input" type="radio" id="choice3" name="q{{ loop.index }}" value="q{{ loop.index }}_choice3" required>
-							<label class="form-check-label" for="q{{ loop.index }}">{{ question.choice3 }}</label>
-						</p>
-
-						<p class="form-check">
-							<input class="form-check-input" type="radio" id="choice4" name="q{{ loop.index }}" value="q{{ loop.index }}_choice4" required>
-							<label class="form-check-label" for="q{{ loop.index }}">{{ question.choice4 }}</label>
-						</p>
-
-						<div class="d-flex justify-content-center">
-							<input class="btn btn-arrow" type="button" value="←">
-							<p>{{ loop.index }}/16</p>
-							<input class="btn btn-arrow" type="button" value="→">
+	<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  		<div class="carousel-inner">
+		  {% for question in questions %}
+    		<div class="carousel-item {% if loop.index == 1 %}active{% endif %}" id="slide{{ loop.index }}">
+				  <form action="resultats" method="post">
+					<div class="d-flex justify-content-center">
+						<div class="shadow p-3 m-3 rounded question w-50">
+							<div>
+								<p>
+									<h2>
+										{{ loop.index }}.{{ question.title }}
+									</h2>
+								</p>
+								<p class="form-check">
+									<input class="form-check-input" type="radio" id="choice1" name="q{{ loop.index }}" value="q{{ loop.index }}_choice1" required>
+									<label class="form-check-label" for="q{{ loop.index }}">{{ question.choice1 }}</label>
+								</p>
+								<p class="form-check">
+									<input class="form-check-input" type="radio" id="choice2" name="q{{ loop.index }}" value="q{{ loop.index }}_choice2" required>
+									<label class="form-check-label" for="q{{ loop.index }}">{{ question.choice2 }}</label>
+								</p>
+								<p class="form-check">
+									<input class="form-check-input" type="radio" id="choice3" name="q{{ loop.index }}" value="q{{ loop.index }}_choice3" required>
+									<label class="form-check-label" for="q{{ loop.index }}">{{ question.choice3 }}</label>
+								</p>
+								<p class="form-check">
+									<input class="form-check-input" type="radio" id="choice4" name="q{{ loop.index }}" value="q{{ loop.index }}_choice4" required>
+									<label class="form-check-label" for="q{{ loop.index }}">{{ question.choice4 }}</label>
+								</p>
+								<div class="d-flex justify-content-center">
+									<input class="btn btn-arrow" type="button" value="←">
+									<p>{{ loop.index }}/16</p>
+									<input class="btn btn-arrow" type="button" value="→">
+								</div>
+							</div>
+						</div>
+						<div class="funfact shadow p-3 m-3 rounded w-25">
+							<h2>Le saviez-tu ?</h2>
+							<p>{{ question.fact }}</p>
 						</div>
 					</div>
-				</div>
-
-				<div class="funfact shadow p-3 m-3 rounded w-25">
-					<h2>Le saviez-tu ?</h2>
-					<p>{{ question.fact }}</p>
-				</div>
-			</div>
-		{% endfor %}
+    		</div>
+			{% endfor %}		
+	
+  		</div>
+  		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    		<span class="visually-hidden">Previous</span>
+  		</button>
+  		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+    		<span class="visually-hidden">Next</span>
+  		</button>
+	</div>
 
 		<p class="d-flex justify-content-center">
 			<input class="btn btn-question" type="submit" value="Soumettre"/>
 		</p>
-
 	</form>
 </main>
 
