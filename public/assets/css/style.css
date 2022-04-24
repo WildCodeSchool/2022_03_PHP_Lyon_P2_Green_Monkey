@@ -171,3 +171,6 @@ form {
 
 /* ---------- CALCULATOR PAGE ---------- */
 /* animate__fadeOutLeft à utiliser sur la div*/
+input:required {
+    color: red;
+}
