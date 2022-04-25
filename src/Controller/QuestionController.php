@@ -15,7 +15,7 @@ class QuestionController extends AbstractController
             "choice4" => "je suis vegan",
             "fact" => "Ut lobortis rhoncus mi id maximus. In tincidunt sed turpis in egestas.
             Integer odio ipsum, lobortis nec commodo vel, congue vitae erat. Fusce ac sollicitudin
-            dolor. Nullam a ex sed ligula lobortis viverra vel et libero."
+            dolor."
         ],
         [
             "title" => "Vous consommez des boissons froides (sodas, sirops, alcool) :",
@@ -25,7 +25,7 @@ class QuestionController extends AbstractController
             "choice4" => "je ne sais pas",
             "fact" => "Ut lobortis rhoncus mi id maximus. In tincidunt sed turpis in egestas.
             Integer odio ipsum, lobortis nec commodo vel, congue vitae erat. Fusce ac sollicitudin
-            dolor. Nullam a ex sed ligula lobortis viverra vel et libero."
+            dolor."
         ],
         [
             "title" => "À quelle fréquence jetez-vous de la nourriture ?",
@@ -35,7 +35,7 @@ class QuestionController extends AbstractController
             "choice4" => "je ne sais pas",
             "fact" => "Ut lobortis rhoncus mi id maximus. In tincidunt sed turpis in egestas.
             Integer odio ipsum, lobortis nec commodo vel, congue vitae erat. Fusce ac sollicitudin
-            dolor. Nullam a ex sed ligula lobortis viverra vel et libero."
+            dolor."
         ],
         [
             "title" => "Quel type de petit-déjeuner vous correspond le plus ?",
