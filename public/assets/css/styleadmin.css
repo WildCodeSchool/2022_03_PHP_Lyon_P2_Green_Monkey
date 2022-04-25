@@ -21,8 +21,25 @@ body {
 }
 
 /* classes used in the admin page*/
+
+.admin-container {
+    background: no-repeat url("/assets/images/foliage_bg.png");
+    background-size: cover;
+    background-position: center top;
+    height: 100vh;
+}
+
+.admin-page {
+    margin-top: 7.3em;
+
+}
+
 .accordion {
     color: var(--text-color);
+}
+
+.accordion-button {
+    font-size: 0.4em;
 }
 
 :active.accordion-button, :focus.accordion-button {
