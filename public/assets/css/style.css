@@ -147,6 +147,11 @@ body {
     font-family: var(--font-family);
 }
 
+.mobileButton:hover {
+    color: var(--text-color);
+    background-color: var(--bs-yellow-darker);
+}
+
 .logorezisehomepage {
     width: 25%;
     filter: invert(27%) sepia(14%) saturate(4421%) hue-rotate(72deg)
@@ -196,7 +201,6 @@ body {
     text-align: left;
     padding-top: 1em;
 }
-
 
 .homeArticleDesktopView {
     text-align: left;
