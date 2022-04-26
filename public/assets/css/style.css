@@ -209,7 +209,6 @@ h2 {
 
 .mainConnection {
     height: 100vh;
-    background: url("/assets/images/jungle-bg.jpg");
     background: url("/assets/images/foliage_bg_hor.png");
     -webkit-background-size: cover;
     -moz-background-size: cover;
