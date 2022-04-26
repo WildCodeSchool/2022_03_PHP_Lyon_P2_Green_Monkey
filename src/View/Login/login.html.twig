@@ -1,0 +1,48 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+	{{parent()}}- Connexion
+{% endblock %}
+
+{% block content %}
+	<div class="d-flex justify-content-center">
+		<div class="loginContainer">
+			<div class="d-flex justify-content-center">
+				<h2>Connexion</h2>
+			</div>
+			<form class="loginForm" action="/home" method="post">
+
+				<div class="form-outline mb-4">
+					<label class="form-label" for="email">Adresse e-mail :</label>
+					<input class="form-control loginInput" type="email" id="email" name="email" placeholder="adresse e-mail" required>
+				</div>
+
+				<div class="form-outline mb-4">
+					<label class="form-label" for="password">Mot de passe :</label>
+					<input class="form-control loginInput" type="password" id="password" name="password" placeholder="mot de passe" required>
+				</div>
+
+				<div class="d-flex justify-content-center">
+					<div class="loginValidation">
+						<div class="form-check">
+							<input class="form-check-input loginCheckbox" type="checkbox" value="" id="form2Example31" checked/>
+							<label class="form-check-label" for="form2Example31">
+								Se souvenir de moi
+							</label>
+						</div>
+
+						<div class="form-outline mb-4">
+							<p class="loginCreate">Pas de compte ?
+								<a class="loginCreateLink" href="/register">En créer un</a>
+							</p>
+						</div>
+
+						<div class="form-outline mb-4">
+							<input type="submit" class="btn loginButton" value="Connexion">
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock %}
