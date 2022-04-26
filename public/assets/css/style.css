@@ -123,7 +123,6 @@ body {
     border-radius: 25px;
     font-family: var(--font-family);
     box-shadow: 3px 1px 10px black;
-    margin-top: 15vh;
     padding: 3vh;
     width: 90vw;
 }
@@ -165,7 +164,7 @@ body {
 .homeHeaderBackgrounDesktopView {
     background-image: url(/assets/images/tropicaldesktopbackground.jpg);
     background-size: auto 100vw;
-    height: 450px;
+    height: 600px;
 }
 
 .homeheaderTitleDesktopView {
