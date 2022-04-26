@@ -207,6 +207,16 @@ h2 {
 
 /* ---------- LOGIN ---------- */
 
+.mainConnection {
+    height: 100vh;
+    background: url("/assets/images/jungle-bg.jpg");
+    background: url("/assets/images/foliage_bg_hor.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .loginContainer {
     background-color: var(--bs-yellow-light);
     color: var(--bs-green-darker);
