@@ -5,22 +5,37 @@
 {% endblock %}
 
 {% block content %}
+	<div class="mainResultsContainer">
+		<div class="results">
+			<div class="resultsContainer">
+				<h1>
+					Votre empreinte carbone
+				</h1>
 
-	<h1>
-		Votre empreinte carbone :
-		{{ totalFootprint }}
-		kg de CO2 par an
-	</h1>
+				<div class="resultsByCategory">
+					<p>Alimentation :
+						{{ footprintByCategory[0] }}
+						kg eq.CO2</p>
+					<p>Transports :
+						{{ footprintByCategory[1] }}
+						kg eq.CO2</p>
+					<p>Logement :
+						{{ footprintByCategory[2] }}
+						kg eq.CO2</p>
+					<p>Numérique :
+						{{ footprintByCategory[3] }}
+						kg eq.CO2</p>
+				</div>
+				<div class="resultsTotal">
+					<h2>Total</h2>
+					<h2>{{ totalFootprint }}
+						kg eq.CO2</h2>
+				</div>
 
-	<h2>Par catégorie :</h2>
-
-	<p>Alimentation :
-		{{ footprintByCategory[0] }}</p>
-	<p>Transports :
-		{{ footprintByCategory[1] }}</p>
-	<p>Logement :
-		{{ footprintByCategory[2] }}</p>
-	<p>Numérique :
-		{{ footprintByCategory[3] }}</p>
-
-{% endblock %}
+				<div class="resultsButtons">
+					<a href="/calculator"><input class="btnclass btn" type="button" value="Recommencer"></a>
+					<a href="/"><input class="btnclass btn" type="button" value="Retour à l'accueil"></a>
+				</div>
+			</div>
+		</div>
+	{% endblock %}
