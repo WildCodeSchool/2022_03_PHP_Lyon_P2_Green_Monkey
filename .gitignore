@@ -6,7 +6,6 @@ db.php
 .idea
 .vscode
 .DS_Store
-
 src/View/Item
 src/Controller/ItemController.php
 src/Model/ItemManager.php
