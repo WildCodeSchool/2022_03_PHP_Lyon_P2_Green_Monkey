@@ -13,7 +13,7 @@
 		<div class="calculatorMainTitleContainer">
 			<h1 class="display-1 calculatorMainTitle">Calculez votre empreinte carbone</h1>
 		</div>
-		<form action="resultats" method="post">
+		<form action="results" method="post">
 
 			{% for question in questions %}
 				<div class="d-flex justify-content-center">
@@ -55,7 +55,7 @@
 					</div>
 
 					<div class="funfact w-25 d-none d-lg-block">
-						<h2>Le saviez-tu ?</h2>
+						<h2>Le saviez-vous ?</h2>
 						<p>{{ question.fact }}</p>
 					</div>
 				</div>
