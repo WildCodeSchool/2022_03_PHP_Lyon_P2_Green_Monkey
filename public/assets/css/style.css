@@ -2,8 +2,10 @@
 
 :root {
     --font-family: "Grandstander", cursive;
+    --bs-green-darker: #0f5b01;
     --bs-green-dark: #27ae60;
     --bs-green-light: #2ecc71;
+    --bs-yellow-darker: #df7a0e;
     --bs-yellow-dark: #f39c12;
     --bs-yellow-light: #f1c40f;
     --text-color: #ecf0f1;
@@ -96,7 +98,6 @@ form {
         brightness(93%) contrast(104%);
 }
 
-
 /* ---------- CALCULATOR PAGE ---------- */
 
 .calculatorMainTitle {
@@ -111,7 +112,7 @@ form {
 .question,
 .calculatorMainTitleContainer {
     background-color: var(--bs-yellow-light);
-    color: var(--bs-green-dark);
+    color: var(--bs-green-darker);
     margin: 1em;
     padding: 3vh;
     border-radius: 25px;
@@ -204,6 +205,106 @@ h2 {
     margin-top: 3vh;
 }
 
+/* ---------- LOGIN ---------- */
+
+.mainConnection {
+    height: 100vh;
+    background: url("/assets/images/foliage_bg_vert.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.loginContainer {
+    background-color: var(--bs-yellow-light);
+    color: var(--bs-green-darker);
+    margin: 1em;
+    margin-top: 10vh;
+    padding: 3vh;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow);
+    max-width: 90%;
+}
+
+.loginForm {
+    font-size: 1.8rem;
+    padding-top: initial;
+}
+
+.loginInput {
+    font-size: 1.5rem;
+    background-color: var(--bs-yellow-dark);
+    border: none;
+    color: var(--text-color) !important;
+}
+
+.loginInput::placeholder {
+    color: var(--text-color);
+}
+
+.loginInput:focus {
+    background-color: var(--bs-yellow-darker);
+    box-shadow: none;
+}
+
+.loginValidation {
+    text-align: center;
+    margin-top: 1vh;
+    margin-bottom: -2vh;
+}
+
+.loginCreate {
+    font-size: initial;
+    color: var(--bs-green-dark);
+}
+
+.loginCreateLink {
+    color: var(--bs-yellow-darker);
+    text-decoration: none;
+}
+
+.loginCreateLink:hover {
+    color: var(--bs-yellow-dark);
+}
+
+.loginButton {
+    background-color: var(--bs-yellow-dark);
+    color: var(--text-color);
+    border-radius: 15px;
+    font-size: 2.9rem;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    vertical-align: center;
+}
+
+.loginButton:hover {
+    color: var(--text-color);
+    background-color: var(--bs-yellow-darker);
+}
+
+.loginCheckbox {
+    background-color: var(--bs-yellow-dark);
+    border: none;
+    cursor: pointer;
+}
+
+.loginCheckbox:focus {
+    box-shadow: none;
+}
+
+.loginCheckbox:hover {
+    background-color: var(--bs-yellow-darker);
+}
+
+.loginCheckbox:checked {
+    background-color: var(--bs-yellow-dark);
+}
+
+.loginCheckbox:checked:hover {
+    background-color: var(--bs-yellow-darker);
+}
+
 /* ---------- NAVBAR ---------- */
 .navbar {
     background-color: var(--bs-green-light);
@@ -238,4 +339,5 @@ h2 {
 .logo-top-nav {
     vertical-align: middle;
     width: 6em;
+    margin-right: 1vh;
 }
