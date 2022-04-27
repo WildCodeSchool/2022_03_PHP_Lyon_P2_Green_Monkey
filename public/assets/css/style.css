@@ -123,7 +123,6 @@ body {
     border-radius: 25px;
     font-family: var(--font-family);
     box-shadow: 3px 1px 10px black;
-    margin-top: 15vh;
     padding: 3vh;
     width: 90vw;
 }
@@ -148,6 +147,11 @@ body {
     font-family: var(--font-family);
 }
 
+.mobileButton:hover {
+    color: var(--text-color);
+    background-color: var(--bs-yellow-darker);
+}
+
 .logorezisehomepage {
     width: 25%;
     filter: invert(27%) sepia(14%) saturate(4421%) hue-rotate(72deg)
@@ -165,7 +169,7 @@ body {
 .homeHeaderBackgrounDesktopView {
     background-image: url(/assets/images/tropicaldesktopbackground.jpg);
     background-size: auto 100vw;
-    height: 450px;
+    height: 600px;
 }
 
 .homeheaderTitleDesktopView {
@@ -197,7 +201,6 @@ body {
     text-align: left;
     padding-top: 1em;
 }
-
 
 .homeArticleDesktopView {
     text-align: left;
