@@ -209,7 +209,7 @@ h2 {
 
 .mainConnection {
     height: 100vh;
-    background: url("/assets/images/foliage_bg_hor.png");
+    background: url("/assets/images/jungle-bg-white-gm.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -250,10 +250,13 @@ h2 {
 
 .loginValidation {
     text-align: center;
+    margin-top: 1vh;
+    margin-bottom: -2vh;
 }
 
 .loginCreate {
     font-size: initial;
+    color: var(--bs-green-dark);
 }
 
 .loginCreateLink {
@@ -270,9 +273,8 @@ h2 {
     color: var(--text-color);
     border-radius: 15px;
     font-size: 2.9rem;
-    font-family: var(--font-family);
-    width: initial;
-    margin-top: 1.5vh;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
     vertical-align: center;
 }
 
@@ -337,4 +339,5 @@ h2 {
 .logo-top-nav {
     vertical-align: middle;
     width: 6em;
+    margin-right: 1vh;
 }
