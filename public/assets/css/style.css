@@ -6,6 +6,7 @@
     --bs-green-darker: #0f5b01;
     --bs-green-dark: #27ae60;
     --bs-green-light: #2ecc71;
+    --bs-yellow-darker: #df7a0e;
     --bs-yellow-dark: #f39c12;
     --bs-yellow-darker: #df7a0e;
     --bs-yellow-light: #f1c40f;
@@ -27,6 +28,212 @@ body {
     color: var(--text-color);
 }
 
+/* ---------- CALCULATOR PAGE ---------- */
+
+.calculatorMainTitle {
+    margin-top: 10vh;
+    text-align: center;
+}
+
+.questionTitle {
+    font-size: 4rem;
+}
+
+.question,
+.calculatorMainTitleContainer {
+    background-color: var(--bs-yellow-light);
+    color: var(--bs-green-darker);
+    margin: 1em;
+    padding: 3vh;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow);
+}
+
+.calculatorMainTitleContainer {
+    background-color: var(--bs-green-light);
+    color: var(--text-color);
+}
+
+.questionChoice {
+    font-size: 2rem;
+    margin-left: 2vw;
+}
+
+.funfact {
+    background-color: var(--bs-green-dark);
+    margin: 1em;
+    padding: 3vh;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow);
+}
+
+.funfact h2 {
+    font-size: 3.5rem;
+}
+
+.funfact p {
+    font-size: 2rem;
+}
+
+.btnHidden {
+    display: none;
+}
+
+.btn-arrow {
+    background-color: var(--bs-green-dark);
+    color: var(--text-color);
+}
+
+.btn-question {
+    background-color: var(--bs-green-dark);
+    color: var(--text-color);
+    width: 200px;
+}
+
+.submitButton {
+    margin-bottom: 10vh;
+}
+
+/* ---------- RESULTS PAGE ---------- */
+.mainResultsContainer,
+.question-container {
+    background: url("/assets/images/foliage_bg.png");
+    background-size: contain;
+    background-position: center top;
+}
+
+.mainResultsContainer {
+    height: 100vh;
+}
+
+.results {
+    display: flex;
+    justify-content: center;
+}
+
+.resultsContainer {
+    background-color: var(--bs-yellow-light);
+    margin: 1em;
+    padding: 3vh;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    font-family: var(--font-family);
+    width: auto;
+    box-shadow: 3px 1px 10px black;
+    margin-top: 10vh;
+}
+
+.resultsContainer h1,
+h2 {
+    font-size: 5em;
+}
+
+.resultsByCategory {
+    font-size: 2.5em;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
+}
+
+/* ---------- LOGIN ---------- */
+
+.mainConnection {
+    height: 100vh;
+    background: url("/assets/images/foliage_bg_vert.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.loginContainer {
+    background-color: var(--bs-yellow-light);
+    color: var(--bs-green-darker);
+    margin: 1em;
+    margin-top: 10vh;
+    padding: 3vh;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow);
+    max-width: 90%;
+}
+
+.loginForm {
+    font-size: 1.8rem;
+    padding-top: initial;
+}
+
+.loginInput {
+    font-size: 1.5rem;
+    background-color: var(--bs-yellow-dark);
+    border: none;
+    color: var(--text-color) !important;
+}
+
+.loginInput::placeholder {
+    color: var(--text-color);
+}
+
+.loginInput:focus {
+    background-color: var(--bs-yellow-darker);
+    box-shadow: none;
+}
+
+.loginValidation {
+    text-align: center;
+    margin-top: 1vh;
+    margin-bottom: -2vh;
+}
+
+.loginCreate {
+    font-size: initial;
+    color: var(--bs-green-dark);
+}
+
+.loginCreateLink {
+    color: var(--bs-yellow-darker);
+    text-decoration: none;
+}
+
+.loginCreateLink:hover {
+    color: var(--bs-yellow-dark);
+}
+
+.loginButton {
+    background-color: var(--bs-yellow-dark);
+    color: var(--text-color);
+    border-radius: 15px;
+    font-size: 2.9rem;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    vertical-align: center;
+}
+
+.loginButton:hover {
+    color: var(--text-color);
+    background-color: var(--bs-yellow-darker);
+}
+
+.loginCheckbox {
+    background-color: var(--bs-yellow-dark);
+    border: none;
+    cursor: pointer;
+}
+
+.loginCheckbox:focus {
+    box-shadow: none;
+}
+
+.loginCheckbox:hover {
+    background-color: var(--bs-yellow-darker);
+}
+
+.loginCheckbox:checked {
+    background-color: var(--bs-yellow-dark);
+}
+
+.loginCheckbox:checked:hover {
+    background-color: var(--bs-yellow-darker);
+}
 
 /* ---------- NAVBAR ---------- */
 .navbar {
@@ -66,50 +273,10 @@ body {
 
 
 /* ---------- HOME PAGE ---------- */
-/* .container1 {
-    background-color: purple;
-    border-radius: 25px;
-    box-shadow: var(--box-shadow);
-    height: 180vh;
-    font-family: var(--font-family);
-    width: 76vh;
-}
-
-.container2 {
-    background-color: var(--bs-yellow-light);
-    margin: 1em;
-    margin-right: 100px;
-    border-radius: 25px;
-    box-shadow: var(--box-shadow);
-    height: 112vh;
-    font-family: var(--font-family);
-    width: 66vh;
-    box-shadow: 3px 1px 10px black;
-}
-
-.textcolorlogo {
-    color: green;
-    padding-top: 1.9em;
-}
-
-.pclass1 {
-    font-size: 2.9em;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    color: white;
-    padding-right: 1em;
-    padding-left: 1em;
-} */
-
-/* form {
-    padding-top: 4em;
-} */
-
-
-/* MOBILE VIEW */
+/* MOBILE VIEW */ 
 
 .mobilebodybackground {
-    background: no-repeat url("/assets/images/foliage_bg.png");
+    background: no-repeat url("/assets/images/foliage_bg_vert.png");
     background-size: cover;
     background-position: left left;
     display: flex;
