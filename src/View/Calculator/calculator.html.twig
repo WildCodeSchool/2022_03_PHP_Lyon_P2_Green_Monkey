@@ -19,7 +19,7 @@
 		  {% for question in questions %}
     		<div class="carousel-item {% if loop.index == 1 %}active{% endif %}" id="slide{{ loop.index }}">
 				  <form action="resultats" method="post">
-					<div class="d-flex justify-content-center">
+					<div class="carousel-block d-flex justify-content-center">
 						<div class="shadow p-3 m-3 rounded question w-50">
 							<div>
 								<p>
@@ -28,22 +28,22 @@
 									</h2>
 								</p>
 								<p class="form-check">
-									<input class="calc-input form-check-input" type="radio" id="choice1-{{loop.index}}" 
+									<input class="{% if not loop.last %}calc-input{% endif %} {% if loop.last %}calc-final{% endif %} form-check-input" type="radio" id="choice1-{{loop.index}}" 
 									name="radio-choice" value="q{{ loop.index }}_choice1" required>
 									<label class="form-check-label" for="q{{ loop.index }}-choice1">{{ question.choice1 }}</label>
 								</p>
 								<p class="form-check">
-									<input class="calc-input form-check-input" type="radio" id="choice2-{{loop.index}}" 
+									<input class="{% if not loop.last %}calc-input{% endif %} {% if loop.last %}calc-final{% endif %} form-check-input" type="radio" id="choice2-{{loop.index}}" 
 									name="radio-choice" value="q{{ loop.index }}_choice2" required>
 									<label class="form-check-label" for="q{{ loop.index }}-choice2">{{ question.choice2 }}</label>
 								</p>
 								<p class="form-check">
-									<input class="calc-input form-check-input" type="radio" id="choice3-{{loop.index}}" 
+									<input class="{% if not loop.last %}calc-input{% endif %} {% if loop.last %}calc-final{% endif %} form-check-input" type="radio" id="choice3-{{loop.index}}" 
 									name="radio-choice" value="q{{ loop.index }}_choice3" required>
 									<label class="form-check-label" for="q{{ loop.index }}-choice3">{{ question.choice3 }}</label>
 								</p>
 								<p class="form-check">
-									<input class="calc-input form-check-input" type="radio" id="choice4-{{loop.index}}" 
+									<input class="{% if not loop.last %}calc-input{% endif %} {% if loop.last %}calc-final{% endif %} form-check-input" type="radio" id="choice4-{{loop.index}}" 
 									name="radio-choice" value="q{{ loop.index }}_choice4" required>
 									<label class="form-check-label" for="q{{ loop.index }}-choice4">{{ question.choice4 }}</label>
 								</p>
@@ -63,7 +63,7 @@
 	</div>
 
 		<p class="d-flex justify-content-center">
-			<input class="btn btn-question" type="submit" value="Soumettre"/>
+			<input class="btn btn-question" id="final-button" type="submit" value="Soumettre"/>
 		</p>
 	</form>
 </main>

@@ -266,6 +266,9 @@ form {
     color: var(--text-color);
     width: 200px;
 }
+#final-button {
+    display: none;
+}
 
 .submitButton {
     margin-bottom: 10vh;
