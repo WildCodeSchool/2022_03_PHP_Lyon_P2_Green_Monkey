@@ -30,17 +30,17 @@ body {
 
 /* ---------- CALCULATOR PAGE ---------- */
 
-.calculatorMainTitle {
+.CalculatorMainTitle {
     margin-top: 10vh;
     text-align: center;
 }
 
-.questionTitle {
+.QuestionTitle {
     font-size: 4rem;
 }
 
 .question,
-.calculatorMainTitleContainer {
+.CalculatorMainTitleContainer {
     background-color: var(--bs-yellow-light);
     color: var(--bs-green-darker);
     margin: 1em;
@@ -49,12 +49,12 @@ body {
     box-shadow: var(--box-shadow);
 }
 
-.calculatorMainTitleContainer {
+.CalculatorMainTitleContainer {
     background-color: var(--bs-green-light);
     color: var(--text-color);
 }
 
-.questionChoice {
+.QuestionChoice {
     font-size: 2rem;
     margin-left: 2vw;
 }
@@ -90,19 +90,19 @@ body {
     width: 200px;
 }
 
-.submitButton {
+.SubmitButton {
     margin-bottom: 10vh;
 }
 
 /* ---------- RESULTS PAGE ---------- */
-.mainResultsContainer,
-.question-container {
+.MainResultsContainer,
+.QuestionContainer {
     background: url("/assets/images/foliage_bg.png");
     background-size: contain;
     background-position: center top;
 }
 
-.mainResultsContainer {
+.MainResultsContainer {
     height: 100vh;
 }
 
@@ -111,7 +111,7 @@ body {
     justify-content: center;
 }
 
-.resultsContainer {
+.ResultsContainer {
     background-color: var(--bs-yellow-light);
     margin: 1em;
     padding: 3vh;
@@ -124,12 +124,12 @@ body {
     margin-top: 10vh;
 }
 
-.resultsContainer h1,
+.ResultsContainer h1,
 h2 {
     font-size: 5em;
 }
 
-.resultsByCategory {
+.ResultsByCategory {
     font-size: 2.5em;
     margin-bottom: 3vh;
     margin-top: 3vh;
@@ -137,7 +137,7 @@ h2 {
 
 /* ---------- LOGIN ---------- */
 
-.mainConnection {
+.MainConnection {
     height: 100vh;
     background: url("/assets/images/foliage_bg_vert.png");
     -webkit-background-size: cover;
@@ -146,7 +146,7 @@ h2 {
     background-size: cover;
 }
 
-.loginContainer {
+.LoginContainer {
     background-color: var(--bs-yellow-light);
     color: var(--bs-green-darker);
     margin: 1em;
@@ -157,48 +157,48 @@ h2 {
     max-width: 90%;
 }
 
-.loginForm {
+.LoginForm {
     font-size: 1.8rem;
     padding-top: initial;
 }
 
-.loginInput {
+.LoginInput {
     font-size: 1.5rem;
     background-color: var(--bs-yellow-dark);
     border: none;
     color: var(--text-color) !important;
 }
 
-.loginInput::placeholder {
+.LoginInput::placeholder {
     color: var(--text-color);
 }
 
-.loginInput:focus {
+.LoginInput:focus {
     background-color: var(--bs-yellow-darker);
     box-shadow: none;
 }
 
-.loginValidation {
+.LoginValidation {
     text-align: center;
     margin-top: 1vh;
     margin-bottom: -2vh;
 }
 
-.loginCreate {
+.LoginCreate {
     font-size: initial;
     color: var(--bs-green-dark);
 }
 
-.loginCreateLink {
+.LoginCreateLink {
     color: var(--bs-yellow-darker);
     text-decoration: none;
 }
 
-.loginCreateLink:hover {
+.LoginCreateLink:hover {
     color: var(--bs-yellow-dark);
 }
 
-.loginButton {
+.LoginButton {
     background-color: var(--bs-yellow-dark);
     color: var(--text-color);
     border-radius: 15px;
@@ -208,30 +208,30 @@ h2 {
     vertical-align: center;
 }
 
-.loginButton:hover {
+.LoginButton:hover {
     color: var(--text-color);
     background-color: var(--bs-yellow-darker);
 }
 
-.loginCheckbox {
+.LoginCheckbox {
     background-color: var(--bs-yellow-dark);
     border: none;
     cursor: pointer;
 }
 
-.loginCheckbox:focus {
+.LoginCheckbox:focus {
     box-shadow: none;
 }
 
-.loginCheckbox:hover {
+.LoginCheckbox:hover {
     background-color: var(--bs-yellow-darker);
 }
 
-.loginCheckbox:checked {
+.LoginCheckbox:checked {
     background-color: var(--bs-yellow-dark);
 }
 
-.loginCheckbox:checked:hover {
+.LoginCheckbox:checked:hover {
     background-color: var(--bs-yellow-darker);
 }
 
@@ -275,7 +275,7 @@ h2 {
 /* ---------- HOME PAGE ---------- */
 /* MOBILE VIEW */ 
 
-.mobilebodybackground {
+.MobileBodybackGround {
     background: no-repeat url("/assets/images/foliage_bg_vert.png");
     background-size: cover;
     background-position: left left;
@@ -285,7 +285,7 @@ h2 {
     padding-bottom: 5vh;
 }
 
-.mobileContainer {
+.MobileContainer {
     background-color: var(--bs-yellow-light);
     border-radius: 25px;
     font-family: var(--font-family);
@@ -294,7 +294,7 @@ h2 {
     width: 90vw;
 }
 
-.centralparagraph {
+.CentralParagraph {
     font-size: calc(100% + 1vw + 1vh);
     padding-left: 1rem;
     padding-right: 1rem;
@@ -303,7 +303,7 @@ h2 {
     margin-bottom: 5vh;
 }
 
-.mobileButton {
+.MobileButton {
     background-color: var(--bs-yellow-dark);
     color: var(--text-color);
     border-radius: 25px;
@@ -314,12 +314,12 @@ h2 {
     font-family: var(--font-family);
 }
 
-.mobileButton:hover {
+.MobileButton:hover {
     color: var(--text-color);
     background-color: var(--bs-yellow-darker);
 }
 
-.logorezisehomepage {
+.LogoReziseHomepage {
     width: 25%;
     filter: invert(27%) sepia(14%) saturate(4421%) hue-rotate(72deg)
         brightness(93%) contrast(104%);
@@ -327,25 +327,25 @@ h2 {
 
 /* DESKTOP VIEW */
 
-.desktopbodybackground {
+.DesktopBodyBackground {
     background-color: var(--text-color);
     height: 100vh;
     background-size: cover;
 }
 
-.homeHeaderBackgrounDesktopView {
+.HomeHeaderBackgrounDesktopView {
     background-image: url(/assets/images/tropicaldesktopbackground.jpg);
     background-size: auto 100vw;
     height: 600px;
 }
 
-.homeheaderTitleDesktopView {
+.HomeheaderTitleDesktopView {
     font-size: 7.7em;
     font-weight: bold;
     text-shadow: 3px 1px 10px black;
 }
 
-.homeButtonDesktopView {
+.HomeButtonDesktopView {
     background-color: var(--bs-yellow-light);
     color: #0F5B01;
     font-size: 5.6em;
@@ -357,19 +357,19 @@ h2 {
     box-shadow: 3px 1px 10px black;
 }
 
-.homeButtonDesktopView:hover {
+.HomeButtonDesktopView:hover {
     color: var(--text-color);
     background-color: var(--bs-yellow-darker);
 }
 
-.homeArticleTextFormat {
+.HomeArticleTextFormat {
     display: flex;
     justify-content: space-around;
     text-align: left;
     padding-top: 1em;
 }
 
-.homeArticleDesktopView {
+.HomeArticleDesktopView {
     text-align: left;
     padding-left: 2em;
     color: black;
@@ -377,15 +377,15 @@ h2 {
     max-width: 30vw;
 }
 
-.homeArticleFontResizeDesktopView{
+.HomeArticleFontResizeDesktopView{
     font-size: 1.7em;
 }
 
-.homeCenterTitleDesktopView {
+.HomeCenterTitleDesktopView {
     margin-top: 5em;
 }
 
-.homeNameColorGreen {
+.HomeNameColorGreen {
     color: var(--bs-green-dark);
 }
 
@@ -394,7 +394,7 @@ h2 {
     margin: 1.5vh;
 }
 
-#pcolorgreen {
+#PColorGreen {
     color: var(--bs-green-dark);
 }
 
