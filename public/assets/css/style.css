@@ -213,7 +213,7 @@ form {
 }
 
 .questionTitle {
-    font-size: 4rem;
+    font-size: 2rem;
 }
 
 .question,
@@ -232,7 +232,7 @@ form {
 }
 
 .questionChoice {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-left: 2vw;
 }
 
@@ -245,20 +245,11 @@ form {
 }
 
 .funfact h2 {
-    font-size: 3.5rem;
-}
-
-.funfact p {
     font-size: 2rem;
 }
 
-.btnHidden {
-    display: none;
-}
-
-.btn-arrow {
-    background-color: var(--bs-green-dark);
-    color: var(--text-color);
+.funfact p {
+    font-size: 1.5rem;
 }
 
 .btn-question {
@@ -268,6 +259,16 @@ form {
 }
 #final-button {
     display: none;
+    background-color: var(--bs-green-dark);
+    color: var(--text-color);
+    font-size: 3rem;
+    width: 50%;
+    height: 15vh;
+    box-shadow: var(--box-shadow);
+}
+
+:hover#final-button {
+    color: black;
 }
 
 .submitButton {
@@ -350,7 +351,3 @@ h2 {
     vertical-align: middle;
     width: 6em;
 }
-
-/* ---------- CALCULATOR PAGE ---------- */
-/* animate__fadeOutLeft à utiliser sur la div*/
-

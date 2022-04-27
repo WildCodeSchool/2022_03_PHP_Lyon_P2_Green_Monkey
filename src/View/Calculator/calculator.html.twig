@@ -5,14 +5,14 @@
 {% endblock %}
 
 {% block stylesheet %}
+{{parent()}}
 <link rel="stylesheet" href="/assets/css/styleadmin.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 {% endblock %}
 
 {% block content %}
 
 <main class="question-container">
-	<h1 class="display-1">Calculez votre empreinte carbone</h1>
+	<h1 class="display-1 calculatorMainTitle">Calculez votre empreinte carbone</h1>
 
 	<div id="carouselExampleControls" class="carousel slide">
   		<div class="carousel-inner">
@@ -20,39 +20,44 @@
     		<div class="carousel-item {% if loop.index == 1 %}active{% endif %}" id="slide{{ loop.index }}">
 				  <form action="resultats" method="post">
 					<div class="carousel-block d-flex justify-content-center">
-						<div class="shadow p-3 m-3 rounded question w-50">
+						<div class="shadow p-4 m-3 rounded question w-50">
 							<div>
 								<p>
-									<h2>
+									<h2 class="questionTitle">
 										{{ loop.index }}.{{ question.title }}
 									</h2>
 								</p>
-								<p class="form-check">
-									<input class="{% if not loop.last %}calc-input{% endif %} {% if loop.last %}calc-final{% endif %} form-check-input" type="radio" id="q{{ loop.index }}-choice1" 
+								<div class="d-flex flex-column justify-content-end align-items-start mt-4">
+								<p class="form-check questionChoice">
+									<input class="{% if not loop.last %}calc-input{% endif %} {% if loop.last %}calc-final{% endif %} 
+									form-check-input" type="radio" id="q{{ loop.index }}-choice1" 
 									name="q{{ loop.index }}" value="q{{ loop.index }}_choice1" required>
 									<label class="form-check-label" for="q{{ loop.index }}-choice1">{{ question.choice1 }}</label>
 								</p>
-								<p class="form-check">
-									<input class="{% if not loop.last %}calc-input{% endif %} {% if loop.last %}calc-final{% endif %} form-check-input" type="radio" id="q{{ loop.index }}-choice2" 
+								<p class="form-check questionChoice">
+									<input class="{% if not loop.last %}calc-input{% endif %} {% if loop.last %}calc-final{% endif %} 
+									form-check-input" type="radio" id="q{{ loop.index }}-choice2" 
 									name="q{{ loop.index }}" value="q{{ loop.index }}_choice2" required>
 									<label class="form-check-label" for="q{{ loop.index }}-choice2">{{ question.choice2 }}</label>
 								</p>
-								<p class="form-check">
-									<input class="{% if not loop.last %}calc-input{% endif %} {% if loop.last %}calc-final{% endif %} form-check-input" type="radio" id="q{{ loop.index }}-choice3" 
+								<p class="form-check questionChoice">
+									<input class="{% if not loop.last %}calc-input{% endif %} {% if loop.last %}calc-final{% endif %} 
+									form-check-input" type="radio" id="q{{ loop.index }}-choice3" 
 									name="q{{ loop.index }}" value="q{{ loop.index }}_choice3" required>
 									<label class="form-check-label" for="q{{ loop.index }}-choice3">{{ question.choice3 }}</label>
 								</p>
-								<p class="form-check">
-									<input class="{% if not loop.last %}calc-input{% endif %} {% if loop.last %}calc-final{% endif %} form-check-input" type="radio" id="q{{ loop.index }}-choice4" 
+								<p class="form-check questionChoice">
+									<input class="{% if not loop.last %}calc-input{% endif %} {% if loop.last %}calc-final{% endif %} 
+									form-check-input" type="radio" id="q{{ loop.index }}-choice4" 
 									name="q{{ loop.index }}" value="q{{ loop.index }}_choice4" required>
 									<label class="form-check-label" for="q{{ loop.index }}-choice4">{{ question.choice4 }}</label>
 								</p>
-								<div class="d-flex justify-content-center">
-									<p>{{ loop.index }}/16</p>
+								
+									<p class="m-auto pt-3">{{ loop.index }}/16</p>
 								</div>
 							</div>
 						</div>
-						<div class="funfact shadow p-3 m-3 rounded w-25">
+						<div class="funfact shadow p-3 m-3 rounded w-25 d-none d-lg-block">
 							<h2>Le saviez-tu ?</h2>
 							<p>{{ question.fact }}</p>
 						</div>
@@ -63,7 +68,7 @@
 	</div>
 
 		<p class="d-flex justify-content-center">
-			<input class="btn btn-question" id="final-button" type="submit" value="Soumettre"/>
+			<input class="btn" id="final-button" type="submit" value="Soumettre"/>
 		</p>
 	</form>
 </main>
