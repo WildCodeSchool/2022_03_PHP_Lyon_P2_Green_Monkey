@@ -207,8 +207,7 @@ body {
     text-align: center;
 }
 
-.question,
-.calculatorMainTitleContainer {
+.question {
     background-color: var(--bs-yellow-light);
     color: var(--bs-green-darker);
     margin: 1em;
@@ -217,10 +216,10 @@ body {
     box-shadow: var(--box-shadow);
 }
 
-.calculatorMainTitleContainer {
+/*.calculatorMainTitleContainer {
     background-color: var(--bs-green-light);
     color: var(--text-color);
-}
+}*/
 
 .questionTitle {
     font-size: 2rem;
