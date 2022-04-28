@@ -7,17 +7,17 @@ use Controller\UserController;
 
 class AdminController extends AbstractController
 {
-
     public function index(): string
     {
-
+        
         $adminManager = new AdminManager();
         $values = $adminManager->selectAll();
         return $this->twig->render('Admin/admin.html.twig', ['values' => $values]);
     }
     public function edit(): ?string
     {
-        if (!isset($_SESSION['user_email'])) {
+        
+        if (!isset($_SESSION['user_mail'])) {
             return $this->twig->render('Home/homepage.html.twig');
         }
 

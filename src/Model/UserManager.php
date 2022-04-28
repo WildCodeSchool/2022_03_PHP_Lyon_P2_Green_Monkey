@@ -25,8 +25,5 @@ class UserManager extends AbstractManager
         $statement->execute();
 
         return $statement->fetch();
-        
     }
-    
-
 }
