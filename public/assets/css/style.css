@@ -193,17 +193,13 @@ body {
 
 
 /* ---------- CALCULATOR PAGE ---------- */
-.CalculatorMainTitle {
+.calculatorMainTitle {
     margin-top: 10vh;
     text-align: center;
 }
 
-.questionTitle {
-    font-size: 2rem;
-}
-
 .question,
-.CalculatorMainTitleContainer {
+.calculatorMainTitleContainer {
     background-color: var(--bs-yellow-light);
     color: var(--bs-green-darker);
     margin: 1em;
@@ -212,30 +208,18 @@ body {
     box-shadow: var(--box-shadow);
 }
 
-.CalculatorMainTitleContainer {
+.calculatorMainTitleContainer {
     background-color: var(--bs-green-light);
     color: var(--text-color);
+}
+
+.questionTitle {
+    font-size: 2rem;
 }
 
 .questionChoice {
     font-size: 1.5rem;
     margin-left: 2vw;
-}
-
-.funfact {
-    background-color: var(--bs-green-dark);
-    margin: 1em;
-    padding: 3vh;
-    border-radius: 25px;
-    box-shadow: var(--box-shadow);
-}
-
-.funfact h2 {
-    font-size: 2rem;
-}
-
-.funfact p {
-    font-size: 1.5rem;
 }
     
 .QuestionButton {
@@ -254,14 +238,26 @@ body {
     background-color: var(--bs-yellow-darker);
 }
 
+.funfact p {
+    font-size: 1.5rem;
+}
+
+.funfact {
+    background-color: var(--bs-green-dark);
+    margin: 1em;
+    padding: 3vh;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow);
+}
+
+.funfact h2 {
+    font-size: 2rem;
+}
+
 .funfact a {
     text-decoration: none;
     font-size: 1.5rem;
     color: var(--bs-yellow-light);
-}
-
-.btnHidden {
-    display: none;
 }
 
 .btn-question {
