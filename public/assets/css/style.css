@@ -27,6 +27,10 @@ html {
     min-height: 100%;
 }
 
+body {
+    background: none;
+}
+
 html,
 body {
     font-size: 10px;
@@ -74,7 +78,6 @@ body {
 
 /* ---------- HOME PAGE ---------- */
 /* MOBILE VIEW */
-
 .MobileBodybackGround {
     display: flex;
     justify-content: center;
@@ -127,7 +130,6 @@ body {
 
 .DesktopBodyBackground {
     background-color: var(--text-color);
-    height: 100vh;
     background-size: cover;
 }
 
@@ -187,18 +189,12 @@ body {
     color: var(--bs-green-dark);
 }
 
-.resultsButtons .btnclass {
-    width: initial;
-    margin: 1.5vh;
-}
-
 #PColorGreen {
     color: var(--bs-green-dark);
 }
 
 
 /* ---------- CALCULATOR PAGE ---------- */
-
 .CalculatorMainTitle {
     margin-top: 10vh;
     text-align: center;
@@ -265,8 +261,6 @@ body {
 
 
 /* ---------- RESULTS PAGE ---------- */
-
-
 .results {
     display: flex;
     justify-content: center;
@@ -294,6 +288,21 @@ h2 {
     font-size: 2.5em;
     margin-bottom: 3vh;
     margin-top: 3vh;
+}
+
+.btnclass {
+    background-color: var(--bs-yellow-dark);
+    color: var(--text-color);
+    border-radius: 25px;
+    height: 7rem;
+    width: 40rem;
+    font-size: 2.9rem;
+    font-family: var(--font-family);
+}
+
+.resultsButtons .btnclass {
+    width: initial;
+    margin: 1.5vh;
 }
 
 
