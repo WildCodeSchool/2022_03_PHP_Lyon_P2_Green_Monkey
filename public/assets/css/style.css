@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,400;0,700;1,100&display=swap");
 
 :root {
@@ -73,6 +74,7 @@ body {
     width: 6em;
     margin-right: 1vh;
 }
+
 
 /* ---------- HOME PAGE ---------- */
 /* MOBILE VIEW */
@@ -189,9 +191,9 @@ body {
     font-weight: bold;
 }
 
-/* ---------- CALCULATOR PAGE ---------- */
 
-.calculatorMainTitle {
+/* ---------- CALCULATOR PAGE ---------- */
+.CalculatorMainTitle {
     margin-top: 10vh;
     text-align: center;
 }
@@ -201,16 +203,16 @@ body {
 }
 
 .question,
-.calculatorMainTitleContainer {
+.CalculatorMainTitleContainer {
     background-color: var(--bs-yellow-light);
-    color: var(--bs-green-dark);
+    color: var(--bs-green-darker);
     margin: 1em;
     padding: 3vh;
     border-radius: 25px;
     box-shadow: var(--box-shadow);
 }
 
-.calculatorMainTitleContainer {
+.CalculatorMainTitleContainer {
     background-color: var(--bs-green-light);
     color: var(--text-color);
 }
@@ -235,6 +237,32 @@ body {
 .funfact p {
     font-size: 1.5rem;
 }
+    
+.QuestionButton {
+    background-color: var(--bs-yellow-dark);
+    color: var(--text-color);
+    border-radius: 25px;
+    height: 7rem;
+    font-size: 2.9rem;
+    font-family: var(--font-family);
+    width: initial;
+    margin: 1.5vh;
+}
+
+.QuestionButton:hover {
+    color: var(--text-color);
+    background-color: var(--bs-yellow-darker);
+}
+
+.funfact a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--bs-yellow-light);
+}
+
+.btnHidden {
+    display: none;
+}
 
 .btn-question {
     background-color: var(--bs-green-dark);
@@ -255,7 +283,7 @@ body {
     color: black;
 }
 
-.submitButton {
+.SubmitButton {
     margin-bottom: 10vh;
 }
 
@@ -264,14 +292,6 @@ body {
     display: flex;
     justify-content: center;
 }
-
-/*.mainResultsContainer,
-.question-container {
-    background: no-repeat url("/assets/images/foliage_bg.png");
-    background-size: cover;
-    background-position: center top;
-    height: 100vh;
-}*/
 
 .resultsContainer {
     background-color: var(--bs-yellow-light);
@@ -290,7 +310,7 @@ body {
     font-size: 5em;
 }
 
-.resultsByCategory {
+.ResultsByCategory {
     font-size: 2.5em;
     margin-bottom: 3vh;
     margin-top: 3vh;
@@ -373,7 +393,7 @@ body {
     margin-bottom: 1vh;
     vertical-align: center;
 }
-
+ 
 .LoginButton:hover {
     color: var(--text-color);
     background-color: var(--bs-yellow-darker);
@@ -401,7 +421,8 @@ body {
     background-color: var(--bs-yellow-darker);
 }
 
-/* ---------- ADMIN PAGE ---------- */
+/*---------- ADMIN PAGE -----------*/
+
 .admin-container {
     background: no-repeat url("/assets/images/foliage_bg.png");
     background-size: cover;
@@ -432,6 +453,11 @@ body {
     color: var(--text-color);
 }
 
+.accordion-button:not(.collapsed) {
+    background-color: var(--bs-green-dark)!important;
+    color: var(--text-color)!important;
+}
+
 .oldAnswerValue {
     font-size: 15px;
     font-weight: bold;
@@ -441,9 +467,4 @@ body {
     background-color: var(--bs-green-dark);
     color: var(--text-color);
     box-shadow: var(--box-shadow);
-}
-
-.accordion-button:not(.collapsed) {
-    background-color: var(--bs-green-dark)!important;
-    color: var(--text-color)!important;
 }
