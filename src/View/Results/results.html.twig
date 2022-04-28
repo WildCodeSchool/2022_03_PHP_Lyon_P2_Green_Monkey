@@ -6,13 +6,13 @@
 
 {% block content %}
 	<main class="MainResultsContainer">
-		<div class="Results">
-			<div class="ResultsContainer">
+		<div class="results">
+			<div class="resultsContainer">
 				<h1>
 					Votre empreinte carbone
 				</h1>
 
-				<div class="ResultsByCategory">
+				<div class="resultsByCategory">
 					<p>Alimentation :
 						{{ footprintByCategory[0] }}
 						kg eq.CO2</p>
@@ -32,9 +32,9 @@
 						tonnes eq.CO2</h2>
 				</div>
 
-				<div class="ResultsButtons">
-					<a href="/calculator"><input class="ResultsButton btn" type="button" value="Recommencer"></a>
-					<a href="/"><input class="ResultsButton btn" type="button" value="Retour à l'accueil"></a>
+				<div class="resultsButtons">
+					<a href="/calculator"><input class="resultsButton btn" type="button" value="Recommencer"></a>
+					<a href="/"><input class="resultsButton btn" type="button" value="Retour à l'accueil"></a>
 				</div>
 			</div>
 		</div>

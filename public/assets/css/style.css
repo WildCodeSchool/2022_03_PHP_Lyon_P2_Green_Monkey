@@ -21,10 +21,13 @@
     box-sizing: border-box;
 }
 
-html {
+.question-container, .MainResultsContainer, .admin-container, .MainConnection {
     background: url(/assets/images/jungle-bg-blue.jpg);
+    height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    min-height: 100%;
 }
 
 body {
@@ -37,6 +40,7 @@ body {
     font-family: var(--font-family);
     color: var(--text-color);
 }
+
 
 /* ---------- NAVBAR ---------- */
 .navbar {
@@ -83,7 +87,7 @@ body {
     justify-content: center;
     padding-top: 10vh;
     padding-bottom: 5vh;
-    background: none;
+    background: url(/assets/images/jungle-bg-blue.jpg);
 }
 
 .MobileContainer {
@@ -193,8 +197,13 @@ body {
 
 
 /* ---------- CALCULATOR PAGE ---------- */
+
+.question-page {
+    margin-top: 7.3em;
+}
+
 .calculatorMainTitle {
-    margin-top: 10vh;
+    margin-top: 7.2vh;
     text-align: center;
 }
 
@@ -306,7 +315,7 @@ body {
     font-size: 5em;
 }
 
-.ResultsByCategory {
+.resultsByCategory {
     font-size: 2.5em;
     margin-bottom: 3vh;
     margin-top: 3vh;
@@ -418,13 +427,6 @@ body {
 }
 
 /*---------- ADMIN PAGE -----------*/
-
-.admin-container {
-    background: no-repeat url("/assets/images/foliage_bg.png");
-    background-size: cover;
-    background-position: center top;
-    height: 100vh;
-}
 
 .admin-page {
     margin-top: 7.3em;
