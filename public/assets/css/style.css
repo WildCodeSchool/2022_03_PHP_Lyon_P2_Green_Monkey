@@ -21,6 +21,16 @@
     box-sizing: border-box;
 }
 
+html {
+    background: url(/assets/images/jungle-bg-blue.jpg);
+    background-size: cover;
+    min-height: 100%;
+}
+
+body {
+    background: none;
+}
+
 html,
 body {
     font-size: 10px;
@@ -28,8 +38,163 @@ body {
     color: var(--text-color);
 }
 
-/* ---------- CALCULATOR PAGE ---------- */
 
+/* ---------- NAVBAR ---------- */
+.navbar {
+    background-color: var(--bs-green-light);
+    box-shadow: var(--box-shadow);
+}
+
+#navbar-title {
+    font-weight: bold;
+    font-size: 3.6em;
+    line-height: 0.8em;
+    color: var(--text-color);
+}
+
+.offcanvas {
+    background-color: var(--bs-green-dark);
+}
+
+#offcanvasNavbarLabel {
+    color: var(--text-color);
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.nav-link {
+    font-size: 2.6em;
+}
+
+#nav-li-color a {
+    color: var(--text-color);
+}
+
+.logo-top-nav {
+    vertical-align: middle;
+    width: 6em;
+    margin-right: 1vh;
+}
+
+
+/* ---------- HOME PAGE ---------- */
+/* MOBILE VIEW */
+.MobileBodybackGround {
+    display: flex;
+    justify-content: center;
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+    background: none;
+}
+
+.MobileContainer {
+    background-color: var(--bs-yellow-light);
+    border-radius: 25px;
+    box-shadow: 3px 1px 10px black;
+    padding: 3vh;
+    width: 90vw;
+}
+
+.CentralParagraph {
+    font-size: calc(100% + 1vw + 1vh);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: white;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.MobileButton {
+    background-color: var(--bs-yellow-dark);
+    color: var(--text-color);
+    border-radius: 25px;
+    height: 7rem;
+    font-size: 4.3rem;
+    width: 70vw;
+}
+
+.MobileButton:hover {
+    color: var(--text-color);
+    background-color: var(--bs-yellow-darker);
+}
+
+.LogoReziseHomepage {
+    width: 25%;
+    filter: invert(27%) sepia(14%) saturate(4421%) hue-rotate(72deg)
+        brightness(93%) contrast(104%);
+}
+
+
+/* DESKTOP VIEW */
+.DesktopBodyBackground {
+    background-color: var(--text-color);
+    background-size: cover;
+    height: 100vh;
+}
+
+.HomeHeaderBackgrounDesktopView {
+    background-image: url(/assets/images/tropicaldesktopbackground.jpg);
+    background-size: auto 100vw;
+    height: 600px;
+}
+
+.HomeheaderTitleDesktopView {
+    font-size: 7.7em;
+    font-weight: bold;
+    text-shadow: 3px 1px 10px black;
+}
+
+.HomeButtonDesktopView {
+    background-color: var(--bs-yellow-light);
+    color: #0F5B01;
+    font-size: 5.6em;
+    height: 82px;
+    width: 400px;
+    border-radius: 15px;
+    font-family: var(--font-family);
+    vertical-align: center;
+    box-shadow: 3px 1px 10px black;
+}
+
+.HomeButtonDesktopView:hover {
+    color: var(--text-color);
+    background-color: var(--bs-yellow-darker);
+}
+
+.HomeArticleTextFormat {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    padding-top: 1em;
+}
+
+.HomeArticleDesktopView {
+    text-align: left;
+    padding-left: 2em;
+    color: black;
+    font-size: 1em;
+    max-width: 30vw;
+}
+
+.HomeArticleFontResizeDesktopView{
+    font-size: 1.7em;
+}
+
+.HomeCenterTitleDesktopView {
+    margin-top: 5em;
+}
+
+.HomeNameColorGreen {
+    color: var(--bs-green-dark);
+}
+
+#PColorGreen {
+    color: var(--bs-green-dark);
+    font-weight: bold;
+}
+
+
+/* ---------- CALCULATOR PAGE ---------- */
 .CalculatorMainTitle {
     margin-top: 10vh;
     text-align: center;
@@ -75,6 +240,28 @@ body {
     font-size: 2rem;
 }
 
+.QuestionButton {
+    background-color: var(--bs-yellow-dark);
+    color: var(--text-color);
+    border-radius: 25px;
+    height: 7rem;
+    font-size: 2.9rem;
+    font-family: var(--font-family);
+    width: initial;
+    margin: 1.5vh;
+}
+
+.QuestionButton:hover {
+    color: var(--text-color);
+    background-color: var(--bs-yellow-darker);
+}
+
+.funfact a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--bs-yellow-light);
+}
+
 .btnHidden {
     display: none;
 }
@@ -94,19 +281,9 @@ body {
     margin-bottom: 10vh;
 }
 
+
 /* ---------- RESULTS PAGE ---------- */
-.MainResultsContainer,
-.QuestionContainer {
-    background: url("/assets/images/foliage_bg.png");
-    background-size: contain;
-    background-position: center top;
-}
-
-.MainResultsContainer {
-    height: 100vh;
-}
-
-.results {
+.Results {
     display: flex;
     justify-content: center;
 }
@@ -135,15 +312,21 @@ h2 {
     margin-top: 3vh;
 }
 
-/* ---------- LOGIN ---------- */
+.ResultsButton {
+    background-color: var(--bs-yellow-dark);
+    color: var(--text-color);
+    border-radius: 25px;
+    height: 7rem;
+    font-size: 2.9rem;
+    font-family: var(--font-family);
+    width: initial;
+    margin: 1.5vh;
+}
 
+
+/* ---------- LOGIN ---------- */
 .MainConnection {
-    height: 100vh;
-    background: url("/assets/images/foliage_bg_vert.png");
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-color: none;
 }
 
 .LoginContainer {
@@ -233,204 +416,4 @@ h2 {
 
 .LoginCheckbox:checked:hover {
     background-color: var(--bs-yellow-darker);
-}
-
-/* ---------- NAVBAR ---------- */
-.navbar {
-    background-color: var(--bs-green-light);
-    box-shadow: var(--box-shadow);
-}
-
-#navbar-title {
-    font-weight: bold;
-    font-size: 3.6em;
-    line-height: 0.8em;
-    color: var(--text-color);
-}
-
-.offcanvas {
-    background-color: var(--bs-green-dark);
-}
-
-#offcanvasNavbarLabel {
-    color: var(--text-color);
-    font-size: 4em;
-    font-weight: bold;
-}
-
-.nav-link {
-    font-size: 2.6em;
-}
-
-#nav-li-color a {
-    color: var(--text-color);
-}
-
-.logo-top-nav {
-    vertical-align: middle;
-    width: 6em;
-}
-
-
-/* ---------- HOME PAGE ---------- */
-/* MOBILE VIEW */ 
-
-.MobileBodybackGround {
-    background: no-repeat url("/assets/images/foliage_bg_vert.png");
-    background-size: cover;
-    background-position: left left;
-    display: flex;
-    justify-content: center;
-    padding-top: 10vh;
-    padding-bottom: 5vh;
-}
-
-.MobileContainer {
-    background-color: var(--bs-yellow-light);
-    border-radius: 25px;
-    font-family: var(--font-family);
-    box-shadow: 3px 1px 10px black;
-    padding: 3vh;
-    width: 90vw;
-}
-
-.CentralParagraph {
-    font-size: calc(100% + 1vw + 1vh);
-    padding-left: 1rem;
-    padding-right: 1rem;
-    color: white;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-}
-
-.MobileButton {
-    background-color: var(--bs-yellow-dark);
-    color: var(--text-color);
-    border-radius: 25px;
-    height: 7rem;
-    width: 50rem;
-    font-size: calc(120% + 1vw + 1vh);
-    width: 65vw;
-    font-family: var(--font-family);
-}
-
-.MobileButton:hover {
-    color: var(--text-color);
-    background-color: var(--bs-yellow-darker);
-}
-
-.LogoReziseHomepage {
-    width: 25%;
-    filter: invert(27%) sepia(14%) saturate(4421%) hue-rotate(72deg)
-        brightness(93%) contrast(104%);
-}
-
-/* DESKTOP VIEW */
-
-.DesktopBodyBackground {
-    background-color: var(--text-color);
-    height: 100vh;
-    background-size: cover;
-}
-
-.HomeHeaderBackgrounDesktopView {
-    background-image: url(/assets/images/tropicaldesktopbackground.jpg);
-    background-size: auto 100vw;
-    height: 600px;
-}
-
-.HomeheaderTitleDesktopView {
-    font-size: 7.7em;
-    font-weight: bold;
-    text-shadow: 3px 1px 10px black;
-}
-
-.HomeButtonDesktopView {
-    background-color: var(--bs-yellow-light);
-    color: #0F5B01;
-    font-size: 5.6em;
-    height: 82px;
-    width: 400px;
-    border-radius: 15px;
-    font-family: var(--font-family);
-    vertical-align: center;
-    box-shadow: 3px 1px 10px black;
-}
-
-.HomeButtonDesktopView:hover {
-    color: var(--text-color);
-    background-color: var(--bs-yellow-darker);
-}
-
-.HomeArticleTextFormat {
-    display: flex;
-    justify-content: space-around;
-    text-align: left;
-    padding-top: 1em;
-}
-
-.HomeArticleDesktopView {
-    text-align: left;
-    padding-left: 2em;
-    color: black;
-    font-size: 1em;
-    max-width: 30vw;
-}
-
-.HomeArticleFontResizeDesktopView{
-    font-size: 1.7em;
-}
-
-.HomeCenterTitleDesktopView {
-    margin-top: 5em;
-}
-
-.HomeNameColorGreen {
-    color: var(--bs-green-dark);
-}
-
-.resultsButtons .btnclass {
-    width: initial;
-    margin: 1.5vh;
-}
-
-#PColorGreen {
-    color: var(--bs-green-dark);
-}
-
-
-/* ---------- RESULTS PAGE ---------- */
-.mainResultsContainer,
-.question-container {
-    background: no-repeat url("/assets/images/foliage_bg.png");
-    background-size: cover;
-    background-position: center top;
-    height: 100vh;
-}
-
-.results {
-    display: flex;
-    justify-content: center;
-}
-
-.resultsContainer {
-    background-color: var(--bs-yellow-light);
-    margin: 1em;
-    padding: 3vh;
-    border-radius: 25px;
-    box-shadow: var(--box-shadow);
-    text-align: center;
-    font-family: var(--font-family);
-    width: auto;
-    box-shadow: 3px 1px 10px black;
-}
-
-.resultsContainer h1, h2 {
-    font-size: 5em;
-}
-
-.resultsByCategory {
-    font-size: 2.5em;
-    margin-bottom: 3vh;
-    margin-top: 3vh;
 }

@@ -57,12 +57,13 @@
 					<div class="funfact w-25 d-none d-lg-block">
 						<h2>Le saviez-vous ?</h2>
 						<p>{{ question.fact }}</p>
+						<a href="{{ question.source }}" target="_blank">Source</a>
 					</div>
 				</div>
 			{% endfor %}
 
 			<p class="d-flex justify-content-center submitButton">
-				<input class="btn btnclass" type="submit" value="Soumettre"/>
+				<input class="btn QuestionButton" type="submit" value="Soumettre"/>
 			</p>
 
 		</form>
