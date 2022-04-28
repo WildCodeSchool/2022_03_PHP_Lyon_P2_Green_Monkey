@@ -6,13 +6,13 @@
 
 {% block content %}
 	<main class="MainResultsContainer">
-		<div class="Results">
-			<div class="ResultsContainer">
+		<div class="results">
+			<div class="resultsContainer">
 				<h1>
 					Votre empreinte carbone
 				</h1>
 
-				<div class="ResultsByCategory">
+				<div class="resultsByCategory">
 					<p>Alimentation :
 						{{ footprintByCategory[0] }}
 						kg eq.CO2</p>
@@ -23,18 +23,18 @@
 						{{ footprintByCategory[2] }}
 						kg eq.CO2</p>
 					<p>Numérique :
-						{{ footprintByCategory[3] }}
+						{{ footprintByCategory[3]}}
 						kg eq.CO2</p>
 				</div>
 				<div class="ResultsTotal">
 					<h2>Total</h2>
-					<h2>{{ totalFootprint }}
-						kg eq.CO2</h2>
+					<h2>{{ (totalFootprint /1000) | round(2, 'common') }}
+						tonnes eq.CO2</h2>
 				</div>
 
-				<div class="ResultsButtons">
-					<a href="/calculator"><input class="ResultsButton btn" type="button" value="Recommencer"></a>
-					<a href="/"><input class="ResultsButton btn" type="button" value="Retour à l'accueil"></a>
+				<div class="resultsButtons">
+					<a href="/calculator"><input class="resultsButton btn" type="button" value="Recommencer"></a>
+					<a href="/"><input class="resultsButton btn" type="button" value="Retour à l'accueil"></a>
 				</div>
 			</div>
 		</div>

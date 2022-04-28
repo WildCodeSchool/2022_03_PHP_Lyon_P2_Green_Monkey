@@ -4,69 +4,82 @@
 	{{parent()}}- Calculateur
 {% endblock %}
 
-{% block stylesheet %}<link rel="stylesheet" href="/assets/css/styleadmin.css">
+{% block stylesheet %}
+{{parent()}}
+<link rel="stylesheet" href="/assets/css/styleadmin.css">
 {% endblock %}
 
 {% block content %}
 
-	<main class="question-container">
-		<div class="calculatorMainTitleContainer">
-			<h1 class="display-1 calculatorMainTitle">Calculez votre empreinte carbone</h1>
-		</div>
-		<form action="results" method="post">
+<main class="question-container">
+	<div class="container-fluid question-page">
+	<h1 class="display-1 calculatorMainTitle">Calculez votre empreinte carbone</h1>
+	
 
-			{% for question in questions %}
-				<div class="d-flex justify-content-center">
-					<div class="question container-sm">
-						<div>
-							<p>
-								<h2 class="questionTitle">
-									{{ loop.index }}.
-									{{ question.title }}
-								</h2>
-							</p>
-
-							<p class="form-check questionChoice">
-								<input class="form-check-input" type="radio" id="choice1" name="q{{ loop.index }}" value="q{{ loop.index }}_choice1" required>
-								<label class="form-check-label" for="q{{ loop.index }}">{{ question.choice1 }}</label>
-							</p>
-
-							<p class="form-check questionChoice">
-								<input class="form-check-input" type="radio" id="choice2" name="q{{ loop.index }}" value="q{{ loop.index }}_choice2" required>
-								<label class="form-check-label" for="q{{ loop.index }}">{{ question.choice2 }}</label>
-							</p>
-
-							<p class="form-check questionChoice">
-								<input class="form-check-input" type="radio" id="choice3" name="q{{ loop.index }}" value="q{{ loop.index }}_choice3" required>
-								<label class="form-check-label" for="q{{ loop.index }}">{{ question.choice3 }}</label>
-							</p>
-
-							<p class="form-check questionChoice">
-								<input class="form-check-input" type="radio" id="choice4" name="q{{ loop.index }}" value="q{{ loop.index }}_choice4" required>
-								<label class="form-check-label" for="q{{ loop.index }}">{{ question.choice4 }}</label>
-							</p>
-
-							<div class="btnHidden">
-								<input class="btn btn-arrow" type="button" value="←">
-								<p>{{ loop.index }}/16</p>
-								<input class="btn btn-arrow" type="button" value="→">
+	<div id="carouselExampleControls" class="carousel slide">
+  		<div class="carousel-inner">
+		  {% for question in questions %}
+    		<div class="carousel-item {% if loop.index == 1 %}active{% endif %}" id="slide{{ loop.index }}">
+				  <form action="results" method="post">
+					<div class="carousel-block d-flex justify-content-center">
+						<div class="shadow p-4 m-3 rounded question w-50">
+							<div>
+								<p>
+									<h2 class="questionTitle">
+										{{ loop.index }}.{{ question.title }}
+									</h2>
+								</p>
+								<div class="d-flex flex-column justify-content-end align-items-start mt-4">
+								<p class="form-check questionChoice">
+									<input class="{% if not loop.last %}calc-input{% endif %} {% if loop.last %}calc-final{% endif %} 
+									form-check-input" type="radio" id="q{{ loop.index }}-choice1" 
+									name="q{{ loop.index }}" value="q{{ loop.index }}_choice1" required>
+									<label class="form-check-label" for="q{{ loop.index }}-choice1">{{ question.choice1 }}</label>
+								</p>
+								<p class="form-check questionChoice">
+									<input class="{% if not loop.last %}calc-input{% endif %} {% if loop.last %}calc-final{% endif %} 
+									form-check-input" type="radio" id="q{{ loop.index }}-choice2" 
+									name="q{{ loop.index }}" value="q{{ loop.index }}_choice2" required>
+									<label class="form-check-label" for="q{{ loop.index }}-choice2">{{ question.choice2 }}</label>
+								</p>
+								<p class="form-check questionChoice">
+									<input class="{% if not loop.last %}calc-input{% endif %} {% if loop.last %}calc-final{% endif %} 
+									form-check-input" type="radio" id="q{{ loop.index }}-choice3" 
+									name="q{{ loop.index }}" value="q{{ loop.index }}_choice3" required>
+									<label class="form-check-label" for="q{{ loop.index }}-choice3">{{ question.choice3 }}</label>
+								</p>
+								<p class="form-check questionChoice">
+									<input class="{% if not loop.last %}calc-input{% endif %} {% if loop.last %}calc-final{% endif %} 
+									form-check-input" type="radio" id="q{{ loop.index }}-choice4" 
+									name="q{{ loop.index }}" value="q{{ loop.index }}_choice4" required>
+									<label class="form-check-label" for="q{{ loop.index }}-choice4">{{ question.choice4 }}</label>
+								</p>
+								
+									<p class="m-auto pt-3">{{ loop.index }}/16</p>
+								</div>
 							</div>
 						</div>
+						<div class="funfact shadow p-3 m-3 rounded w-25 d-none d-lg-block">
+							<h2>Le saviez-tu ?</h2>
+							<p>{{ question.fact }}</p>
+						</div>
 					</div>
-
-					<div class="funfact w-25 d-none d-lg-block">
-						<h2>Le saviez-vous ?</h2>
-						<p>{{ question.fact }}</p>
-						<a href="{{ question.source }}" target="_blank">Source</a>
-					</div>
-				</div>
+    		</div>
 			{% endfor %}
+  		</div>
+	</div>
 
-			<p class="d-flex justify-content-center submitButton">
-				<input class="btn QuestionButton" type="submit" value="Soumettre"/>
-			</p>
-
-		</form>
-	</main>
+		<p class="d-flex justify-content-center">
+			<input class="btn" id="final-button" type="submit" value="Soumettre"/>
+		</p>
+	</form>
+	</div>
+</main>
 
 {% endblock %}
+
+{% block javascript %}
+{{parent()}}
+<script src="../assets/script.js"></script>
+{% endblock %}
+
