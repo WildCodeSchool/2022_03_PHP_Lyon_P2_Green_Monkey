@@ -216,11 +216,6 @@ body {
     box-shadow: var(--box-shadow);
 }
 
-/*.calculatorMainTitleContainer {
-    background-color: var(--bs-green-light);
-    color: var(--text-color);
-}*/
-
 .questionTitle {
     font-size: 2rem;
 }
