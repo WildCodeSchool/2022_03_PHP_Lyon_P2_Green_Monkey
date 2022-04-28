@@ -3,22 +3,28 @@
 namespace App\Controller;
 
 use App\Model\AdminManager;
+use Controller\UserController;
 
 class AdminController extends AbstractController
 {
+
     public function index(): string
     {
+
         $adminManager = new AdminManager();
         $values = $adminManager->selectAll();
         return $this->twig->render('Admin/admin.html.twig', ['values' => $values]);
     }
-
     public function edit(): ?string
     {
+        if (!isset($_SESSION['user_email'])) {
+            return $this->twig->render('Home/homepage.html.twig');
+        }
+
         $adminManager = new AdminManager();
         $values = $adminManager->selectAll();
 
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['answer_value'])) {
             $values = array_map('trim', $_POST);
 
             // TODO validations (length, format...)
