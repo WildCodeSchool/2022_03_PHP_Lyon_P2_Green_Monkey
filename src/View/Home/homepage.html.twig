@@ -1,0 +1,50 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+	<div class="MobileBodybackGround d-lg-none">
+		<div class=" MobileContainer text-center my-auto mx-auto d-lg-none">
+			<img class="LogoReziseHomepage" src="/assets/images/gorilla.png">
+			<div>
+				<p class="CentralParagraph animate__bounceIn">
+					Bienvenue sur
+					<span id="PColorGreen">Green Monkey</span>, le calculateur d'empreinte carbone préféré de la jungle ! Découvrez comment calculer votre empreinte carbone en répondant à une série de questions simples. L'empreinte carbone moyenne d'un.e Français.e est de 9,5 tonnes par an, beaucoup plus que ce que nous devrions consommer (2,5t par personne par an).
+				</p>
+			</div>
+
+			<div>
+				<a href="/calculator" role="button" class="btn MobileButton">C'est parti !</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="DesktopBodyBackground d-none d-lg-block">
+		<div class="HomeDesktopViewClassPadding">
+			<div class="bg-cover text-white">
+				<div class="d-flex flex-column justify-content-center text-center HomeHeaderBackgrounDesktopView">
+					<div class="HomeCenterTitleDesktopView">
+						<h1 class="HomeheaderTitleDesktopView">Calculez votre empreinte carbone</h1>
+						<a href="/calculator" role="button" class="btn HomeButtonDesktopView">C'est parti !</a>
+					</div>
+				</div>
+			</div>
+			<div class="HomeArticleTextFormat">
+				<article class="HomeArticleDesktopView">
+					<h2 class="HomeH2TextFormat">Bienvenue sur
+						<span class="HomeNameColorGreen">Green Monkey !
+						</span>
+					</h2>
+					<p class="HomeArticleFontResizeDesktopView">Le calculateur d'empreinte carbone préféré de la jungle ! Faites connaissance de votre empreinte carbone avec de simples questions et comparez dans un futur proche !
+					</p>
+				</article>
+				<article class="HomeArticleDesktopView">
+					<h2 class="HomeH2TextFormat">Un peu de texte</h2>
+					<p class="HomeArticleFontResizeDesktopView">Lm ipsum dolor sit amet, consectetur adipiscing elit. Donec eu risus iaculis, rhoncus mi non, volutpat ante. Pellente  sque habitant morbi tristique senectus et netus et males  uada fames ac turpis egestas. Maecenas ac augue et  augue tincidunt blandit aliquam vitae magna. Cras ornare ultricies odio</p>
+				</article>
+				<article class="HomeArticleDesktopView">
+					<h2 class="HomeH2TextFormat">Un peu de texte</h2>
+					<p class="HomeArticleFontResizeDesktopView">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu risus iaculis, rhoncus mi non, volutpat ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas ac augue et augue tincidunt blandit aliquam vitae magna. Cras ornare ultricies odio</p>
+				</article>
+			</div>
+		</div>
+	</div>
+</div>{% endblock %}

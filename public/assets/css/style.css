@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,400;0,700;1,100&display=swap");
 
 :root {
@@ -7,6 +8,7 @@
     --bs-green-light: #2ecc71;
     --bs-yellow-darker: #df7a0e;
     --bs-yellow-dark: #f39c12;
+    --bs-yellow-darker: #df7a0e;
     --bs-yellow-light: #f1c40f;
     --text-color: #ecf0f1;
     --box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
@@ -19,297 +21,23 @@
     box-sizing: border-box;
 }
 
+html {
+    background: url(/assets/images/jungle-bg-blue.jpg);
+    background-size: cover;
+    min-height: 100%;
+}
+
+body {
+    background: none;
+}
+
 html,
 body {
     font-size: 10px;
     font-family: var(--font-family);
     color: var(--text-color);
-    background-color: var(--text-color);
-    min-height: 100vh;
 }
 
-/* ---------- HOME PAGE ---------- */
-.container1 {
-    background-color: purple;
-    border-radius: 25px;
-    box-shadow: var(--box-shadow);
-    height: 180vh;
-    font-family: var(--font-family);
-    width: 76vh;
-}
-
-.container2 {
-    background-color: var(--bs-yellow-light);
-    margin: 1em;
-    margin-right: 100px;
-    border-radius: 25px;
-    box-shadow: var(--box-shadow);
-    height: 112vh;
-    font-family: var(--font-family);
-    width: 66vh;
-    box-shadow: 3px 1px 10px black;
-}
-
-.textcolorlogo {
-    color: green;
-    padding-top: 1.9em;
-}
-
-.logopadding {
-    padding-top: 5.1em;
-    padding-bottom: 5em;
-}
-
-.pclass1 {
-    font-size: 2.9em;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    color: white;
-    padding-right: 1em;
-    padding-left: 1em;
-}
-
-.btnclass {
-    background-color: var(--bs-yellow-dark);
-    color: var(--text-color);
-    border-radius: 25px;
-    height: 7rem;
-    width: 40rem;
-    font-size: 2.9rem;
-    font-family: var(--font-family);
-}
-
-.resultsButtons .btnclass {
-    width: initial;
-    margin: 1.5vh;
-}
-
-#pcolorgreen {
-    color: var(--bs-green-dark);
-}
-
-form {
-    padding-top: 4em;
-}
-
-.logorezisehomepage {
-    width: 25%;
-    filter: invert(27%) sepia(14%) saturate(4421%) hue-rotate(72deg)
-        brightness(93%) contrast(104%);
-}
-
-/* ---------- CALCULATOR PAGE ---------- */
-
-.calculatorMainTitle {
-    margin-top: 10vh;
-    text-align: center;
-}
-
-.questionTitle {
-    font-size: 4rem;
-}
-
-.question,
-.calculatorMainTitleContainer {
-    background-color: var(--bs-yellow-light);
-    color: var(--bs-green-darker);
-    margin: 1em;
-    padding: 3vh;
-    border-radius: 25px;
-    box-shadow: var(--box-shadow);
-}
-
-.calculatorMainTitleContainer {
-    background-color: var(--bs-green-light);
-    color: var(--text-color);
-}
-
-.questionChoice {
-    font-size: 2rem;
-    margin-left: 2vw;
-}
-
-.funfact {
-    background-color: var(--bs-green-dark);
-    margin: 1em;
-    padding: 3vh;
-    border-radius: 25px;
-    box-shadow: var(--box-shadow);
-}
-
-.funfact h2 {
-    font-size: 3.5rem;
-}
-
-.funfact p {
-    font-size: 2rem;
-}
-
-.funfact a {
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: var(--bs-yellow-light);
-}
-
-.btnHidden {
-    display: none;
-}
-
-.btn-arrow {
-    background-color: var(--bs-green-dark);
-    color: var(--text-color);
-}
-
-.btn-question {
-    background-color: var(--bs-green-dark);
-    color: var(--text-color);
-    width: 200px;
-}
-
-.submitButton {
-    margin-bottom: 10vh;
-}
-
-/* ---------- RESULTS PAGE ---------- */
-.mainResultsContainer,
-.question-container {
-    background: url("/assets/images/foliage_bg.png");
-    background-size: contain;
-    background-position: center top;
-}
-
-.mainResultsContainer {
-    height: 100vh;
-}
-
-.results {
-    display: flex;
-    justify-content: center;
-}
-
-.resultsContainer {
-    background-color: var(--bs-yellow-light);
-    margin: 1em;
-    padding: 3vh;
-    border-radius: 25px;
-    box-shadow: var(--box-shadow);
-    text-align: center;
-    font-family: var(--font-family);
-    width: auto;
-    box-shadow: 3px 1px 10px black;
-    margin-top: 10vh;
-}
-
-.resultsContainer h1,
-h2 {
-    font-size: 5em;
-}
-
-.resultsByCategory {
-    font-size: 2.5em;
-    margin-bottom: 3vh;
-    margin-top: 3vh;
-}
-
-/* ---------- LOGIN ---------- */
-
-.mainConnection {
-    height: 100vh;
-    background: url("/assets/images/foliage_bg_vert.png");
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.loginContainer {
-    background-color: var(--bs-yellow-light);
-    color: var(--bs-green-darker);
-    margin: 1em;
-    margin-top: 10vh;
-    padding: 3vh;
-    border-radius: 25px;
-    box-shadow: var(--box-shadow);
-    max-width: 90%;
-}
-
-.loginForm {
-    font-size: 1.8rem;
-    padding-top: initial;
-}
-
-.loginInput {
-    font-size: 1.5rem;
-    background-color: var(--bs-yellow-dark);
-    border: none;
-    color: var(--text-color) !important;
-}
-
-.loginInput::placeholder {
-    color: var(--text-color);
-}
-
-.loginInput:focus {
-    background-color: var(--bs-yellow-darker);
-    box-shadow: none;
-}
-
-.loginValidation {
-    text-align: center;
-    margin-top: 1vh;
-    margin-bottom: -2vh;
-}
-
-.loginCreate {
-    font-size: initial;
-    color: var(--bs-green-dark);
-}
-
-.loginCreateLink {
-    color: var(--bs-yellow-darker);
-    text-decoration: none;
-}
-
-.loginCreateLink:hover {
-    color: var(--bs-yellow-dark);
-}
-
-.loginButton {
-    background-color: var(--bs-yellow-dark);
-    color: var(--text-color);
-    border-radius: 15px;
-    font-size: 2.9rem;
-    margin-top: 2vh;
-    margin-bottom: 1vh;
-    vertical-align: center;
-}
-
-.loginButton:hover {
-    color: var(--text-color);
-    background-color: var(--bs-yellow-darker);
-}
-
-.loginCheckbox {
-    background-color: var(--bs-yellow-dark);
-    border: none;
-    cursor: pointer;
-}
-
-.loginCheckbox:focus {
-    box-shadow: none;
-}
-
-.loginCheckbox:hover {
-    background-color: var(--bs-yellow-darker);
-}
-
-.loginCheckbox:checked {
-    background-color: var(--bs-yellow-dark);
-}
-
-.loginCheckbox:checked:hover {
-    background-color: var(--bs-yellow-darker);
-}
 
 /* ---------- NAVBAR ---------- */
 .navbar {
@@ -346,4 +74,346 @@ h2 {
     vertical-align: middle;
     width: 6em;
     margin-right: 1vh;
+}
+
+
+/* ---------- HOME PAGE ---------- */
+/* MOBILE VIEW */
+.MobileBodybackGround {
+    display: flex;
+    justify-content: center;
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+    background: none;
+}
+
+.MobileContainer {
+    background-color: var(--bs-yellow-light);
+    border-radius: 25px;
+    box-shadow: 3px 1px 10px black;
+    padding: 3vh;
+    width: 90vw;
+}
+
+.CentralParagraph {
+    font-size: calc(100% + 1vw + 1vh);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: white;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.MobileButton {
+    background-color: var(--bs-yellow-dark);
+    color: var(--text-color);
+    border-radius: 25px;
+    height: 7rem;
+    font-size: 4.3rem;
+    width: 70vw;
+}
+
+.MobileButton:hover {
+    color: var(--text-color);
+    background-color: var(--bs-yellow-darker);
+}
+
+.LogoReziseHomepage {
+    width: 25%;
+    filter: invert(27%) sepia(14%) saturate(4421%) hue-rotate(72deg)
+        brightness(93%) contrast(104%);
+}
+
+
+/* DESKTOP VIEW */
+.DesktopBodyBackground {
+    background-color: var(--text-color);
+    background-size: cover;
+    height: 100vh;
+}
+
+.HomeHeaderBackgrounDesktopView {
+    background-image: url(/assets/images/tropicaldesktopbackground.jpg);
+    background-size: auto 100vw;
+    height: 600px;
+}
+
+.HomeheaderTitleDesktopView {
+    font-size: 7.7em;
+    font-weight: bold;
+    text-shadow: 3px 1px 10px black;
+}
+
+.HomeButtonDesktopView {
+    background-color: var(--bs-yellow-light);
+    color: #0F5B01;
+    font-size: 5.6em;
+    height: 82px;
+    width: 400px;
+    border-radius: 15px;
+    font-family: var(--font-family);
+    vertical-align: center;
+    box-shadow: 3px 1px 10px black;
+}
+
+.HomeButtonDesktopView:hover {
+    color: var(--text-color);
+    background-color: var(--bs-yellow-darker);
+}
+
+.HomeArticleTextFormat {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    padding-top: 1em;
+}
+
+.HomeArticleDesktopView {
+    text-align: left;
+    padding-left: 2em;
+    color: black;
+    font-size: 1em;
+    max-width: 30vw;
+}
+
+.HomeArticleFontResizeDesktopView{
+    font-size: 1.7em;
+}
+
+.HomeCenterTitleDesktopView {
+    margin-top: 5em;
+}
+
+.HomeNameColorGreen {
+    color: var(--bs-green-dark);
+}
+
+#PColorGreen {
+    color: var(--bs-green-dark);
+    font-weight: bold;
+}
+
+
+/* ---------- CALCULATOR PAGE ---------- */
+.CalculatorMainTitle {
+    margin-top: 10vh;
+    text-align: center;
+}
+
+.QuestionTitle {
+    font-size: 4rem;
+}
+
+.question,
+.CalculatorMainTitleContainer {
+    background-color: var(--bs-yellow-light);
+    color: var(--bs-green-darker);
+    margin: 1em;
+    padding: 3vh;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow);
+}
+
+.CalculatorMainTitleContainer {
+    background-color: var(--bs-green-light);
+    color: var(--text-color);
+}
+
+.QuestionChoice {
+    font-size: 2rem;
+    margin-left: 2vw;
+}
+
+.funfact {
+    background-color: var(--bs-green-dark);
+    margin: 1em;
+    padding: 3vh;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow);
+}
+
+.funfact h2 {
+    font-size: 3.5rem;
+}
+
+.funfact p {
+    font-size: 2rem;
+}
+
+.QuestionButton {
+    background-color: var(--bs-yellow-dark);
+    color: var(--text-color);
+    border-radius: 25px;
+    height: 7rem;
+    font-size: 2.9rem;
+    font-family: var(--font-family);
+    width: initial;
+    margin: 1.5vh;
+}
+
+.QuestionButton:hover {
+    color: var(--text-color);
+    background-color: var(--bs-yellow-darker);
+}
+
+.funfact a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--bs-yellow-light);
+}
+
+.btnHidden {
+    display: none;
+}
+
+.btn-arrow {
+    background-color: var(--bs-green-dark);
+    color: var(--text-color);
+}
+
+.btn-question {
+    background-color: var(--bs-green-dark);
+    color: var(--text-color);
+    width: 200px;
+}
+
+.SubmitButton {
+    margin-bottom: 10vh;
+}
+
+
+/* ---------- RESULTS PAGE ---------- */
+.Results {
+    display: flex;
+    justify-content: center;
+}
+
+.ResultsContainer {
+    background-color: var(--bs-yellow-light);
+    margin: 1em;
+    padding: 3vh;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    font-family: var(--font-family);
+    width: auto;
+    box-shadow: 3px 1px 10px black;
+    margin-top: 10vh;
+}
+
+.ResultsContainer h1,
+h2 {
+    font-size: 5em;
+}
+
+.ResultsByCategory {
+    font-size: 2.5em;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
+}
+
+.ResultsButton {
+    background-color: var(--bs-yellow-dark);
+    color: var(--text-color);
+    border-radius: 25px;
+    height: 7rem;
+    font-size: 2.9rem;
+    font-family: var(--font-family);
+    width: initial;
+    margin: 1.5vh;
+}
+
+
+/* ---------- LOGIN ---------- */
+.MainConnection {
+    background-color: none;
+}
+
+.LoginContainer {
+    background-color: var(--bs-yellow-light);
+    color: var(--bs-green-darker);
+    margin: 1em;
+    margin-top: 10vh;
+    padding: 3vh;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow);
+    max-width: 90%;
+}
+
+.LoginForm {
+    font-size: 1.8rem;
+    padding-top: initial;
+}
+
+.LoginInput {
+    font-size: 1.5rem;
+    background-color: var(--bs-yellow-dark);
+    border: none;
+    color: var(--text-color) !important;
+}
+
+.LoginInput::placeholder {
+    color: var(--text-color);
+}
+
+.LoginInput:focus {
+    background-color: var(--bs-yellow-darker);
+    box-shadow: none;
+}
+
+.LoginValidation {
+    text-align: center;
+    margin-top: 1vh;
+    margin-bottom: -2vh;
+}
+
+.LoginCreate {
+    font-size: initial;
+    color: var(--bs-green-dark);
+}
+
+.LoginCreateLink {
+    color: var(--bs-yellow-darker);
+    text-decoration: none;
+}
+
+.LoginCreateLink:hover {
+    color: var(--bs-yellow-dark);
+}
+
+.LoginButton {
+    background-color: var(--bs-yellow-dark);
+    color: var(--text-color);
+    border-radius: 15px;
+    font-size: 2.9rem;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    vertical-align: center;
+}
+
+.LoginButton:hover {
+    color: var(--text-color);
+    background-color: var(--bs-yellow-darker);
+}
+
+.LoginCheckbox {
+    background-color: var(--bs-yellow-dark);
+    border: none;
+    cursor: pointer;
+}
+
+.LoginCheckbox:focus {
+    box-shadow: none;
+}
+
+.LoginCheckbox:hover {
+    background-color: var(--bs-yellow-darker);
+}
+
+.LoginCheckbox:checked {
+    background-color: var(--bs-yellow-dark);
+}
+
+.LoginCheckbox:checked:hover {
+    background-color: var(--bs-yellow-darker);
 }
