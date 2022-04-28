@@ -23,13 +23,13 @@
 						{{ footprintByCategory[2] }}
 						kg eq.CO2</p>
 					<p>Numérique :
-						{{ footprintByCategory[3] }}
+						{{ footprintByCategory[3]}}
 						kg eq.CO2</p>
 				</div>
 				<div class="resultsTotal">
 					<h2>Total</h2>
-					<h2>{{ totalFootprint }}
-						kg eq.CO2</h2>
+					<h2>{{ (totalFootprint /1000) | round(2, 'common') }}
+						tonnes eq.CO2</h2>
 				</div>
 
 				<div class="resultsButtons">

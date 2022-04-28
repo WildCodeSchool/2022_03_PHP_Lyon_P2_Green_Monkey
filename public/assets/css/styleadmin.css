@@ -78,11 +78,6 @@ body {
     background-color: var(--bs-green-dark);
 }
 
-.btn-arrow {
-    background-color: var(--bs-green-dark);
-    color: var(--text-color);
-}
-
 .btn-question {
     background-color: var(--bs-green-dark);
     color: var(--text-color);
