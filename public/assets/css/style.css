@@ -21,10 +21,13 @@
     box-sizing: border-box;
 }
 
-html {
+.question-container, .MainResultsContainer, .admin-container, .MainConnection {
     background: url(/assets/images/jungle-bg-blue.jpg);
+    height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    min-height: 100%;
 }
 
 body {
@@ -84,7 +87,7 @@ body {
     justify-content: center;
     padding-top: 10vh;
     padding-bottom: 5vh;
-    background: none;
+    background: url(/assets/images/jungle-bg-blue.jpg);
 }
 
 .MobileContainer {
@@ -123,7 +126,6 @@ body {
     filter: invert(27%) sepia(14%) saturate(4421%) hue-rotate(72deg)
         brightness(93%) contrast(104%);
 }
-
 
 /* DESKTOP VIEW */
 .DesktopBodyBackground {
@@ -195,17 +197,17 @@ body {
 
 
 /* ---------- CALCULATOR PAGE ---------- */
-.CalculatorMainTitle {
-    margin-top: 10vh;
+
+.question-page {
+    margin-top: 7.3em;
+}
+
+.calculatorMainTitle {
+    margin-top: 7.2vh;
     text-align: center;
 }
 
-.QuestionTitle {
-    font-size: 4rem;
-}
-
-.question,
-.CalculatorMainTitleContainer {
+.question {
     background-color: var(--bs-yellow-light);
     color: var(--bs-green-darker);
     margin: 1em;
@@ -214,32 +216,15 @@ body {
     box-shadow: var(--box-shadow);
 }
 
-.CalculatorMainTitleContainer {
-    background-color: var(--bs-green-light);
-    color: var(--text-color);
+.questionTitle {
+    font-size: 2rem;
 }
 
-.QuestionChoice {
-    font-size: 2rem;
+.questionChoice {
+    font-size: 1.5rem;
     margin-left: 2vw;
 }
-
-.funfact {
-    background-color: var(--bs-green-dark);
-    margin: 1em;
-    padding: 3vh;
-    border-radius: 25px;
-    box-shadow: var(--box-shadow);
-}
-
-.funfact h2 {
-    font-size: 3.5rem;
-}
-
-.funfact p {
-    font-size: 2rem;
-}
-
+    
 .QuestionButton {
     background-color: var(--bs-yellow-dark);
     color: var(--text-color);
@@ -256,19 +241,26 @@ body {
     background-color: var(--bs-yellow-darker);
 }
 
+.funfact p {
+    font-size: 1.5rem;
+}
+
+.funfact {
+    background-color: var(--bs-green-dark);
+    margin: 1em;
+    padding: 3vh;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow);
+}
+
+.funfact h2 {
+    font-size: 2rem;
+}
+
 .funfact a {
     text-decoration: none;
     font-size: 1.5rem;
     color: var(--bs-yellow-light);
-}
-
-.btnHidden {
-    display: none;
-}
-
-.btn-arrow {
-    background-color: var(--bs-green-dark);
-    color: var(--text-color);
 }
 
 .btn-question {
@@ -276,19 +268,31 @@ body {
     color: var(--text-color);
     width: 200px;
 }
+#final-button {
+    display: none;
+    background-color: var(--bs-green-dark);
+    color: var(--text-color);
+    font-size: 3rem;
+    width: 50%;
+    height: 15vh;
+    box-shadow: var(--box-shadow);
+}
+
+:hover#final-button {
+    color: black;
+}
 
 .SubmitButton {
     margin-bottom: 10vh;
 }
 
-
 /* ---------- RESULTS PAGE ---------- */
-.Results {
+.results {
     display: flex;
     justify-content: center;
 }
 
-.ResultsContainer {
+.resultsContainer {
     background-color: var(--bs-yellow-light);
     margin: 1em;
     padding: 3vh;
@@ -301,18 +305,17 @@ body {
     margin-top: 10vh;
 }
 
-.ResultsContainer h1,
-h2 {
+.resultsContainer h1, h2 {
     font-size: 5em;
 }
 
-.ResultsByCategory {
+.resultsByCategory {
     font-size: 2.5em;
     margin-bottom: 3vh;
     margin-top: 3vh;
 }
 
-.ResultsButton {
+.resultsButton {
     background-color: var(--bs-yellow-dark);
     color: var(--text-color);
     border-radius: 25px;
@@ -322,7 +325,6 @@ h2 {
     width: initial;
     margin: 1.5vh;
 }
-
 
 /* ---------- LOGIN ---------- */
 .MainConnection {
@@ -390,7 +392,7 @@ h2 {
     margin-bottom: 1vh;
     vertical-align: center;
 }
-
+ 
 .LoginButton:hover {
     color: var(--text-color);
     background-color: var(--bs-yellow-darker);
@@ -416,4 +418,45 @@ h2 {
 
 .LoginCheckbox:checked:hover {
     background-color: var(--bs-yellow-darker);
+}
+
+/*---------- ADMIN PAGE -----------*/
+
+.admin-page {
+    margin-top: 7.3em;
+
+}
+
+.accordion {
+    color: var(--text-color);
+}
+
+.accordion-button {
+    font-size: 0.4em;
+}
+
+:active.accordion-button, :focus.accordion-button {
+    background-color: var(--bs-green-light);
+    color: var(--text-color);
+}
+
+.accordion-collapse {
+    background-color: var(--bs-yellow-light);
+    color: var(--text-color);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--bs-green-dark)!important;
+    color: var(--text-color)!important;
+}
+
+.oldAnswerValue {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn-change-value {
+    background-color: var(--bs-green-dark);
+    color: var(--text-color);
+    box-shadow: var(--box-shadow);
 }
