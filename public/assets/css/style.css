@@ -90,7 +90,6 @@ body {
 .MobileContainer {
     background-color: var(--bs-yellow-light);
     border-radius: 25px;
-    font-family: var(--font-family);
     box-shadow: 3px 1px 10px black;
     padding: 3vh;
     width: 90vw;
@@ -110,10 +109,8 @@ body {
     color: var(--text-color);
     border-radius: 25px;
     height: 7rem;
-    width: 50rem;
-    font-size: calc(120% + 1vw + 1vh);
-    width: 65vw;
-    font-family: var(--font-family);
+    font-size: 4.3rem;
+    width: 70vw;
 }
 
 .MobileButton:hover {
