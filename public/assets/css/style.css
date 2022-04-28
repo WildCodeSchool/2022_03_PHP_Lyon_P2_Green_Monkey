@@ -257,6 +257,11 @@ body {
 .QuestionButton:hover {
     color: var(--text-color);
     background-color: var(--bs-yellow-darker);
+
+.funfact a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--bs-yellow-light);
 }
 
 .btnHidden {
