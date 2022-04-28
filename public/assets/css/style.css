@@ -21,6 +21,12 @@
     box-sizing: border-box;
 }
 
+html {
+    background: url(/assets/images/jungle-bg-blue.jpg);
+    background-size: cover;
+    min-height: 100%;
+}
+
 html,
 body {
     font-size: 10px;
@@ -28,212 +34,6 @@ body {
     color: var(--text-color);
 }
 
-/* ---------- CALCULATOR PAGE ---------- */
-
-.CalculatorMainTitle {
-    margin-top: 10vh;
-    text-align: center;
-}
-
-.QuestionTitle {
-    font-size: 4rem;
-}
-
-.question,
-.CalculatorMainTitleContainer {
-    background-color: var(--bs-yellow-light);
-    color: var(--bs-green-darker);
-    margin: 1em;
-    padding: 3vh;
-    border-radius: 25px;
-    box-shadow: var(--box-shadow);
-}
-
-.CalculatorMainTitleContainer {
-    background-color: var(--bs-green-light);
-    color: var(--text-color);
-}
-
-.QuestionChoice {
-    font-size: 2rem;
-    margin-left: 2vw;
-}
-
-.funfact {
-    background-color: var(--bs-green-dark);
-    margin: 1em;
-    padding: 3vh;
-    border-radius: 25px;
-    box-shadow: var(--box-shadow);
-}
-
-.funfact h2 {
-    font-size: 3.5rem;
-}
-
-.funfact p {
-    font-size: 2rem;
-}
-
-.btnHidden {
-    display: none;
-}
-
-.btn-arrow {
-    background-color: var(--bs-green-dark);
-    color: var(--text-color);
-}
-
-.btn-question {
-    background-color: var(--bs-green-dark);
-    color: var(--text-color);
-    width: 200px;
-}
-
-.SubmitButton {
-    margin-bottom: 10vh;
-}
-
-/* ---------- RESULTS PAGE ---------- */
-.MainResultsContainer,
-.QuestionContainer {
-    background: url("/assets/images/foliage_bg.png");
-    background-size: contain;
-    background-position: center top;
-}
-
-.MainResultsContainer {
-    height: 100vh;
-}
-
-.results {
-    display: flex;
-    justify-content: center;
-}
-
-.ResultsContainer {
-    background-color: var(--bs-yellow-light);
-    margin: 1em;
-    padding: 3vh;
-    border-radius: 25px;
-    box-shadow: var(--box-shadow);
-    text-align: center;
-    font-family: var(--font-family);
-    width: auto;
-    box-shadow: 3px 1px 10px black;
-    margin-top: 10vh;
-}
-
-.ResultsContainer h1,
-h2 {
-    font-size: 5em;
-}
-
-.ResultsByCategory {
-    font-size: 2.5em;
-    margin-bottom: 3vh;
-    margin-top: 3vh;
-}
-
-/* ---------- LOGIN ---------- */
-
-.MainConnection {
-    height: 100vh;
-    background: url("/assets/images/foliage_bg_vert.png");
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.LoginContainer {
-    background-color: var(--bs-yellow-light);
-    color: var(--bs-green-darker);
-    margin: 1em;
-    margin-top: 10vh;
-    padding: 3vh;
-    border-radius: 25px;
-    box-shadow: var(--box-shadow);
-    max-width: 90%;
-}
-
-.LoginForm {
-    font-size: 1.8rem;
-    padding-top: initial;
-}
-
-.LoginInput {
-    font-size: 1.5rem;
-    background-color: var(--bs-yellow-dark);
-    border: none;
-    color: var(--text-color) !important;
-}
-
-.LoginInput::placeholder {
-    color: var(--text-color);
-}
-
-.LoginInput:focus {
-    background-color: var(--bs-yellow-darker);
-    box-shadow: none;
-}
-
-.LoginValidation {
-    text-align: center;
-    margin-top: 1vh;
-    margin-bottom: -2vh;
-}
-
-.LoginCreate {
-    font-size: initial;
-    color: var(--bs-green-dark);
-}
-
-.LoginCreateLink {
-    color: var(--bs-yellow-darker);
-    text-decoration: none;
-}
-
-.LoginCreateLink:hover {
-    color: var(--bs-yellow-dark);
-}
-
-.LoginButton {
-    background-color: var(--bs-yellow-dark);
-    color: var(--text-color);
-    border-radius: 15px;
-    font-size: 2.9rem;
-    margin-top: 2vh;
-    margin-bottom: 1vh;
-    vertical-align: center;
-}
-
-.LoginButton:hover {
-    color: var(--text-color);
-    background-color: var(--bs-yellow-darker);
-}
-
-.LoginCheckbox {
-    background-color: var(--bs-yellow-dark);
-    border: none;
-    cursor: pointer;
-}
-
-.LoginCheckbox:focus {
-    box-shadow: none;
-}
-
-.LoginCheckbox:hover {
-    background-color: var(--bs-yellow-darker);
-}
-
-.LoginCheckbox:checked {
-    background-color: var(--bs-yellow-dark);
-}
-
-.LoginCheckbox:checked:hover {
-    background-color: var(--bs-yellow-darker);
-}
 
 /* ---------- NAVBAR ---------- */
 .navbar {
@@ -273,16 +73,14 @@ h2 {
 
 
 /* ---------- HOME PAGE ---------- */
-/* MOBILE VIEW */ 
+/* MOBILE VIEW */
 
 .MobileBodybackGround {
-    background: no-repeat url("/assets/images/foliage_bg_vert.png");
-    background-size: cover;
-    background-position: left left;
     display: flex;
     justify-content: center;
     padding-top: 10vh;
     padding-bottom: 5vh;
+    background: none;
 }
 
 .MobileContainer {
@@ -399,21 +197,82 @@ h2 {
 }
 
 
-/* ---------- RESULTS PAGE ---------- */
-.mainResultsContainer,
-.question-container {
-    background: no-repeat url("/assets/images/foliage_bg.png");
-    background-size: cover;
-    background-position: center top;
-    height: 100vh;
+/* ---------- CALCULATOR PAGE ---------- */
+
+.CalculatorMainTitle {
+    margin-top: 10vh;
+    text-align: center;
 }
+
+.QuestionTitle {
+    font-size: 4rem;
+}
+
+.question,
+.CalculatorMainTitleContainer {
+    background-color: var(--bs-yellow-light);
+    color: var(--bs-green-darker);
+    margin: 1em;
+    padding: 3vh;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow);
+}
+
+.CalculatorMainTitleContainer {
+    background-color: var(--bs-green-light);
+    color: var(--text-color);
+}
+
+.QuestionChoice {
+    font-size: 2rem;
+    margin-left: 2vw;
+}
+
+.funfact {
+    background-color: var(--bs-green-dark);
+    margin: 1em;
+    padding: 3vh;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow);
+}
+
+.funfact h2 {
+    font-size: 3.5rem;
+}
+
+.funfact p {
+    font-size: 2rem;
+}
+
+.btnHidden {
+    display: none;
+}
+
+.btn-arrow {
+    background-color: var(--bs-green-dark);
+    color: var(--text-color);
+}
+
+.btn-question {
+    background-color: var(--bs-green-dark);
+    color: var(--text-color);
+    width: 200px;
+}
+
+.SubmitButton {
+    margin-bottom: 10vh;
+}
+
+
+/* ---------- RESULTS PAGE ---------- */
+
 
 .results {
     display: flex;
     justify-content: center;
 }
 
-.resultsContainer {
+.ResultsContainer {
     background-color: var(--bs-yellow-light);
     margin: 1em;
     padding: 3vh;
@@ -423,14 +282,111 @@ h2 {
     font-family: var(--font-family);
     width: auto;
     box-shadow: 3px 1px 10px black;
+    margin-top: 10vh;
 }
 
-.resultsContainer h1, h2 {
+.ResultsContainer h1,
+h2 {
     font-size: 5em;
 }
 
-.resultsByCategory {
+.ResultsByCategory {
     font-size: 2.5em;
     margin-bottom: 3vh;
     margin-top: 3vh;
+}
+
+
+/* ---------- LOGIN ---------- */
+.MainConnection {
+    background-color: none;
+}
+
+.LoginContainer {
+    background-color: var(--bs-yellow-light);
+    color: var(--bs-green-darker);
+    margin: 1em;
+    margin-top: 10vh;
+    padding: 3vh;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow);
+    max-width: 90%;
+}
+
+.LoginForm {
+    font-size: 1.8rem;
+    padding-top: initial;
+}
+
+.LoginInput {
+    font-size: 1.5rem;
+    background-color: var(--bs-yellow-dark);
+    border: none;
+    color: var(--text-color) !important;
+}
+
+.LoginInput::placeholder {
+    color: var(--text-color);
+}
+
+.LoginInput:focus {
+    background-color: var(--bs-yellow-darker);
+    box-shadow: none;
+}
+
+.LoginValidation {
+    text-align: center;
+    margin-top: 1vh;
+    margin-bottom: -2vh;
+}
+
+.LoginCreate {
+    font-size: initial;
+    color: var(--bs-green-dark);
+}
+
+.LoginCreateLink {
+    color: var(--bs-yellow-darker);
+    text-decoration: none;
+}
+
+.LoginCreateLink:hover {
+    color: var(--bs-yellow-dark);
+}
+
+.LoginButton {
+    background-color: var(--bs-yellow-dark);
+    color: var(--text-color);
+    border-radius: 15px;
+    font-size: 2.9rem;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    vertical-align: center;
+}
+
+.LoginButton:hover {
+    color: var(--text-color);
+    background-color: var(--bs-yellow-darker);
+}
+
+.LoginCheckbox {
+    background-color: var(--bs-yellow-dark);
+    border: none;
+    cursor: pointer;
+}
+
+.LoginCheckbox:focus {
+    box-shadow: none;
+}
+
+.LoginCheckbox:hover {
+    background-color: var(--bs-yellow-darker);
+}
+
+.LoginCheckbox:checked {
+    background-color: var(--bs-yellow-dark);
+}
+
+.LoginCheckbox:checked:hover {
+    background-color: var(--bs-yellow-darker);
 }
