@@ -11,8 +11,8 @@
 
 {% block content %}
 
-<main class="question-container">
-	<div class="container-fluid question-page">
+<main class="question-container d-flex align-items-lg-start">
+	<div class="container-fluid question-page ">
 	<h1 class="display-1 calculatorMainTitle">Calculez votre empreinte carbone</h1>
 	
 
@@ -22,7 +22,7 @@
     		<div class="carousel-item {% if loop.index == 1 %}active{% endif %}" id="slide{{ loop.index }}">
 				  <form action="results" method="post">
 					<div class="carousel-block d-flex justify-content-center">
-						<div class="shadow p-4 m-3 rounded question w-50">
+						<div class="question d-flex align-items-center rounded">
 							<div>
 								<p>
 									<h2 class="questionTitle">
@@ -55,13 +55,13 @@
 									<label class="form-check-label" for="q{{ loop.index }}-choice4">{{ question.choice4 }}</label>
 								</p>
 								
-									<p class="m-auto pt-3">{{ loop.index }}/16</p>
+									<p class="listingQuestion m-auto pt-3">{{ loop.index }}/16</p>
 								</div>
 							</div>
 						</div>
-						<div class="funfact shadow p-3 m-3 rounded w-25 d-none d-lg-block">
-							<h2>Le saviez-tu ?</h2>
-							<p>{{ question.fact }}</p>
+						<div class="funfact shadow rounded w-25 d-none d-lg-block">
+							<h2 class="m-3">Le saviez-tu ?</h2>
+							<p class="mt-3">{{ question.fact }}</p>
 						</div>
 					</div>
     		</div>

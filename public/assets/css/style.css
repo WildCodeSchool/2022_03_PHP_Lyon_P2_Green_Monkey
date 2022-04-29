@@ -212,12 +212,14 @@ body {
     color: var(--bs-green-darker);
     margin: 1em;
     padding: 3vh;
-    border-radius: 25px;
     box-shadow: var(--box-shadow);
+    min-height: 30vh;
+    min-width: 50%;
+
 }
 
 .questionTitle {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .questionChoice {
@@ -241,6 +243,10 @@ body {
     background-color: var(--bs-yellow-darker);
 }
 
+.listingQuestion {
+    font-size: 2rem;
+}
+
 .funfact p {
     font-size: 1.5rem;
 }
@@ -254,7 +260,7 @@ body {
 }
 
 .funfact h2 {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .funfact a {
@@ -282,9 +288,9 @@ body {
     color: black;
 }
 
-.SubmitButton {
+/*.SubmitButton {
     margin-bottom: 10vh;
-}
+}*/
 
 /* ---------- RESULTS PAGE ---------- */
 .results {
