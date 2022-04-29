@@ -10,6 +10,22 @@
 			<h1 class="pt-5 pt-lg-20 text-center">Espace administrateur</h1>
 			<p class="text-center">Vous souhaitez modifier la valeur d'une question ? C'est par ici !</p>
 
+			<div>
+				<ul>
+					<li class="alert alert-danger" role="alert">test</li>
+				</ul>
+			</div>
+
+			<!-- Displaying errors, might need rework -->
+			{% if errors is not empty %}
+				<div>
+					<ul>
+						{% for error in errors %}
+							<li class="alert alert-danger" role="alert">{{ error }}</li>
+						{% endfor %}
+					</ul>
+				</div>
+			{% endif %}
 
 			<div class="accordion accordion-flush container-fluid" id="accordionFlushExample">
 				{% for items in values|batch(4) %}

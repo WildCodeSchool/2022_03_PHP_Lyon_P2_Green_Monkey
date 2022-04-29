@@ -13,6 +13,7 @@ class UserController extends AbstractController
             $credentials = array_map('trim', $_POST);
             $userManager = new UserManager();
             $user = $userManager->selectOneByEmail($credentials['mail']);
+
             if ($user && $credentials['password'] === $user['password']) {
                 $_SESSION['user_mail'] = $user['mail'];
                 header('location: /admin');
