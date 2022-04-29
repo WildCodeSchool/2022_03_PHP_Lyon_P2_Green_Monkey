@@ -36,7 +36,7 @@ class ItemController extends AbstractController
         $itemManager = new ItemManager();
         $item = $itemManager->selectOneById($id);
 
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
             // clean $_POST data
             $item = array_map('trim', $_POST);
 
@@ -61,6 +61,7 @@ class ItemController extends AbstractController
      */
     public function add(): ?string
     {
+
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // clean $_POST data
             $item = array_map('trim', $_POST);
