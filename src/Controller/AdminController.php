@@ -15,7 +15,7 @@ class AdminController extends AbstractController
     }
     public function edit(): ?string
     {
-        if (!isset($_SESSION['user_mail'])) { 
+        if (!isset($_SESSION['user_mail'])) {
             header('location: /login');
         }
 
