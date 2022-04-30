@@ -11,5 +11,6 @@ return [
     'calculator' => ['QuestionController', 'index',],
     'results' => ['ResultController', 'index',],
     'admin' => ['AdminController', 'edit'],
-    'login' => ['UserController', 'login']
+    'login' => ['LoginController', 'index'],
+    'loading' => ['LoadingController', 'index']
 ];
