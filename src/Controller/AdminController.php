@@ -20,7 +20,7 @@ class AdminController extends AbstractController
         $errors = [];
 
         if (!isset($_SESSION['user_mail'])) {
-            return $this->twig->render('Home/homepage.html.twig');
+            header('Location: /');
         }
 
         $adminManager = new AdminManager();

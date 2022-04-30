@@ -23,7 +23,8 @@
 .question-container,
 .MainResultsContainer,
 .admin-container,
-.MainConnection, .MobileBodybackGround {
+.MainConnection,
+.MobileBodybackGround {
     background: url(/assets/images/jungle-bg-blue.jpg);
     min-height: 100vh;
     -webkit-background-size: cover;
@@ -426,6 +427,15 @@ h2 {
 
 .LoginCheckbox:checked:hover {
     background-color: var(--bs-yellow-darker);
+}
+
+.errorLoginContainer {
+    max-width: 275px;
+}
+
+.errorLogin {
+    font-size: 1.5rem;
+    list-style-type: none;
 }
 
 /*---------- ADMIN PAGE -----------*/
