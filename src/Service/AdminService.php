@@ -20,6 +20,9 @@ class AdminService
             $errors['value_must_be_reasonable'] = 'La valeur ne peut être supérieure à 10 000.';
         }
 
+        if (empty($values['answer_value'])) {
+            $errors['value_must_exist'] = 'Veuillez entrer une valeur.';
+        }
 
         return $errors;
     }
