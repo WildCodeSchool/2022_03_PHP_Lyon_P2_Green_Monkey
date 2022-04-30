@@ -18,7 +18,7 @@
 				<div class="carousel-inner">
 					{% for question in questions %}
 						<div class="carousel-item {% if loop.index == 1 %}active{% endif %}" id="slide{{ loop.index }}">
-							<form action="loading" method="post">
+							<form action="results" method="post">
 								<div class="carousel-block d-flex justify-content-center">
 									<div class="shadow p-4 m-3 rounded question w-50">
 										<div>

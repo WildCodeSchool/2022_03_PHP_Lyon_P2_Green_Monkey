@@ -12,5 +12,4 @@ return [
     'results' => ['ResultController', 'index',],
     'admin' => ['AdminController', 'edit'],
     'login' => ['LoginController', 'index'],
-    'loading' => ['LoadingController', 'index']
 ];
