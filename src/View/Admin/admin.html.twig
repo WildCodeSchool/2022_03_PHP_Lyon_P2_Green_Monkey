@@ -7,13 +7,11 @@
 {% block content %}
 	<main class="admin-container">
 		<div class="container-fluid admin-page">
-			<h1 class="pt-5 pt-lg-20 text-center">Espace administrateur</h1>
-			<p class="text-center">Vous souhaitez modifier la valeur d'une question ? C'est par ici !</p>
-
-			<div>
-				<ul>
-					<li class="alert alert-danger" role="alert">test</li>
-				</ul>
+			<div class="d-flex justify-content-center">
+				<div class="pageTitleContainer">
+					<h1 class="pageTitle pt-5 pt-lg-20 text-center">Espace administrateur</h1>
+					<p class="pageSubtitle text-center">Vous souhaitez modifier la valeur d'une question ? C'est par ici !</p>
+				</div>
 			</div>
 
 			<!-- Displaying errors, might need rework -->
@@ -21,7 +19,8 @@
 				<div>
 					<ul>
 						{% for error in errors %}
-							<li class="alert alert-danger" role="alert">{{ error }}</li>
+							<li class="errorAdmin alert alert-danger" role="alert">❌ Erreur :
+								{{ error }}</li>
 						{% endfor %}
 					</ul>
 				</div>
@@ -40,14 +39,14 @@
 							<div class="accordion-body row row-cols-1 row-cols-md-4">
 								{% for value in items %}
 									<form method="post" class="d-flex flex-column align-items-center">
-										<p>{{ value.label }}
+										<p class="answer-value">{{ value.label }}
 											:
 											<span class="oldAnswerValue">{{value.answer_value}}</span>
 										</p>
 										<p class="d-flex flex-column align-items-center">
 											<input type="hidden" id="id" name="id" value="{{ value.id }}">
-											<label for="answer_value">Nouvelle valeur de réponse :</label>
-											<input class="input-group-text m-2" type="number" step=".01" id="answer_value" name="answer_value">
+											<label class="answer-value" for="answer_value">Nouvelle valeur de réponse :</label>
+											<input class="input-group-text m-2 admin-input" type="number" step=".01" id="answer_value" name="answer_value" value="{{value.answer_value}}">
 											<input class="btn btn-change-value m-2 center" type="submit" value="Modifier la valeur">
 										</p>
 									</form>

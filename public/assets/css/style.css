@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,400;0,700;1,100&display=swap");
 
 :root {
@@ -10,8 +9,8 @@
     --bs-yellow-dark: #f39c12;
     --bs-yellow-darker: #df7a0e;
     --bs-yellow-light: #f1c40f;
-    --text-color: #ecf0f1;
-    --box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    --text-color: #ffffff;
+    --box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 1px,
         rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
@@ -21,9 +20,12 @@
     box-sizing: border-box;
 }
 
-.question-container, .MainResultsContainer, .admin-container, .MainConnection {
+.question-container,
+.MainResultsContainer,
+.admin-container,
+.MainConnection, .MobileBodybackGround {
     background: url(/assets/images/jungle-bg-blue.jpg);
-    height: 100vh;
+    min-height: 100vh;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -41,6 +43,24 @@ body {
     color: var(--text-color);
 }
 
+/* ---------- MAIN TITLES ----------*/
+.pageTitleContainer {
+    background-color: var(--bs-green-dark);
+    padding: 5em 2em 0.5em 2em;
+    margin: 1em;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+.pageTitle {
+    font-size: 3rem;
+}
+
+.pageSubtitle {
+    font-size: 2rem;
+}
 
 /* ---------- NAVBAR ---------- */
 .navbar {
@@ -79,7 +99,6 @@ body {
     margin-right: 1vh;
 }
 
-
 /* ---------- HOME PAGE ---------- */
 /* MOBILE VIEW */
 .MobileBodybackGround {
@@ -87,13 +106,12 @@ body {
     justify-content: center;
     padding-top: 10vh;
     padding-bottom: 5vh;
-    background: url(/assets/images/jungle-bg-blue.jpg);
 }
 
 .MobileContainer {
     background-color: var(--bs-yellow-light);
     border-radius: 25px;
-    box-shadow: 3px 1px 10px black;
+    box-shadow: var(--box-shadow);
     padding: 3vh;
     width: 90vw;
 }
@@ -148,7 +166,7 @@ body {
 
 .HomeButtonDesktopView {
     background-color: var(--bs-yellow-light);
-    color: #0F5B01;
+    color: #0f5b01;
     font-size: 5.6em;
     height: 82px;
     width: 400px;
@@ -178,7 +196,7 @@ body {
     max-width: 30vw;
 }
 
-.HomeArticleFontResizeDesktopView{
+.HomeArticleFontResizeDesktopView {
     font-size: 1.7em;
 }
 
@@ -195,18 +213,7 @@ body {
     font-weight: bold;
 }
 
-
 /* ---------- CALCULATOR PAGE ---------- */
-
-.question-page {
-    margin-top: 7.3em;
-}
-
-.calculatorMainTitle {
-    margin-top: 7.2vh;
-    text-align: center;
-}
-
 .question {
     background-color: var(--bs-yellow-light);
     color: var(--bs-green-darker);
@@ -224,7 +231,7 @@ body {
     font-size: 1.5rem;
     margin-left: 2vw;
 }
-    
+
 .QuestionButton {
     background-color: var(--bs-yellow-dark);
     color: var(--text-color);
@@ -305,7 +312,8 @@ body {
     margin-top: 10vh;
 }
 
-.resultsContainer h1, h2 {
+.resultsContainer h1,
+h2 {
     font-size: 5em;
 }
 
@@ -392,7 +400,7 @@ body {
     margin-bottom: 1vh;
     vertical-align: center;
 }
- 
+
 .LoginButton:hover {
     color: var(--text-color);
     background-color: var(--bs-yellow-darker);
@@ -421,10 +429,8 @@ body {
 }
 
 /*---------- ADMIN PAGE -----------*/
-
 .admin-page {
-    margin-top: 7.3em;
-
+    padding-bottom: 2vh;
 }
 
 .accordion {
@@ -435,7 +441,8 @@ body {
     font-size: 0.4em;
 }
 
-:active.accordion-button, :focus.accordion-button {
+:active.accordion-button,
+:focus.accordion-button {
     background-color: var(--bs-green-light);
     color: var(--text-color);
 }
@@ -446,17 +453,46 @@ body {
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: var(--bs-green-dark)!important;
-    color: var(--text-color)!important;
+    background-color: var(--bs-green-dark) !important;
+    color: var(--text-color) !important;
 }
 
 .oldAnswerValue {
-    font-size: 15px;
+    font-size: 2rem;
     font-weight: bold;
+}
+
+.answer-value {
+    font-size: 1.6rem;
+}
+
+.admin-input {
+    font-size: 2rem;
+    background-color: var(--bs-yellow-dark);
+    border: none;
+    color: var(--text-color) !important;
+}
+
+.admin-input:focus {
+    background-color: var(--bs-yellow-darker);
+    box-shadow: none;
+    border: none;
 }
 
 .btn-change-value {
     background-color: var(--bs-green-dark);
     color: var(--text-color);
     box-shadow: var(--box-shadow);
+    font-size: 2rem;
+    border-radius: 10px;
+}
+
+.btn-change-value:hover {
+    background-color: var(--bs-green-light);
+    color: var(--text-color);
+}
+
+.errorAdmin {
+    font-size: 2rem;
+    list-style-type: none;
 }
