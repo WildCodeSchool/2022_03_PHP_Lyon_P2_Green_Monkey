@@ -31,7 +31,7 @@
 }
 
 body {
-    background: none;
+    background-color: var(--text-color);
 }
 
 html,
@@ -224,7 +224,7 @@ body {
     font-size: 1.5rem;
     margin-left: 2vw;
 }
-    
+
 .QuestionButton {
     background-color: var(--bs-yellow-dark);
     color: var(--text-color);
@@ -392,7 +392,7 @@ body {
     margin-bottom: 1vh;
     vertical-align: center;
 }
- 
+
 .LoginButton:hover {
     color: var(--text-color);
     background-color: var(--bs-yellow-darker);
