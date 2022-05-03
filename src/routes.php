@@ -14,5 +14,6 @@ return [
     'admin/answers' => ['AdminController', 'answers'],
     'admin/edit' => ['AdminController', 'edit'],
     'admin/stats' => ['AdminController', 'stats'],
-    'login' => ['UserController', 'login']
+    'login' => ['UserController', 'login'],
+    'logout' => ['UserController', 'logout']
 ];
