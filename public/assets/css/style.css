@@ -127,6 +127,10 @@ body {
         brightness(93%) contrast(104%);
 }
 
+.MobileBodybackGround.d-lg-none {
+    margin-top: 6em;
+}
+
 /* DESKTOP VIEW */
 .DesktopBodyBackground {
     background-color: var(--text-color);
@@ -203,8 +207,9 @@ body {
 }
 
 .calculatorMainTitle {
-    margin-top: 7.2vh;
     text-align: center;
+color: var(--text-color);
+text-shadow: 3px 5px 2px #474747;
 }
 
 .question {
