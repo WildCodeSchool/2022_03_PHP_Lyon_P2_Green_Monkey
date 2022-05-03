@@ -17,7 +17,7 @@ class UserManager extends AbstractManager
         $this->pdo = $connection->getConnection();
     }
 
-    public function selectOneByEmail(string $mail)
+    public function selectOneByEmail(string $mail): array|bool
     {
         // prepared request
         $statement = $this->pdo->prepare("SELECT * FROM " . static::TABLE . " WHERE mail=:mail");

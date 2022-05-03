@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light navbar-expand-lg fixed-top">
 	<div class="container-fluid">
-		<a href="/"><img class="logo-top-nav" src="/assets/images/monkey-logo.png" alt""></a>
+		<a href="/"><img class="logo-top-nav animate__animated animate__rotateIn" src="/assets/images/monkey-logo.png" alt""></a>
 		<a class="navbar-brand" id="navbar-title" href="/">Green
 			<br>
 			Monkey
@@ -22,7 +22,9 @@
 						<a class="nav-link" href="calculator">Questionnaire</a>
 					</li>
 					<li class="nav-item m-2">
-							<a class="nav-link" href="login">Connexion</a>
+						{% if user.mail %}
+							<a class="nav-link" href="logout">Déconnexion</a>
+						{% endif %}
 					</li>
 				</ul>
 			</div>
