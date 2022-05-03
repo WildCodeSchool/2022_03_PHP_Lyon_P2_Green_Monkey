@@ -222,10 +222,13 @@ body {
     padding: 3vh;
     border-radius: 25px;
     box-shadow: var(--box-shadow);
+    min-height: 30vh;
+    min-width: 50%;
+
 }
 
 .questionTitle {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .questionChoice {
@@ -244,9 +247,17 @@ body {
     margin: 1.5vh;
 }
 
+.listingQuestion {
+    font-size: 2rem;
+}
+
 .QuestionButton:hover {
     color: var(--text-color);
     background-color: var(--bs-yellow-darker);
+}
+
+.listingQuestion {
+    font-size: 2rem;
 }
 
 .funfact p {
@@ -262,7 +273,7 @@ body {
 }
 
 .funfact h2 {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .funfact a {
@@ -288,10 +299,6 @@ body {
 
 :hover#final-button {
     color: black;
-}
-
-.SubmitButton {
-    margin-bottom: 10vh;
 }
 
 /* ---------- RESULTS PAGE ---------- */
