@@ -19,7 +19,7 @@
 				</div>
 			</div>
 
-			<div id="carouselExampleControls" class="carousel slide">
+			<div id="carouselExampleControls" class="carouselContainer carousel slide">
 				<div class="carousel-inner">
 					{% for question in questions %}
 						<div class="carousel-item {% if loop.index == 1 %}active{% endif %}" id="slide{{ loop.index }}">
@@ -50,11 +50,11 @@
 													<label class="form-check-label" for="q{{ loop.index }}-choice4">{{ question.choice4 }}</label>
 												</p>
 
-												<p class="m-auto pt-3">{{ loop.index }}/16</p>
+												<p class="listingQuestion m-auto pt-3">{{ loop.index }}/16</p>
 											</div>
 										</div>
 									</div>
-									<div class="funfact p-4 m-3 w-25 d-none d-lg-block">
+									<div class="funfact p-4 m-3 w-25 d-none d-sm-block">
 										<h2>Le saviez-vous ?</h2>
 										<p>{{ question.fact }}</p>
 									</div>
@@ -65,7 +65,7 @@
 				</div>
 
 				<p class="d-flex justify-content-center">
-					<input class="btn" id="final-button" type="submit" value="Soumettre"/>
+					<input class="btn" id="final-button" type="submit" value="Envoyer"/>
 				</p>
 			</form>
 		</div>

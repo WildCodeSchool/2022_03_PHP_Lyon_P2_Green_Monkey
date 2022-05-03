@@ -223,8 +223,7 @@ body {
     border-radius: 25px;
     box-shadow: var(--box-shadow);
     min-height: 30vh;
-    min-width: 50%;
-
+    min-width: 300px;
 }
 
 .questionTitle {
@@ -232,7 +231,7 @@ body {
 }
 
 .questionChoice {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin-left: 2vw;
 }
 
@@ -261,7 +260,7 @@ body {
 }
 
 .funfact p {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 .funfact {
@@ -270,9 +269,10 @@ body {
     padding: 3vh;
     border-radius: 25px;
     box-shadow: var(--box-shadow);
+    min-width: 200px;
 }
 
-.funfact h2 {
+.question h2, .funfact h2 {
     font-size: 3rem;
 }
 
@@ -289,16 +289,19 @@ body {
 }
 #final-button {
     display: none;
-    background-color: var(--bs-green-dark);
-    color: var(--text-color);
+    margin-top: 10vh;
+    background-color: var(--bs-yellow-light);
+    color: var(--bs-green-darker);
     font-size: 3rem;
     width: 50%;
     height: 15vh;
+    border-radius: 25px;
     box-shadow: var(--box-shadow);
 }
 
-:hover#final-button {
-    color: black;
+#final-button:hover {
+    background-color: var(--bs-yellow-dark);
+    color: var(--text-color);
 }
 
 /* ---------- RESULTS PAGE ---------- */
@@ -343,10 +346,6 @@ h2 {
 }
 
 /* ---------- LOGIN ---------- */
-.MainConnection {
-    background-color: none;
-}
-
 .LoginContainer {
     background-color: var(--bs-yellow-light);
     color: var(--bs-green-darker);
@@ -383,6 +382,10 @@ h2 {
     text-align: center;
     margin-top: 1vh;
     margin-bottom: -2vh;
+}
+
+.loginRemember {
+    text-align: initial;
 }
 
 .LoginCreate {
