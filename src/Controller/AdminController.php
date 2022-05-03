@@ -17,10 +17,11 @@ class AdminController extends AbstractController
 
     public function edit(): ?string
     {
+
         $errors = [];
 
         if (!isset($_SESSION['user_mail'])) {
-            header('Location: /');
+            header('location: /login');
         }
 
         $adminManager = new AdminManager();

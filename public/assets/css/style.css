@@ -146,6 +146,10 @@ body {
         brightness(93%) contrast(104%);
 }
 
+.MobileBodybackGround.d-lg-none {
+    margin-top: 6em;
+}
+
 /* DESKTOP VIEW */
 .DesktopBodyBackground {
     background-color: var(--text-color);
