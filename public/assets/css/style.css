@@ -20,15 +20,12 @@
     box-sizing: border-box;
 }
 
-<<<<<<< HEAD
-.question-container, .MainResultsContainer, .admin-container, .MainConnection, .mainStatsContainer {
-=======
 .question-container,
 .MainResultsContainer,
 .admin-container,
 .MainConnection,
-.MobileBodybackGround {
->>>>>>> dev
+.MobileBodybackGround,
+.mainStatsContainer {
     background: url(/assets/images/jungle-bg-blue.jpg);
     min-height: 100vh;
     -webkit-background-size: cover;
@@ -447,20 +444,17 @@ h2 {
     background-color: var(--bs-yellow-darker);
 }
 
-<<<<<<< HEAD
-/*---------- ADMIN EDIT PAGE -----------*/
-=======
 .errorLoginContainer {
     max-width: 275px;
 }
->>>>>>> dev
 
 .errorLogin {
     font-size: 1.5rem;
     list-style-type: none;
 }
 
-/*---------- ADMIN PAGE -----------*/
+/*---------- ADMIN EDIT PAGE -----------*/
+
 .admin-page {
     padding-bottom: 2vh;
 }
