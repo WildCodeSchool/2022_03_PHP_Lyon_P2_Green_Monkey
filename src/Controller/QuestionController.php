@@ -37,7 +37,7 @@ class QuestionController extends AbstractController
             "source" => "shorturl.at/dqxFI",
         ],
         [
-            "title" => "Quel type de petit-déjeuner vous correspond le plus ?",
+            "title" => "Quel type de petit-déjeuner préférez-vous ?",
             "choice1" => "viennoiserie, baguette",
             "choice2" => "lait et céréales",
             "choice3" => "pas de petit-déjeuner",
@@ -46,7 +46,7 @@ class QuestionController extends AbstractController
             "source" => "shorturl.at/jsGV7",
         ],
         [
-            "title" => "Quel moyen de transport utilisez-vous au quotidien ?",
+            "title" => "Quel est votre moyen de transport privilégié ?",
             "choice1" => "la voiture",
             "choice2" => "les transports en commun",
             "choice3" => "le vélo",
@@ -75,7 +75,7 @@ class QuestionController extends AbstractController
             "source" => "shorturl.at/nvPZ7",
         ],
         [
-            "title" => "Avez-vous acheté un moyen de transport cette année ?",
+            "title" => "Avez-vous acheté un véhicule cette année ?",
             "choice1" => "oui, une voiture",
             "choice2" => "oui, une trottinette électrique",
             "choice3" => "oui, un vélo",
