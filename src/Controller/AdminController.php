@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Model\AdminManager;
 use Controller\UserController;
+use App\Service\AdminService;
 
 class AdminController extends AbstractController
 {
@@ -27,6 +28,9 @@ class AdminController extends AbstractController
 
     public function edit(): ?string
     {
+
+        $errors = [];
+
         if (!isset($_SESSION['user_mail'])) {
             header('location: /login');
         }
@@ -37,17 +41,22 @@ class AdminController extends AbstractController
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['answer_value'])) {
             $values = array_map('trim', $_POST);
 
-            // TODO validations (length, format...)
+            // Validation service
+            $adminService = new AdminService();
+            $errors = $adminService->checkAdminFields($values);
 
-            // if validation is ok, update and redirection
-            $adminManager->update($values);
+            // Executing query
+            if (empty($errors)) {
+                $adminManager = new AdminManager();
+                $adminManager->update($values);
 
-            header('Location: /admin');
+                header('Location: /admin');
 
-            // we are redirecting so we don't want any content rendered
-            return null;
+                // we are redirecting so we don't want any content rendered
+                return null;
+            }
         }
-        return $this->twig->render('Admin/admin.html.twig', ['values' => $values,]);
+        return $this->twig->render('Admin/admin.html.twig', ['values' => $values, 'errors' => $errors]);
     }
 
     public function stats(): string
