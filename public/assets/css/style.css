@@ -21,7 +21,7 @@
     box-sizing: border-box;
 }
 
-.question-container, .MainResultsContainer, .admin-container, .MainConnection {
+.question-container, .MainResultsContainer, .admin-container, .MainConnection, .mainStatsContainer {
     background: url(/assets/images/jungle-bg-blue.jpg);
     height: 100vh;
     -webkit-background-size: cover;
@@ -427,7 +427,7 @@ text-shadow: 3px 5px 2px #474747;
     background-color: var(--bs-yellow-darker);
 }
 
-/*---------- ADMIN PAGE -----------*/
+/*---------- ADMIN EDIT PAGE -----------*/
 
 .admin-page {
     margin-top: 7.3em;
@@ -466,4 +466,17 @@ text-shadow: 3px 5px 2px #474747;
     background-color: var(--bs-green-dark);
     color: var(--text-color);
     box-shadow: var(--box-shadow);
+}
+
+/*--------- ADMIN STATS PAGE ----------------------*/
+
+.statsContainer {
+    background-color: var(--bs-yellow-light);
+        color: var(--bs-green-darker);
+        margin: 1em;
+        margin-top: 7.3em;
+        padding: 3vh;
+        border-radius: 25px;
+        box-shadow: var(--box-shadow);
+        max-width: 90%;
 }

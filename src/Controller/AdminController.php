@@ -52,9 +52,9 @@ class AdminController extends AbstractController
 
     public function stats(): string
     {
-        if (!isset($_SESSION['user_mail'])) {
+        /*if (!isset($_SESSION['user_mail'])) {
             return $this->twig->render('Home/homepage.html.twig');
-        }
+        }*/
         return $this->twig->render('Admin/stats.html.twig');
     }
 }
