@@ -9,4 +9,5 @@ create table projet2.user
 
 insert into projet2.user (id, mail, password)
 values  (2, 'test@test.com', '$argon2i$v=19$m=16,t=2,p=1$ZUthZkdSWFY0R2tRbktESQ$U21Avh4mjs07RXYutKG53g'),
-        (3, 'vin.diesel@wanadoo.fr', '$argon2i$v=19$m=16,t=2,p=1$VmFCUTdMaFVScHBNU3BwYw$lky9RdbxEIgHs6HtEGwcLQ');
+        (3, 'vin.diesel@wanadoo.fr', '$argon2i$v=19$m=16,t=2,p=1$VmFCUTdMaFVScHBNU3BwYw$lky9RdbxEIgHs6HtEGwcLQ'),
+        (4, 'bill.gates@microsoft.com', '$argon2i$v=19$m=16,t=2,p=1$TXhkcGhlYlZIUEVqTzY0Tw$Vlkm0DTznI7fsU1BAHRhww');

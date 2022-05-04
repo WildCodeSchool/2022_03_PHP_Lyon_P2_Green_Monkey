@@ -535,3 +535,7 @@ h2 {
         box-shadow: var(--box-shadow);
         max-width: 90%;
 }
+
+.resultsContainer {
+    padding-top: 10em;
+}

@@ -5,4 +5,23 @@
 {% endblock %}
 
 {% block content %}
+	{# <div class="question, resultsContainer"
+	<p id="PColorGreen" class="text-center">
+	{% for answer in answers %}
+	{{ answer.in }}
+	{{ answer.q1 }}
+	{{ answer.q2 }}
+	{{ answer.q3 }}
+	{{ answer.q4 }}
+	{% endfor %}
+	</p> #}
+
+	<ul id="PColorGreen">
+		{% for result in results %}
+			<li>
+				{{ result.id }}
+			</li>
+		{% endfor %}
+	</ul>
+
 {% endblock %}

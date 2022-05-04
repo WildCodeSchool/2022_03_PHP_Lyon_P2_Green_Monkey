@@ -11,7 +11,7 @@ return [
     'calculator' => ['QuestionController', 'index',],
     'results' => ['ResultController', 'index',],
     'admin' => ['AdminController', 'index'],
-    'admin/answers' => ['AdminController', 'answers'],
+    'admin/answers' => ['AdminController', 'showAnswers'],
     'admin/edit' => ['AdminController', 'edit'],
     'admin/stats' => ['AdminController', 'stats'],
     'login' => ['UserController', 'login'],
