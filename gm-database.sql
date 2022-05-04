@@ -1,3 +1,7 @@
+DROP DATABASE IF EXISTS projet2;
+CREATE DATABASE projet2;
+USE projet2;
+
 -- Creating tables
 drop table if exists answer;
 create table answer
