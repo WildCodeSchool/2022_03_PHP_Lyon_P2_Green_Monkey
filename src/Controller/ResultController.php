@@ -9,12 +9,19 @@ class ResultController extends AbstractController
 {
     public function index(): string
     {
-        // fetching data from database and comparing it with POST
         $resultManager = new ResultManager();
+        $resultService = new ResultService();
+
+        // adding data to db
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $answers = array_map('trim', $_POST);
+            $resultManager->insert($answers);
+        }
+
+        // fetching data from database and comparing it with POST
         $values = $resultManager->fetchValuesByAnswer($_POST);
 
         // calculating footprint (total and by category)
-        $resultService = new ResultService();
         $totalFootprint = $resultService->calculateTotalFootprint($values);
         $footprintByCategory = $resultService->calculateFootprintByCat($values);
 

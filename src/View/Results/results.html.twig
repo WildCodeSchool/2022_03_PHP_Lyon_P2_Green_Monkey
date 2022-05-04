@@ -5,7 +5,21 @@
 {% endblock %}
 
 {% block content %}
-	<main class="MainResultsContainer">
+	<main id="loading">
+		<div class="MainConnection">
+			<div class="d-flex justify-content-center">
+				<div class="LoginContainer">
+					<div class="d-flex justify-content-center">
+						<h2>Calcul des résultats...</h2>
+					</div>
+					<div class="spinningMonke">
+						<img src="assets/images/spinningmonke.gif"></div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<main class="MainResultsContainer" id="results">
 		<div class="results">
 			<div class="resultsContainer">
 				<h1>
@@ -39,4 +53,8 @@
 			</div>
 		</div>
 	</main>
+{% endblock %}
+
+{% block javascript %}
+	<script type="text/javascript" src="assets/js/loading.js"></script>
 {% endblock %}

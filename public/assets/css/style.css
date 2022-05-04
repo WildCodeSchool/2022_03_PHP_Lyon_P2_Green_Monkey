@@ -35,7 +35,7 @@
 }
 
 body {
-    background: none;
+    background-color: var(--text-color);
 }
 
 html,
