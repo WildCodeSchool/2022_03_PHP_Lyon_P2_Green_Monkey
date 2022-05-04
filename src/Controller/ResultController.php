@@ -7,7 +7,7 @@ use App\Service\ResultService;
 
 class ResultController extends AbstractController
 {
-    public function index(): string
+    public function index(): ?string
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $resultManager = new ResultManager();
@@ -33,5 +33,6 @@ class ResultController extends AbstractController
             ]);
         }
         header("location: /calculator");
+        return null;
     }
 }
