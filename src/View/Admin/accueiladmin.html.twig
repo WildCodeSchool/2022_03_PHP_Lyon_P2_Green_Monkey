@@ -5,4 +5,24 @@
 {% endblock %}
 
 {% block content %}
+	<main class="admin-container">
+		<div class="container-fluid admin-page">
+			<div class="d-flex justify-content-center">
+				<div class="pageTitleContainer">
+					<h1 class="pageTitle pt-5 pt-lg-20 text-center">Espace administrateur</h1>
+				</div>
+			</div>
+			<div class="d-flex-column text-center">
+				<div class="mt-5">
+					<a href="admin/answers" role="button" class="btn MobileButton">Question</a>
+				</div>
+				<div class="mt-5">
+					<a href="admin/edit" role="button" class="btn MobileButton">Stats</a>
+				</div>
+				<div class="mt-5">
+					<a href="admin/stats" role="button" class="btn MobileButton">Edit</a>
+				</div>
+			</div>
+		</div>
+	</main>
 {% endblock %}
