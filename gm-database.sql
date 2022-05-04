@@ -1,3 +1,4 @@
+-- Creating database
 DROP DATABASE IF EXISTS projet2;
 CREATE DATABASE projet2;
 USE projet2;
@@ -121,3 +122,8 @@ values  (1404, 'q1_choice1'),
         (18.25, 'q16_choice2'),
         (7.3, 'q16_choice3'),
         (7.3, 'q16_choice4');
+
+insert into projet2.user_results (date, fp_total, fp_cat1, fp_cat2, fp_cat3, fp_cat4, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16)
+values  ('2022-05-03 10:11:13', 2431.53, 738.73, 423.5, 1140, 129.3, 'q1_choice3', 'q2_choice4', 'q3_choice3', 'q4_choice2', 'q5_choice2', 'q6_choice3', 'q7_choice3', 'q8_choice4', 'q9_choice3', 'q10_choice3', 'q11_choice4', 'q12_choice2', 'q13_choice3', 'q14_choice1', 'q15_choice4', 'q16_choice3'),
+        ('2022-05-04 14:45:39', 2702.23, 536.73, 260, 1560, 345.5, 'q1_choice3', 'q2_choice1', 'q3_choice3', 'q4_choice2', 'q5_choice4', 'q6_choice4', 'q7_choice2', 'q8_choice3', 'q9_choice4', 'q10_choice2', 'q11_choice3', 'q12_choice4', 'q13_choice1', 'q14_choice1', 'q15_choice2', 'q16_choice1'),
+        ('2022-05-04 14:46:12', 26557.3, 1614, 15807.8, 8539, 596.5, 'q1_choice1', 'q2_choice1', 'q3_choice1', 'q4_choice1', 'q5_choice1', 'q6_choice1', 'q7_choice1', 'q8_choice1', 'q9_choice1', 'q10_choice1', 'q11_choice1', 'q12_choice1', 'q13_choice1', 'q14_choice1', 'q15_choice1', 'q16_choice1');
