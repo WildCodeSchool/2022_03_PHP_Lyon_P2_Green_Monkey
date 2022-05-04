@@ -10,7 +10,10 @@ return [
     '' => ['HomeController', 'index',],
     'calculator' => ['QuestionController', 'index',],
     'results' => ['ResultController', 'index',],
-    'admin' => ['AdminController', 'edit'],
+    'admin' => ['AdminController', 'index'],
+    'admin/answers' => ['AdminController', 'answers'],
+    'admin/edit' => ['AdminController', 'edit'],
+    'admin/stats' => ['AdminController', 'stats'],
     'login' => ['UserController', 'login'],
     'logout' => ['UserController', 'logout']
 ];

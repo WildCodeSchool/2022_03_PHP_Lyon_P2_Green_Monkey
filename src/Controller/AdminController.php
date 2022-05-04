@@ -10,9 +10,20 @@ class AdminController extends AbstractController
 {
     public function index(): string
     {
-        $adminManager = new AdminManager();
-        $values = $adminManager->selectAll();
-        return $this->twig->render('Admin/admin.html.twig', ['values' => $values]);
+        if (!isset($_SESSION['user_mail'])) {
+            return $this->twig->render('Home/homepage.html.twig');
+        }
+
+        return $this->twig->render('Admin/accueiladmin.html.twig');
+    }
+
+    public function answers(): string
+    {
+        if (!isset($_SESSION['user_mail'])) {
+            return $this->twig->render('Home/homepage.html.twig');
+        }
+
+        return $this->twig->render('Admin/answers.html.twig');
     }
 
     public function edit(): ?string
@@ -46,5 +57,13 @@ class AdminController extends AbstractController
             }
         }
         return $this->twig->render('Admin/admin.html.twig', ['values' => $values, 'errors' => $errors]);
+    }
+
+    public function stats(): string
+    {
+        if (!isset($_SESSION['user_mail'])) {
+            return $this->twig->render('Home/homepage.html.twig');
+        }
+        return $this->twig->render('Admin/stats.html.twig');
     }
 }

@@ -1,0 +1,23 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+	{{parent()}} - Stats
+{% endblock %}
+
+{% block content %}
+
+<main class="mainStatsContainer">
+    <div class="container-fluid statsContainer">
+        <h1 class="display-1">Statistiques</h1>
+        <div id="sumAnswers">
+            <h2>Nombre de répondants</h2>
+        </div>
+        <div id="globalAverage">
+            <h2>Moyenne globale</h2>
+        </div>
+        <div id="averageByCategory">
+            <h2>Moyenne par catégorie</h2>
+        </div>
+    </div>
+</main>
+{% endblock %}

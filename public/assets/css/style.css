@@ -24,7 +24,8 @@
 .MainResultsContainer,
 .admin-container,
 .MainConnection,
-.MobileBodybackGround {
+.MobileBodybackGround,
+.mainStatsContainer {
     background: url(/assets/images/jungle-bg-blue.jpg);
     min-height: 100vh;
     -webkit-background-size: cover;
@@ -452,7 +453,8 @@ h2 {
     list-style-type: none;
 }
 
-/*---------- ADMIN PAGE -----------*/
+/*---------- ADMIN EDIT PAGE -----------*/
+
 .admin-page {
     padding-bottom: 2vh;
 }
@@ -519,4 +521,17 @@ h2 {
 .errorAdmin {
     font-size: 2rem;
     list-style-type: none;
+}
+
+/*--------- ADMIN STATS PAGE ----------------------*/
+
+.statsContainer {
+    background-color: var(--bs-yellow-light);
+        color: var(--bs-green-darker);
+        margin: 1em;
+        margin-top: 7.3em;
+        padding: 3vh;
+        border-radius: 25px;
+        box-shadow: var(--box-shadow);
+        max-width: 90%;
 }
