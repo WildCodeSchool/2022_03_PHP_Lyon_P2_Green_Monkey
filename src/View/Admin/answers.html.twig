@@ -5,23 +5,52 @@
 {% endblock %}
 
 {% block content %}
-	{# <div class="question, resultsContainer"
-	<p id="PColorGreen" class="text-center">
-	{% for answer in answers %}
-	{{ answer.in }}
-	{{ answer.q1 }}
-	{{ answer.q2 }}
-	{{ answer.q3 }}
-	{{ answer.q4 }}
-	{% endfor %}
-	</p> #}
 
-	<ul id="PColorGreen">
-		{% for result in results %}
-			<li>
-				{{ result.id }}
-			</li>
-		{% endfor %}
-	</ul>
+<main class="admin-container">
+		<div class="container-fluid admin-page">
+			<div class="d-flex justify-content-center">
+				<div class="pageTitleContainer">
+					<h1 class="pageTitle pt-5 pt-lg-20 text-center">Espace administrateur</h1>
+					<p class="pageSubtitle text-center">Tous les resultats !</p>
+				</div>
+			</div>
+	
 
+			<div class="accordion accordion-flush container-fluid" id="accordionFlushExample">
+				{% for result in results %}
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="flush-headingOne">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ loop.index }}" aria-expanded="false" aria-controls="flush-collapse{{ loop.index }}">
+							{{ result.date }}
+	
+							</button>
+						</h2>
+						<div id="flush-collapse{{ loop.index }}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body row row-cols-1 row-cols-md-4">
+							<p class="resultParagraph">{{ result.id }} </p>
+							<p class="resultParagraph">{{ result.q1 }}</p>
+							<p class="resultParagraph">{{ result.q2 }}</p>
+							<p class="resultParagraph">{{ result.q3 }}</p>
+							<p class="resultParagraph">{{ result.q4 }}</p>
+							<p class="resultParagraph">{{ result.q5 }}</p>
+							<p class="resultParagraph">{{ result.q6 }}</p>
+							<p class="resultParagraph">{{ result.q7 }}</p>
+							<p class="resultParagraph">{{ result.q8 }}</p>
+							<p class="resultParagraph">{{ result.q9 }}</p>
+							<p class="resultParagraph">{{ result.q10 }}</p>
+							<p class="resultParagraph">{{ result.q11 }}</p>
+							<p class="resultParagraph">{{ result.q12 }}</p>
+							<p class="resultParagraph">{{ result.q13 }}</p>
+							<p class="resultParagraph">{{ result.q14 }}</p>
+							<p class="resultParagraph">{{ result.q15 }}</p>
+							<p class="resultParagraph">{{ result.q16 }}</p>
+							<p class="resultParagraph">{{ result.fp_total }}</p>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+
+	</main>
 {% endblock %}

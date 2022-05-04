@@ -536,6 +536,6 @@ h2 {
         max-width: 90%;
 }
 
-.resultsContainer {
-    padding-top: 10em;
+.resultParagraph {
+    font-size: 1.6rem;
 }
