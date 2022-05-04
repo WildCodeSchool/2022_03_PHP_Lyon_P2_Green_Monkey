@@ -9,27 +9,29 @@ class ResultController extends AbstractController
 {
     public function index(): string
     {
-        $resultManager = new ResultManager();
-        $resultService = new ResultService();
-
-        // adding data to db
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $resultManager = new ResultManager();
+            $resultService = new ResultService();
+
             $answers = array_map('trim', $_POST);
-            $resultManager->insert($answers);
+
+            // fetching data from database and comparing it with POST
+            $values = $resultManager->fetchValuesByAnswer($answers);
+
+            // calculating footprint (total and by category)
+            $totalFootprint = $resultService->calculateTotalFootprint($values);
+            $footprintByCategory = $resultService->calculateFootprintByCat($values);
+
+            // adding data to db
+            $resultManager->insert($answers, $totalFootprint, $footprintByCategory);
+
+            // rendering page with data we got earlier
+            return $this->twig->render('Results/results.html.twig', [
+                'values' => $values,
+                'totalFootprint' => $totalFootprint,
+                'footprintByCategory' => $footprintByCategory
+            ]);
         }
-
-        // fetching data from database and comparing it with POST
-        $values = $resultManager->fetchValuesByAnswer($_POST);
-
-        // calculating footprint (total and by category)
-        $totalFootprint = $resultService->calculateTotalFootprint($values);
-        $footprintByCategory = $resultService->calculateFootprintByCat($values);
-
-        // rendering page with data we got earlier
-        return $this->twig->render('Results/results.html.twig', [
-            'values' => $values,
-            'totalFootprint' => $totalFootprint,
-            'footprintByCategory' => $footprintByCategory
-        ]);
+        header("location: /calculator");
     }
 }
