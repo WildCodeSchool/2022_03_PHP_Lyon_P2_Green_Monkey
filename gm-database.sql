@@ -1,6 +1,5 @@
 -- Creating tables
-
-drop table if exists answer
+drop table if exists answer;
 create table answer
 (
     id           int auto_increment
@@ -9,7 +8,7 @@ create table answer
     label        varchar(11) not null
 );
 
-drop table if exists user
+drop table if exists user;
 create table user
 (
     id       int auto_increment
@@ -18,7 +17,7 @@ create table user
     password varchar(100) null
 );
 
-drop table if exists user_results
+drop table if exists user_results;
 create table user_results
 (
     id       int auto_increment
