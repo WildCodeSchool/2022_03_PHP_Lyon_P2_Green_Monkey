@@ -319,7 +319,7 @@ body {
     justify-content: center;
 }
 
-.resultsContainer {
+.resultsContainer, .statsContainer {
     background-color: var(--bs-yellow-light);
     margin: 1em;
     padding: 3vh;
@@ -529,13 +529,27 @@ h2 {
 
 /*--------- ADMIN STATS PAGE ----------------------*/
 
-.statsContainer {
-    background-color: var(--bs-yellow-light);
-        color: var(--bs-green-darker);
-        margin: 1em;
-        margin-top: 7.3em;
-        padding: 3vh;
-        border-radius: 25px;
-        box-shadow: var(--box-shadow);
-        max-width: 90%;
+.adminTitleContainer {
+    background-color: var(--bs-green-dark);
+    padding: 2em 5em;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+.statsTitle {
+    font-size: 2.5rem;
+}
+
+#resultCategories {
+    background-color: var(--bs-green-dark);
+    box-shadow: var(--box-shadow);
+    border-radius: 15px;
+    padding: 0.8em;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+#resultCategories:hover {
+    background-color: var(--bs-green-darker);
 }
