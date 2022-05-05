@@ -10,19 +10,21 @@ use App\Service\StatService;
 
 class AdminController extends AbstractController
 {
-    public function index(): string
+    public function index(): ?string
     {
         if (!isset($_SESSION['user_mail'])) {
-            header('location: /login');
+            header('Location: ../login');
+            return null;
         }
 
         return $this->twig->render('Admin/accueiladmin.html.twig');
     }
 
-    public function answers(): string
+    public function answers(): ?string
     {
         if (!isset($_SESSION['user_mail'])) {
-            header('location: /login');
+            header('Location: ../login');
+            return null;
         }
 
         return $this->twig->render('Admin/answers.html.twig');
@@ -33,7 +35,8 @@ class AdminController extends AbstractController
         $errors = [];
 
         if (!isset($_SESSION['user_mail'])) {
-            header('location: /login');
+            header('Location: ../login');
+            return null;
         }
 
         $adminManager = new AdminManager();
@@ -60,10 +63,11 @@ class AdminController extends AbstractController
         return $this->twig->render('Admin/admin.html.twig', ['values' => $values, 'errors' => $errors]);
     }
 
-    public function show(): string
+    public function stats(): ?string
     {
         if (!isset($_SESSION['user_mail'])) {
-            header('location: /login');
+            header('Location: ../login');
+            return null;
         }
 
         // fetching values from db

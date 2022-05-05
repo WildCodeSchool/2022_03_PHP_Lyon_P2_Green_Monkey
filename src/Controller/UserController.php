@@ -22,7 +22,7 @@ class UserController extends AbstractController
             $userManager = new UserManager();
             $user = $userManager->selectOneByEmail($credentials['mail']);
 
-            if ($user == false || password_verify($credentials['password'], $user['password'])) {
+            if ($user == false || !password_verify($credentials['password'], $user['password'])) {
                 $errors['incorrect_credentials'] = 'Mauvais identifiants. Veuillez les saisir de nouveau.';
             }
 
