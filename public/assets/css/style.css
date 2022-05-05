@@ -575,4 +575,5 @@ h2 {
 
 .resultParagraph {
     font-size: 1.6rem;
+    list-style-type: none;
 }
