@@ -25,13 +25,20 @@ class ResultManager extends AbstractManager
         return $values;
     }
 
-    public function insert(array $answers): void
+    public function insert(array $answers, float $totalFootprint, array $footprintByCategory): void
     {
-        // preparing query
+        // data to put into query
         $timestamp = "' " . date('Y-m-d H:i:s') . "', ";
         $toSave = "q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16";
         $placeholders = ":q1, :q2, :q3, :q4, :q5, :q6, :q7, :q8, :q9, :q10, :q11, :q12, :q13, :q14, :q15, :q16";
-        $query = "INSERT INTO user_results (timestamp, " . $toSave . ") VALUES (" . $timestamp . $placeholders . ")";
+
+        // preparing query from said data + data we got from POST
+        $query = "INSERT INTO user_results (date, "
+            . $toSave . ", fp_total, fp_cat1, fp_cat2, fp_cat3, fp_cat4) VALUES ("
+            . $timestamp . $placeholders . ", " . $totalFootprint . ", "
+            . $footprintByCategory[0] . ", " . $footprintByCategory[1] . ", " . $footprintByCategory[2]
+            . ", " . $footprintByCategory[3] . ")";
+
         $statement = $this->pdo->prepare($query);
 
         // binding values

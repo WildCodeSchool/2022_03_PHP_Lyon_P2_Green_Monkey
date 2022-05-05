@@ -5,4 +5,52 @@
 {% endblock %}
 
 {% block content %}
+
+<main class="admin-container">
+		<div class="container-fluid admin-page">
+			<div class="d-flex justify-content-center">
+				<div class="pageTitleContainer">
+					<h1 class="pageTitle pt-5 pt-lg-20 text-center">Espace administrateur</h1>
+					<p class="pageSubtitle text-center">Tous les resultats !</p>
+				</div>
+			</div>
+	
+
+			<div class="accordion accordion-flush container-fluid" id="accordionFlushExample">
+				{% for result in results %}
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="flush-headingOne">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ loop.index }}" aria-expanded="false" aria-controls="flush-collapse{{ loop.index }}">
+							<h3> Questionnaire n°{{ loop.index }} le {{ result.date }} </h3>
+	
+							</button>
+						</h2>
+						<div id="flush-collapse{{ loop.index }}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body row row-cols-1 row-cols-md-4">
+							<ul>
+							<li class="resultParagraph">{{ result.q1 }}</li>
+							<li class="resultParagraph">{{ result.q2 }}</li>
+							<li class="resultParagraph">{{ result.q3 }}</li>
+							<li class="resultParagraph">{{ result.q4 }}</li>
+							<li class="resultParagraph">{{ result.q5 }}</li>
+							<li class="resultParagraph">{{ result.q6 }}</li>
+							<li class="resultParagraph">{{ result.q7 }}</li>
+							<li class="resultParagraph">{{ result.q8 }}</li>
+							<li class="resultParagraph">{{ result.q9 }}</li>
+							<li class="resultParagraph">{{ result.q10 }}</li>
+							<li class="resultParagraph">{{ result.q11 }}</li>
+							<li class="resultParagraph">{{ result.q12 }}</li>
+							<li class="resultParagraph">{{ result.q13 }}</li>
+							<li class="resultParagraph">{{ result.q14 }}</li>
+							<li class="resultParagraph">{{ result.q15 }}</li>
+							<li class="resultParagraph">{{ result.q16 }}</li>
+							<li class="resultParagraph"> Total de points (en kg) {{ result.fp_total }}</li>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+
+	</main>
 {% endblock %}

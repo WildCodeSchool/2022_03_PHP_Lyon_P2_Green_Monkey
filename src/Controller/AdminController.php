@@ -3,8 +3,10 @@
 namespace App\Controller;
 
 use App\Model\AdminManager;
+use App\Model\AdminResultManager;
 use Controller\UserController;
 use App\Service\AdminService;
+use App\Service\StatService;
 
 class AdminController extends AbstractController
 {
@@ -18,19 +20,19 @@ class AdminController extends AbstractController
         return $this->twig->render('Admin/accueiladmin.html.twig');
     }
 
-    public function answers(): ?string
+    public function showAnswers(): ?string
     {
         if (!isset($_SESSION['user_mail'])) {
             header('Location: ../login');
             return null;
         }
-
-        return $this->twig->render('Admin/answers.html.twig');
+        $adminResultManager = new AdminResultManager();
+        $results = $adminResultManager->selectAll();
+        return $this->twig->render('Admin/answers.html.twig', ['results' => $results]);
     }
 
     public function edit(): ?string
     {
-
         $errors = [];
 
         if (!isset($_SESSION['user_mail'])) {
@@ -68,6 +70,23 @@ class AdminController extends AbstractController
             header('Location: ../login');
             return null;
         }
-        return $this->twig->render('Admin/stats.html.twig');
+
+        // fetching values from db
+        $adminResultManager = new AdminResultManager();
+        $values = $adminResultManager->selectAll();
+
+        $statService = new StatService();
+        $total = $statService->calculateTotal($values);
+        $totalAvg = $statService->calculateAvgTotal($total);
+        $totalCatArray = $statService->calculateAvgByCategory($values);
+
+        return $this->twig->render(
+            'Admin/stats.html.twig',
+            [
+                'total' => $total,
+                'totalAvg' => $totalAvg,
+                'totalCatArray' => $totalCatArray
+            ]
+        );
     }
 }
