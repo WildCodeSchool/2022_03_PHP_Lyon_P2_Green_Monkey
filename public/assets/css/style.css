@@ -207,7 +207,7 @@ body {
 
 .HomeArticleFontResizeDesktopView {
     font-size: 2em;
-    
+
 }
 
 .HomeCenterTitleDesktopView {
@@ -373,6 +373,11 @@ h2 {
     margin: 1.5vh;
 }
 
+.resultsButton:hover {
+    background-color: var(--bs-yellow-darker);
+    color: var(--text-color);
+}
+
 /* ---------- LOGIN ---------- */
 .LoginContainer {
     background-color: var(--bs-yellow-light);
@@ -477,7 +482,6 @@ h2 {
 }
 
 /*---------- ADMIN EDIT PAGE -----------*/
-
 .admin-page {
     padding-bottom: 2vh;
 }
@@ -547,7 +551,6 @@ h2 {
 }
 
 /*--------- ADMIN STATS PAGE ----------------------*/
-
 .adminTitleContainer {
     background-color: var(--bs-green-dark);
     padding: 2em 5em;
