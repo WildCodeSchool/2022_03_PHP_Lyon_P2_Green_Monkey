@@ -72,14 +72,20 @@ class AdminController extends AbstractController
 
         // fetching values from db
         $adminResultManager = new AdminResultManager();
-        $values = $adminResultManager->select();
+        $values = $adminResultManager->selectAll();
 
         $statService = new StatService();
         $total = $statService->calculateTotal($values);
         $totalAvg = $statService->calculateAvgTotal($total);
         $totalCatArray = $statService->calculateAvgByCategory($values);
-        $twigRender = ['total' => $total, 'totalAvg' => $totalAvg, 'totalCatArray' => $totalCatArray];
 
-        return $this->twig->render('Admin/stats.html.twig', $twigRender);
+        return $this->twig->render(
+            'Admin/stats.html.twig',
+            [
+                'total' => $total,
+                'totalAvg' => $totalAvg,
+                'totalCatArray' => $totalCatArray
+            ]
+        );
     }
 }
