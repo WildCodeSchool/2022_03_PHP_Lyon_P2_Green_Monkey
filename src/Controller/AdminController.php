@@ -19,7 +19,7 @@ class AdminController extends AbstractController
         return $this->twig->render('Admin/accueiladmin.html.twig');
     }
 
-    public function showAnswers(): string
+    public function showAnswers(): ?string
     {
         if (!isset($_SESSION['user_mail'])) {
             return $this->twig->render('Home/homepage.html.twig');
