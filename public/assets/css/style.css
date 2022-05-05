@@ -203,11 +203,11 @@ body {
     padding-left: 2em;
     color: black;
     font-size: 1em;
-    max-width: 30vw;
 }
 
 .HomeArticleFontResizeDesktopView {
-    font-size: 1.7em;
+    font-size: 2em;
+    
 }
 
 .HomeCenterTitleDesktopView {
@@ -222,6 +222,25 @@ body {
     color: var(--bs-green-dark);
     font-weight: bold;
 }
+
+
+.HomeArticleWidthHistory {
+    margin: 3em;
+}
+
+.HomeArticleWidthWelcome {
+    margin: 5em;
+    margin-top: 2em;
+    font-size: 1em;
+}
+.HomeH2TextFormatWelcomeTitle {
+    font-size: 4.8em;
+}
+
+.HomeH2TextFormat {
+    margin-top: -0.2em;
+}
+
 
 /* ---------- CALCULATOR PAGE ---------- */
 .question {
@@ -556,4 +575,5 @@ h2 {
 
 .resultParagraph {
     font-size: 1.6rem;
+    list-style-type: none;
 }
