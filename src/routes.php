@@ -13,7 +13,7 @@ return [
     'admin' => ['AdminController', 'index'],
     'admin/answers' => ['AdminController', 'answers'],
     'admin/edit' => ['AdminController', 'edit'],
-    'admin/stats' => ['AdminController', 'stats'],
+    'admin/stats' => ['AdminController', 'show'],
     'login' => ['UserController', 'login'],
     'logout' => ['UserController', 'logout']
 ];

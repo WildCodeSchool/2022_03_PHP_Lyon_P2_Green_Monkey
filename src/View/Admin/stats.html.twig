@@ -1,23 +1,33 @@
 {% extends 'layout.html.twig' %}
 
 {% block title %}
-	{{parent()}} - Stats
+	{{parent()}}
+	- Stats
 {% endblock %}
 
 {% block content %}
 
 <main class="mainStatsContainer">
-    <div class="container-fluid statsContainer">
-        <h1 class="display-1">Statistiques</h1>
-        <div id="sumAnswers">
-            <h2>Nombre de répondants</h2>
-        </div>
-        <div id="globalAverage">
-            <h2>Moyenne globale</h2>
-        </div>
-        <div id="averageByCategory">
-            <h2>Moyenne par catégorie</h2>
-        </div>
-    </div>
-</main>
-{% endblock %}
+	<div class="container-fluid statsContainer">
+		<h1 class="display-1">Statistiques</h1>
+		<div id="sumAnswers">
+			<h2>Nombre de répondants</h2>
+<p> {{total.increment}} </p>
+		</div>
+		<div id="globalAverage">
+			<h2>Moyenne globale</h2>
+<p>Total :{{ total.sum }}</p>
+
+			<p>{{ totalAvg }}</p>
+			</div> <div id="averageByCategory">
+			 <h2> par catégorie</h2> {% for cat in totalCatArray %} 
+<p>
+{{cat}}
+</p>
+{%endfor%}
+
+
+			</div> 
+			</div> 
+			</main> 
+			{% endblock %}
