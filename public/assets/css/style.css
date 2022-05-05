@@ -26,7 +26,7 @@
 .MainConnection,
 .MobileBodybackGround,
 .mainStatsContainer {
-    background: url(/assets/images/jungle-bg-blue.jpg);
+    background: url(/assets/images/jungle-bg-blue.png);
     min-height: 100vh;
     -webkit-background-size: cover;
     -moz-background-size: cover;
