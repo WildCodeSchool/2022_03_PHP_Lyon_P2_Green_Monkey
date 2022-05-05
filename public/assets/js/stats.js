@@ -1,21 +1,43 @@
-const result = document.getElementById('resultCategories');
+const food = document.getElementById('food').textContent;
+const accommodation = document.getElementById('accommodation').textContent;
+const transport = document.getElementById('transport').textContent;
+const digital = document.getElementById('digital').textContent;
 
-//preparing the loading of average by category
-result.addEventListener('click', function() {
-    const food = document.getElementById('food').value;
-    const accommodation = document.getElementById('accommodation').value;
-    const transport = document.getElementById('transport').value;
-    const digital = document.getElementById('digital').value;
+let resultbyCategory = [
+    {'name' : 'Alimentation', 'value' : food },
+    {'name' : 'Logement', 'value' : accommodation },
+    {'name' : 'Transport', 'value' : transport },
+    {'name' : 'Numérique', 'value' : digital },
+];
 
-    let resultbyCategory = [food, accommodation, transport, digital];
-    resultbyCategory.sort();
+const labels = [
+    resultbyCategory[0].name,
+    resultbyCategory[1].name,
+    resultbyCategory[2].name,
+    resultbyCategory[3].name,
+  ];
 
-    const cat1 = document.getElementById('cat1');
-    cat1.innerHTML = resultbyCategory[0];
-    const cat2 = document.getElementById('cat2');
-    cat1.innerHTML = resultbyCategory[1];
-    const cat3 = document.getElementById('cat3');
-    cat1.innerHTML = resultbyCategory[2];
-    const cat4 = document.getElementById('cat4');
-    cat1.innerHTML = resultbyCategory[3];
-});
+const data = {
+labels: labels,
+datasets: [{
+    backgroundColor: [
+    '#0F5B01',
+    '#2ecc71',
+    'rgb(240,147,145)',
+    '#f39c12'
+    ],
+    borderColor: '#f1c40f',
+    data: [resultbyCategory[0].value, resultbyCategory[1].value, resultbyCategory[2].value, resultbyCategory[3].value]
+}]
+};
+
+const config = {
+type: 'doughnut',
+data: data,
+options: {}
+};
+
+const myChart = new Chart(
+document.getElementById('myChart'),
+config
+);

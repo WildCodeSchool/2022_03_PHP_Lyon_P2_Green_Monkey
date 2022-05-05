@@ -1,44 +1,47 @@
 {% extends 'layout.html.twig' %}
 
 {% block title %}
-	{{parent()}} - Stats
+	{{parent()}}
+	- Stats
 {% endblock %}
 
 {% block content %}
 
-<main class="mainStatsContainer d-flex flex-column align-items-center justify-content-center">
-    <div class="adminTitleContainer">
-        <h1 class="pt-5 pt-lg-20 text-center pageTitle">Statistiques</h1>
-    </div>
-    <div class="container-fluid statsContainer d-flex flex-column align-items-center">
-        <div id="sumAnswers">
-            <h2 class="display-2">Nombre de répondants</h2>
-            <p class="statsTitle">12 tonnes</p> {# data exemple#}
-        </div>
-        <div id="globalAverage d-flex">
-            <h2 class="display-2">Moyenne globale</h2>
-            <p class="statsTitle">5 tonnes</p> {# data exemple#}
-        </div>
-        <div id="averageByCategory">
-            <h2 class="display-2">Moyenne par catégorie</h2>
-            <button id="resultCategories" class="btn">Afficher les résultats</button>
-            {# when the averages will be ready, we will add them here#}
-            <p id="food"></p>
-            <p id="accommodation"></p>
-            <p id="transport"></p>
-            <p id="digital"></p>
+	<main class="mainStatsContainer d-flex flex-column align-items-center justify-content-center">
+		<div class="adminTitleContainer">
+			<h1 class="pt-5 pt-lg-20 text-center pageTitle">Statistiques</h1>
+		</div>
+		<div class="container-fluid statsContainer d-flex flex-column align-items-center">
+			<div id="sumAnswers">
+				<h2 class="display-2">Nombre de répondants</h2>
+				<p class="statsTitle">{{ total.increment }}</p>
+			</div>
+			<div id="globalAverage d-flex">
+				<h2 class="display-2">Moyenne globale</h2>
+				<p class="statsTitle">{{ total.sum }}
+					kg eq. CO2</p>
+			</div>
+			<div id="averageByCategory">
+				<h2 class="display-2">Moyenne par catégorie</h2>
+				<canvas id="myChart"></canvas>
 
-            {# this blocks will show the result by category#}
-            <div id="cat1" class="category"></div>
-            <div id="cat2" class="category"></div>
-            <div id="cat3" class="category"></div>
-            <div id="cat4" class="category"></div>
-        </div>
-    </div>
-</main>
+				<p id="food">1</p>
+				<p id="accommodation">10</p>
+				<p id="transport">3</p>
+				<p id="digital">80</p>
+
+				{# this blocks will show the result by category#}
+				<div id="cat1" class="category"></div>
+				<div id="cat2" class="category"></div>
+				<div id="cat3" class="category"></div>
+				<div id="cat4" class="category"></div>
+			</div>
+		</div>
+	</main>
 {% endblock %}
 
 {% block javascript %}
-			{{parent()}}
-            <script type="text/javascript" src="../assets/js/stats.js"></script>
+	{{parent()}}
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script type="text/javascript" src="../assets/js/stats.js"></script>
 {% endblock %}
