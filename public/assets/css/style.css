@@ -580,3 +580,8 @@ h2 {
     font-size: 1.6rem;
     list-style-type: none;
 }
+
+td {
+    border: 1px solid white;
+    text-align: center;
+}

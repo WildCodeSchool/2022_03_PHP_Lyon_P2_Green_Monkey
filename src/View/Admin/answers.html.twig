@@ -29,32 +29,80 @@
 						</h2>
 						<div id="flush-collapse{{ loop.index }}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
 							<div class="accordion-body row row-cols-1 row-cols-md-4">
-								<ul>
-									<li class="resultParagraph">{{ result.q1 }}</li>
-									<li class="resultParagraph">{{ result.q2 }}</li>
-									<li class="resultParagraph">{{ result.q3 }}</li>
-									<li class="resultParagraph">{{ result.q4 }}</li>
-									<li class="resultParagraph">{{ result.q5 }}</li>
-									<li class="resultParagraph">{{ result.q6 }}</li>
-									<li class="resultParagraph">{{ result.q7 }}</li>
-									<li class="resultParagraph">{{ result.q8 }}</li>
-									<li class="resultParagraph">{{ result.q9 }}</li>
-									<li class="resultParagraph">{{ result.q10 }}</li>
-									<li class="resultParagraph">{{ result.q11 }}</li>
-									<li class="resultParagraph">{{ result.q12 }}</li>
-									<li class="resultParagraph">{{ result.q13 }}</li>
-									<li class="resultParagraph">{{ result.q14 }}</li>
-									<li class="resultParagraph">{{ result.q15 }}</li>
-									<li class="resultParagraph">{{ result.q16 }}</li>
-									<li class="resultParagraph">
-										Total (en Kg eq. CO2) :
-										{{ result.fp_total }}</li>
-								</div>
-							</div>
+								<table>
+									<tr>
+										<td class="display-4">Question 1</td>
+										<td class="display-4">{{ result.q1 }}</td>
+									</tr>
+									<tr>
+										<td class="display-4">Question 2</td>
+										<td class="display-4">{{ result.q2 }}</td>
+									</tr>
+									<tr>
+										<td class="display-4">Question 3</td>
+										<td class="display-4">{{ result.q3 }}</td>
+									</tr>
+									<tr>
+										<td class="display-4">Question 4</td>
+										<td class="display-4">{{ result.q4 }}</td>
+									</tr>
+									<tr>
+										<td class="display-4">Question 5</td>
+										<td class="display-4">{{ result.q5 }}</td>
+									</tr>
+									<tr>
+										<td class="display-4">Question 6</td>
+										<td class="display-4">{{ result.q6 }}</td>
+									</tr>
+									<tr>
+										<td class="display-4">Question 7</td>
+										<td class="display-4">{{ result.q7 }}</td>
+									</tr>
+									<tr>
+										<td class="display-4">Question 8</td>
+										<td class="display-4">{{ result.q8 }}</td>
+									</tr>
+									<tr>
+										<td class="display-4">Question 9</td>
+										<td class="display-4">{{ result.q9 }}</td>
+									</tr>
+									<tr>
+										<td class="display-4">Question 10</td>
+										<td class="display-4">{{ result.q10 }}</td>
+									</tr>
+									<tr>
+										<td class="display-4">Question 11</td>
+										<td class="display-4">{{ result.q11 }}</td>
+									</tr>
+									<tr>
+										<td class="display-4">Question 12</td>
+										<td class="display-4">{{ result.q12 }}</td>
+									</tr>
+									<tr>
+										<td class="display-4">Question 13</td>
+										<td class="display-4">{{ result.q13 }}</td>
+									</tr>
+									<tr>
+										<td class="display-4">Question 14</td>
+										<td class="display-4">{{ result.q14 }}</td>
+									</tr>
+									<tr>
+										<td class="display-4">Question 15</td>
+										<td class="display-4">{{ result.q15 }}</td>
+									</tr>
+									<tr>
+										<td class="display-4">Question 16</td>
+										<td class="display-4">{{ result.q16 }}</td>
+									</tr>
+									<tr>
+										<td class="display-4">Total (en Kg eq. CO2)</td>
+										<td class="display-4">{{ result.fp_total }}</td>
+									</tr>
+							</table>
 						</div>
-					{% endfor %}
-				</div>
+					</div>
+				{% endfor %}
 			</div>
-
-		</main>
-	{% endblock %}
+		</div>
+	</main>
+{% endblock %}
