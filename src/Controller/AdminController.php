@@ -56,8 +56,6 @@ class AdminController extends AbstractController
                 $adminManager->update($values);
 
                 header('Location: /admin');
-
-                // we are redirecting so we don't want any content rendered
                 return null;
             }
         }
