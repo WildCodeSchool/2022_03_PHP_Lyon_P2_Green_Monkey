@@ -28,6 +28,7 @@ class ResultManager extends AbstractManager
     public function insert(array $answers, float $totalFootprint, array $footprintByCategory): void
     {
         // data to put into query
+        date_default_timezone_set('Europe/Paris');
         $timestamp = "' " . date('Y-m-d H:i:s') . "', ";
         $toSave = "q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16";
         $placeholders = ":q1, :q2, :q3, :q4, :q5, :q6, :q7, :q8, :q9, :q10, :q11, :q12, :q13, :q14, :q15, :q16";
