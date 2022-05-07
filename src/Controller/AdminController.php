@@ -17,7 +17,7 @@ class AdminController extends AbstractController
             return null;
         }
 
-        return $this->twig->render('Admin/accueiladmin.html.twig');
+        return $this->twig->render('Admin/index.html.twig');
     }
 
     public function showAnswers(): ?string
@@ -55,11 +55,11 @@ class AdminController extends AbstractController
                 $adminManager = new AdminManager();
                 $adminManager->update($values);
 
-                header('Location: /admin');
+                header('Location: /admin/edit');
                 return null;
             }
         }
-        return $this->twig->render('Admin/admin.html.twig', ['values' => $values, 'errors' => $errors]);
+        return $this->twig->render('Admin/edit.html.twig', ['values' => $values, 'errors' => $errors]);
     }
 
     public function stats(): ?string
