@@ -207,7 +207,6 @@ body {
 
 .HomeArticleFontResizeDesktopView {
     font-size: 2em;
-
 }
 
 .HomeCenterTitleDesktopView {
@@ -222,7 +221,6 @@ body {
     color: var(--bs-green-dark);
     font-weight: bold;
 }
-
 
 .HomeArticleWidthHistory {
     margin: 3em;
@@ -240,7 +238,6 @@ body {
 .HomeH2TextFormat {
     margin-top: -0.2em;
 }
-
 
 /* ---------- CALCULATOR PAGE ---------- */
 .question {
@@ -300,7 +297,8 @@ body {
     min-width: 200px;
 }
 
-.question h2, .funfact h2 {
+.question h2,
+.funfact h2 {
     font-size: 3rem;
 }
 
@@ -338,7 +336,8 @@ body {
     justify-content: center;
 }
 
-.resultsContainer, .statsContainer {
+.resultsContainer,
+.statsContainer {
     background-color: var(--bs-yellow-light);
     margin: 1em;
     padding: 3vh;
@@ -581,7 +580,16 @@ h2 {
     list-style-type: none;
 }
 
+/*--------- ADMIN RESULTS PAGE ----------------------*/
 td {
     border: 1px solid white;
     text-align: center;
+}
+
+.tableContainer {
+    width: 100vw;
+}
+
+.table-results {
+    font-size: 1.6rem;
 }

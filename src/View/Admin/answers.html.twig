@@ -29,80 +29,40 @@
 						</h2>
 						<div id="flush-collapse{{ loop.index }}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
 							<div class="accordion-body row row-cols-1 row-cols-md-4">
-								<table>
-									<tr>
-										<td class="display-4">Question 1</td>
-										<td class="display-4">{{ result.q1 }}</td>
-									</tr>
-									<tr>
-										<td class="display-4">Question 2</td>
-										<td class="display-4">{{ result.q2 }}</td>
-									</tr>
-									<tr>
-										<td class="display-4">Question 3</td>
-										<td class="display-4">{{ result.q3 }}</td>
-									</tr>
-									<tr>
-										<td class="display-4">Question 4</td>
-										<td class="display-4">{{ result.q4 }}</td>
-									</tr>
-									<tr>
-										<td class="display-4">Question 5</td>
-										<td class="display-4">{{ result.q5 }}</td>
-									</tr>
-									<tr>
-										<td class="display-4">Question 6</td>
-										<td class="display-4">{{ result.q6 }}</td>
-									</tr>
-									<tr>
-										<td class="display-4">Question 7</td>
-										<td class="display-4">{{ result.q7 }}</td>
-									</tr>
-									<tr>
-										<td class="display-4">Question 8</td>
-										<td class="display-4">{{ result.q8 }}</td>
-									</tr>
-									<tr>
-										<td class="display-4">Question 9</td>
-										<td class="display-4">{{ result.q9 }}</td>
-									</tr>
-									<tr>
-										<td class="display-4">Question 10</td>
-										<td class="display-4">{{ result.q10 }}</td>
-									</tr>
-									<tr>
-										<td class="display-4">Question 11</td>
-										<td class="display-4">{{ result.q11 }}</td>
-									</tr>
-									<tr>
-										<td class="display-4">Question 12</td>
-										<td class="display-4">{{ result.q12 }}</td>
-									</tr>
-									<tr>
-										<td class="display-4">Question 13</td>
-										<td class="display-4">{{ result.q13 }}</td>
-									</tr>
-									<tr>
-										<td class="display-4">Question 14</td>
-										<td class="display-4">{{ result.q14 }}</td>
-									</tr>
-									<tr>
-										<td class="display-4">Question 15</td>
-										<td class="display-4">{{ result.q15 }}</td>
-									</tr>
-									<tr>
-										<td class="display-4">Question 16</td>
-										<td class="display-4">{{ result.q16 }}</td>
-									</tr>
-									<tr>
-										<td class="display-4">Total (en Kg eq. CO2)</td>
-										<td class="display-4">{{ result.fp_total }}</td>
-									</tr>
-							</table>
+								<div class="tableContainer">
+									<table>
+										<tr>
+											{% for i in 1..16 %}
+												<td class="table-results">Question
+													{{ i }}</td>
+											{% endfor %}
+											<td class="table-results">Total (en Kg eq. CO2)</td>
+										</tr>
+										<tr>
+											<td class="table-results">{{ result.q1|slice(9, 10) }}</td>
+											<td class="table-results">{{ result.q2|slice(9, 10) }}</td>
+											<td class="table-results">{{ result.q3|slice(9, 10) }}</td>
+											<td class="table-results">{{ result.q4|slice(9, 10) }}</td>
+											<td class="table-results">{{ result.q5|slice(9, 10) }}</td>
+											<td class="table-results">{{ result.q6|slice(9, 10) }}</td>
+											<td class="table-results">{{ result.q7|slice(9, 10) }}</td>
+											<td class="table-results">{{ result.q8|slice(9, 10) }}</td>
+											<td class="table-results">{{ result.q9|slice(9, 10) }}</td>
+											<td class="table-results">{{ result.q10|slice(10, 11) }}</td>
+											<td class="table-results">{{ result.q11|slice(10, 11) }}</td>
+											<td class="table-results">{{ result.q12|slice(10, 11) }}</td>
+											<td class="table-results">{{ result.q13|slice(10, 11) }}</td>
+											<td class="table-results">{{ result.q14|slice(10, 11) }}</td>
+											<td class="table-results">{{ result.q15|slice(10, 11) }}</td>
+											<td class="table-results">{{ result.q16|slice(10, 11) }}</td>
+											<td class="table-results">{{ result.fp_total }}</td>
+										</tr>
+									</table>
+								</div>
+							</div>
 						</div>
-					</div>
-				{% endfor %}
+					{% endfor %}
+				</div>
 			</div>
-		</div>
-	</main>
-{% endblock %}
+		</main>
+	{% endblock %}
