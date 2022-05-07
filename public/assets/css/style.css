@@ -584,6 +584,13 @@ h2 {
 td {
     border: 1px solid white;
     text-align: center;
+    width: 5.55%;
+    min-width: 35px;
+}
+
+.firstCol {
+    width: 7%;
+    min-width: 100px;
 }
 
 .tableContainer {
@@ -593,4 +600,5 @@ td {
 
 .table-results {
     font-size: 1.6rem;
+    color: var(--bs-green-darker);
 }
