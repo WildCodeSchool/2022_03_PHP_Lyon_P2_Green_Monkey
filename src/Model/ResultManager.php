@@ -29,7 +29,8 @@ class ResultManager extends AbstractManager
     {
         // data to put into query
         date_default_timezone_set('Europe/Paris');
-        $timestamp = "' " . date('Y-m-d H:i:s') . "', ";
+        $string = mt_rand(1649419200, 1652284800);
+        $timestamp = "' " . date('Y-m-d H:i:s', $string) . "', ";
         $toSave = "q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16";
         $placeholders = ":q1, :q2, :q3, :q4, :q5, :q6, :q7, :q8, :q9, :q10, :q11, :q12, :q13, :q14, :q15, :q16";
 
