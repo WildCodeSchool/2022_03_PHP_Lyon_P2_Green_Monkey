@@ -588,6 +588,7 @@ td {
 
 .tableContainer {
     width: 100vw;
+    overflow:auto;
 }
 
 .table-results {
