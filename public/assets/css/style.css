@@ -251,6 +251,8 @@ body {
     box-shadow: var(--box-shadow);
     min-height: 30vh;
     min-width: 300px;
+    margin-top: 12em;
+
 }
 
 .questionTitle {
