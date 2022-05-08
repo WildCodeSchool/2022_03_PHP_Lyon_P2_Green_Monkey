@@ -246,7 +246,6 @@ body {
 .question {
     background-color: var(--bs-yellow-light);
     color: var(--bs-green-darker);
-    margin: 1em;
     padding: 3vh;
     border-radius: 25px;
     box-shadow: var(--box-shadow);
