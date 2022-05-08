@@ -554,6 +554,7 @@ h2 {
 .adminTitleContainer {
     background-color: var(--bs-green-dark);
     padding: 2em 5em;
+    margin-top: 7.3em;
     border-radius: 25px;
     text-align: center;
     box-shadow: var(--box-shadow);
