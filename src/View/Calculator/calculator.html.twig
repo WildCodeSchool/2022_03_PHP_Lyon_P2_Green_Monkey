@@ -25,7 +25,8 @@
 						<div class="carousel-item {% if loop.index == 1 %}active{% endif %}" id="slide{{ loop.index }}">
 							<form action="results" method="post">
 								<div class="carousel-block d-flex justify-content-center">
-									<div class="p-4 question w-50">
+
+									<div class="p-4 question">
 										<div>
 											<p>
 												<h2 class="questionTitle">
@@ -54,11 +55,12 @@
 											</div>
 										</div>
 									</div>
-                                    <div class="speech-bubble d-none d-sm-block">
-                                        <h2>Le saviez-vous ?</h2>
-                                        <p>{{ question.fact }}</p>
-                                        <a href="{{ question.source }}" target="_blank">Source</a>
-                                    </div>
+									<div class="speech-bubble d-none d-xl-block align-self-end">
+
+										<h2>Le saviez-vous ?</h2>
+										<p>{{ question.fact }}</p>
+										<a href="{{ question.source }}" target="_blank">Source</a>
+									</div>
 								</div>
 							</div>
 						{% endfor %}

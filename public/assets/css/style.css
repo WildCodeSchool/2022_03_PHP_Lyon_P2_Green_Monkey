@@ -250,9 +250,9 @@ body {
     border-radius: 25px;
     box-shadow: var(--box-shadow);
     min-height: 30vh;
-    min-width: 300px;
+    min-width: 30vh;
+    width: 100em;
     margin-top: 12em;
-
 }
 
 .questionTitle {
@@ -585,11 +585,13 @@ h2 {
     margin-left: 20em;
     padding: 1em;
     width: 55em;
-    height: 29em;
+    height: max-content;
     border-radius: 0.25em;
     transform: rotate(-4deg) rotateY(15deg);
     background: var(--bs-green-dark);
     text-align: center;
+    margin-bottom: 6em;
+
 }
 .speech-bubble:before, .speech-bubble:after {
     position: absolute;
@@ -605,8 +607,10 @@ h2 {
 .speech-bubble:before {
     border: solid 0 transparent;
     border-right: solid 3.5em var(--bs-green-light);
-    border-bottom: solid .25em var(--bs-green-dark);
-    bottom: .25em; left: 1.25em;
-    width: 0; height: 1em;
+    border-bottom: solid 0.25em var(--bs-green-dark);
+    bottom: 2.25em;
+    left: 1.25em;
+    width: 0;
+    height: 3em;
     transform: rotate(45deg) skewX(75deg);
 }
