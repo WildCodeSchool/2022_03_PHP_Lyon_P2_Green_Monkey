@@ -28,6 +28,7 @@ class AdminController extends AbstractController
         }
         $adminResultManager = new AdminResultManager();
         $results = $adminResultManager->selectAll();
+
         return $this->twig->render('Admin/answers.html.twig', ['results' => $results]);
     }
 
@@ -56,12 +57,13 @@ class AdminController extends AbstractController
                 $adminManager->update($values);
 
                 header('Location: /admin');
-
-                // we are redirecting so we don't want any content rendered
                 return null;
             }
         }
-        return $this->twig->render('Admin/admin.html.twig', ['values' => $values, 'errors' => $errors]);
+        return $this->twig->render('Admin/admin.html.twig', [
+            'values' => $values,
+            'errors' => $errors
+        ]);
     }
 
     public function stats(): ?string
@@ -75,6 +77,7 @@ class AdminController extends AbstractController
         $adminResultManager = new AdminResultManager();
         $values = $adminResultManager->selectAll();
 
+        // calculating stats
         $statService = new StatService();
         $total = $statService->calculateTotal($values);
         $totalAvg = $statService->calculateAvgTotal($total);
