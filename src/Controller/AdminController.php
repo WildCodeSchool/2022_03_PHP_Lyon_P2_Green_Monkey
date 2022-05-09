@@ -61,7 +61,6 @@ class AdminController extends AbstractController
             }
         }
         return $this->twig->render('Admin/edit.html.twig', ['values' => $values, 'errors' => $errors]);
-
     }
 
     public function stats(): ?string
