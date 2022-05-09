@@ -29,32 +29,41 @@
 						</h2>
 						<div id="flush-collapse{{ loop.index }}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
 							<div class="accordion-body row row-cols-1 row-cols-md-4">
-								<ul>
-									<li class="resultParagraph">{{ result.q1 }}</li>
-									<li class="resultParagraph">{{ result.q2 }}</li>
-									<li class="resultParagraph">{{ result.q3 }}</li>
-									<li class="resultParagraph">{{ result.q4 }}</li>
-									<li class="resultParagraph">{{ result.q5 }}</li>
-									<li class="resultParagraph">{{ result.q6 }}</li>
-									<li class="resultParagraph">{{ result.q7 }}</li>
-									<li class="resultParagraph">{{ result.q8 }}</li>
-									<li class="resultParagraph">{{ result.q9 }}</li>
-									<li class="resultParagraph">{{ result.q10 }}</li>
-									<li class="resultParagraph">{{ result.q11 }}</li>
-									<li class="resultParagraph">{{ result.q12 }}</li>
-									<li class="resultParagraph">{{ result.q13 }}</li>
-									<li class="resultParagraph">{{ result.q14 }}</li>
-									<li class="resultParagraph">{{ result.q15 }}</li>
-									<li class="resultParagraph">{{ result.q16 }}</li>
-									<li class="resultParagraph">
-										Total (en Kg eq. CO2) :
-										{{ result.fp_total }}</li>
+								<div class="tableContainer">
+									<table>
+										<tr>
+											<td class="table-results firstCol">Question</td>
+											{% for i in 1..16 %}
+												<td class="table-results">{{ i }}</td>
+											{% endfor %}
+											<td class="table-results firstCol">Total</td>
+										</tr>
+										<tr>
+											<td class="table-results">Réponse</td>
+											<td class="table-results">{{ result.q1|slice(9, 10) }}</td>
+											<td class="table-results">{{ result.q2|slice(9, 10) }}</td>
+											<td class="table-results">{{ result.q3|slice(9, 10) }}</td>
+											<td class="table-results">{{ result.q4|slice(9, 10) }}</td>
+											<td class="table-results">{{ result.q5|slice(9, 10) }}</td>
+											<td class="table-results">{{ result.q6|slice(9, 10) }}</td>
+											<td class="table-results">{{ result.q7|slice(9, 10) }}</td>
+											<td class="table-results">{{ result.q8|slice(9, 10) }}</td>
+											<td class="table-results">{{ result.q9|slice(9, 10) }}</td>
+											<td class="table-results">{{ result.q10|slice(10, 11) }}</td>
+											<td class="table-results">{{ result.q11|slice(10, 11) }}</td>
+											<td class="table-results">{{ result.q12|slice(10, 11) }}</td>
+											<td class="table-results">{{ result.q13|slice(10, 11) }}</td>
+											<td class="table-results">{{ result.q14|slice(10, 11) }}</td>
+											<td class="table-results">{{ result.q15|slice(10, 11) }}</td>
+											<td class="table-results">{{ result.q16|slice(10, 11) }}</td>
+											<td class="table-results">{{ result.fp_total }}</td>
+										</tr>
+									</table>
 								</div>
 							</div>
 						</div>
 					{% endfor %}
 				</div>
 			</div>
-
 		</main>
 	{% endblock %}

@@ -28,6 +28,7 @@ class AdminController extends AbstractController
         }
         $adminResultManager = new AdminResultManager();
         $results = $adminResultManager->selectAll();
+
         return $this->twig->render('Admin/answers.html.twig', ['results' => $results]);
     }
 
@@ -60,6 +61,7 @@ class AdminController extends AbstractController
             }
         }
         return $this->twig->render('Admin/edit.html.twig', ['values' => $values, 'errors' => $errors]);
+
     }
 
     public function stats(): ?string
@@ -73,6 +75,7 @@ class AdminController extends AbstractController
         $adminResultManager = new AdminResultManager();
         $values = $adminResultManager->selectAll();
 
+        // calculating stats
         $statService = new StatService();
         $total = $statService->calculateTotal($values);
         $totalAvg = $statService->calculateAvgTotal($total);
