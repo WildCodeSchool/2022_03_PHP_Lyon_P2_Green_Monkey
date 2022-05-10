@@ -533,11 +533,6 @@ h2 {
     color: var(--text-color) !important;
 }
 
-.oldAnswerValue {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
 .answer-value {
     font-size: 1.6rem;
 }
