@@ -39,13 +39,9 @@
 							<div class="accordion-body row row-cols-1 row-cols-md-4">
 								{% for value in items %}
 									<form method="post" class="d-flex flex-column align-items-center">
-										<p class="answer-value">{{ value.label }}
-											:
-											<span class="oldAnswerValue">{{value.answer_value}}</span>
-										</p>
 										<p class="d-flex flex-column align-items-center">
 											<input type="hidden" id="id" name="id" value="{{ value.id }}">
-											<label class="answer-value" for="answer_value">Nouvelle valeur de réponse :</label>
+											<label class="answer-value" for="answer_value">Changer la réponse {{ value.label | last }} :</label>
 											<input class="input-group-text m-2 admin-input" type="number" step=".01" id="answer_value" name="answer_value" value="{{value.answer_value}}">
 											<input class="btn btn-change-value m-2 center" type="submit" value="Modifier la valeur">
 										</p>
