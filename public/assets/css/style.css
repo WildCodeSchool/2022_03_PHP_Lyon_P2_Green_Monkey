@@ -244,23 +244,29 @@ body {
 
 /* ---------- CALCULATOR PAGE ---------- */
 .question {
-    background-color: var(--bs-yellow-light);
+        background-color: var(--bs-yellow-light);
     color: var(--bs-green-darker);
-    padding: 3vh;
+    margin-right: 5em;
     border-radius: 25px;
     box-shadow: var(--box-shadow);
     min-height: 30vh;
-    min-width: 30vh;
+    min-width: 25vh;
     width: 100em;
     margin-top: 12em;
+    margin-left: 5em;
+    margin-bottom: 1em;
 }
+.questionContainer {
+    height: 26em;
+}
+
 
 .questionTitle {
     font-size: 2.5rem;
 }
 
 .questionChoice {
-    font-size: 1.7rem;
+    font-size: 2.5rem;
     margin-left: 2vw;
 }
 
@@ -295,6 +301,44 @@ body {
 
 .speech-bubble h2 {
     font-size: 4em;
+}
+
+.speechBubble {
+    position: relative;
+    margin-left: 20em;
+    padding: 1em;
+    width: 55em;
+    height: max-content;
+    border-radius: 0.25em;
+    transform: rotate(-4deg) rotateY(15deg);
+    background: var(--bs-green-dark);
+    text-align: center;
+    margin-bottom: 15em;
+    margin-right: 5em;
+}
+.speechBubble:before, .speechBubble:after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+}
+.speechBubble:after {
+    top: 0; right: 0; bottom: 0; left: 0;
+    border-radius: inherit;
+    transform: rotate(2deg) translate(.35em, -.15em) scale(1.02);
+    background: var(--bs-green-light);
+}
+.speechBubble:before {
+	content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 35px solid transparent;
+    border-top-color: var(--bs-green-light);
+    border-bottom: 0;
+    margin-left: -6em;
+    margin-bottom: -31px;
 }
 
 .question h2 {
@@ -577,40 +621,4 @@ h2 {
 .resultParagraph {
     font-size: 1.6rem;
     list-style-type: none;
-}
-
-.speech-bubble {
-    position: relative;
-    margin-top: 6em;
-    margin-left: 20em;
-    padding: 1em;
-    width: 55em;
-    height: max-content;
-    border-radius: 0.25em;
-    transform: rotate(-4deg) rotateY(15deg);
-    background: var(--bs-green-dark);
-    text-align: center;
-    margin-bottom: 6em;
-
-}
-.speech-bubble:before, .speech-bubble:after {
-    position: absolute;
-    z-index: -1;
-    content: '';
-}
-.speech-bubble:after {
-    top: 0; right: 0; bottom: 0; left: 0;
-    border-radius: inherit;
-    transform: rotate(2deg) translate(.35em, -.15em) scale(1.02);
-    background: var(--bs-green-light);
-}
-.speech-bubble:before {
-    border: solid 0 transparent;
-    border-right: solid 3.5em var(--bs-green-light);
-    border-bottom: solid 0.25em var(--bs-green-dark);
-    bottom: 2.25em;
-    left: 1.25em;
-    width: 0;
-    height: 3em;
-    transform: rotate(45deg) skewX(75deg);
 }
