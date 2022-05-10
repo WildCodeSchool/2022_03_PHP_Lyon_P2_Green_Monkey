@@ -8,23 +8,23 @@
 {% block content %}
 
 	<main class="mainStatsContainer flex-column d-flex align-items-center">
-		<div class="adminTitleContainer">
-			<h1 class="display-1">Statistiques</h1>
+		<div class="pageTitleContainer">
+			<h1 class="pageTitle pt-5 pt-lg-20 text-center">Statistiques</h1>
 		</div>
 		<div class="container-fluid statsContainer">
 			<div id="sumAnswers">
-				<h2 class="display-2">Nombre de répondants</h2>
+				<h2 class="display-2">Nombre de réponses</h2>
 				<p class="statsTitle">{{ total.increment }}</p>
 			</div>
 			<div id="globalAverage d-flex">
 				<h2 class="display-2">Total des émissions</h2>
-				<p class="statsTitle">{{ total.sum }}
-					kg eq. CO2</p>
+				<p class="statsTitle">{{ (total.sum /1000) | round(2, 'common') | number_format(2, ',', ' ') }}
+					t (eq. CO2)</p>
 			</div>
 			<div id="globalAverage d-flex">
-				<h2 class="display-2">Moyenne globale</h2>
-				<p class="statsTitle">{{ totalAvg }}
-					kg eq. CO2</p>
+				<h2 class="display-2">Moyenne générale</h2>
+				<p class="statsTitle">{{ (totalAvg /1000) | round(2, 'common') | number_format(2, ',', ' ') }}
+					t (eq. CO2)</p>
 			</div>
 			<div id="averageByCategory">
 				<h2 class="display-2">Moyenne par catégorie</h2>
@@ -43,6 +43,6 @@
 
 {% block javascript %}
 	{{parent()}}
-	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
 	<script type="text/javascript" src="../assets/js/stats.js"></script>
 {% endblock %}

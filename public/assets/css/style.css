@@ -57,7 +57,7 @@ body {
 }
 
 .pageTitle {
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 .pageSubtitle {
@@ -280,6 +280,10 @@ body {
     background-color: var(--bs-yellow-darker);
 }
 
+.calculatorCheck {
+    cursor: pointer!important;
+}
+
 .listingQuestion {
     font-size: 2rem;
 }
@@ -313,6 +317,7 @@ body {
     color: var(--text-color);
     width: 200px;
 }
+
 #final-button {
     display: none;
     margin-top: 10vh;
@@ -346,8 +351,8 @@ body {
     text-align: center;
     font-family: var(--font-family);
     width: auto;
-    box-shadow: 3px 1px 10px black;
     margin-top: 10vh;
+    color: var(--bs-green-darker);
 }
 
 .resultsContainer h1,
@@ -357,8 +362,27 @@ h2 {
 
 .resultsByCategory {
     font-size: 2.5em;
+}
+
+.resultsByCategory,
+.resultsTotal,
+.resultsCommentContainer {
     margin-bottom: 3vh;
     margin-top: 3vh;
+}
+
+.resultHigher {
+    color: var(--bs-yellow-darker);
+    font-weight: bold;
+}
+
+.resultLower {
+    color: var(--bs-green-light);
+    font-weight: bold;
+}
+
+.resultsComment {
+    font-size: 2rem;
 }
 
 .resultsButton {
@@ -509,13 +533,13 @@ h2 {
     color: var(--text-color) !important;
 }
 
-.oldAnswerValue {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
 .answer-value {
     font-size: 1.6rem;
+}
+
+.adminBtn {
+    height: auto;
+    box-shadow: var(--box-shadow);
 }
 
 .admin-input {
@@ -550,30 +574,13 @@ h2 {
 }
 
 /*--------- ADMIN STATS PAGE ----------------------*/
-.adminTitleContainer {
-    background-color: var(--bs-green-dark);
-    padding: 2em 5em;
-    margin-top: 7.3em;
-    border-radius: 25px;
-    text-align: center;
-    box-shadow: var(--box-shadow);
-}
-
 .statsTitle {
     font-size: 2.5rem;
+    margin-bottom: 3vh;
 }
 
-#resultCategories {
-    background-color: var(--bs-green-dark);
-    box-shadow: var(--box-shadow);
-    border-radius: 15px;
-    padding: 0.8em;
-    color: var(--text-color);
-    font-size: 1.5rem;
-}
-
-#resultCategories:hover {
-    background-color: var(--bs-green-darker);
+.statsContainer {
+    margin-top: 0vh;
 }
 
 .resultParagraph {
