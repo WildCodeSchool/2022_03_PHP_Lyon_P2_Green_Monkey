@@ -600,10 +600,36 @@ td {
 
 .tableContainer {
     width: 100vw;
-    overflow:auto;
+    overflow: auto;
 }
 
 .table-results {
     font-size: 1.6rem;
     color: var(--bs-green-darker);
+}
+
+/*--------- FOOTER ----------------------*/
+.footer {
+    background: var(--bs-green-dark);
+    box-shadow: var(--box-shadow);
+}
+
+.footerName {
+padding-top: 1vh;
+}
+
+.footerName, .footerText, .footerLinks {
+    font-size: 2.1rem;
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 0vh;
+}
+
+.footerLinks {
+    text-decoration: none;
+    font-size: 1.7rem;
+}
+
+.footerLinks:hover {
+    color: var(--bs-yellow-light);
 }
