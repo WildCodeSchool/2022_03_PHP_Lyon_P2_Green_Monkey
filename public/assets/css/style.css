@@ -405,9 +405,21 @@ h2 {
 
 .resultsByCategory {
     font-size: 2.5em;
+    display: block;
 }
 
-.resultsByCategory,
+.resultsByCategory table {
+    display: block;
+}
+
+.resultsTitle {
+    margin-bottom: 3vh;
+}
+
+.resultBold {
+    font-weight: bold;
+}
+
 .resultsTotal,
 .resultsCommentContainer {
     margin-bottom: 3vh;

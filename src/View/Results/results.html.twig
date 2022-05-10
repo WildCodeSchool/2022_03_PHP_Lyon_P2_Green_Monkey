@@ -27,27 +27,51 @@
 		</div>
 		<div class="results">
 			<div class="resultsContainer">
-				<h1>
+				<h1 class="resultsTitle">
 					Votre empreinte carbone
 				</h1>
+				<div class="row">
+					<div class="resultsByCategory col-sm">
+						<table>
+							<tr>
+								<p>Alimentation :</p>
+							</tr>
+							<tr>
+								<p class="resultBold">{{ footprintByCategory[0] | round(0, 'common') | number_format(0, ',', ' ') }}
+									kg eq.CO2</p>
+							</tr>
+							<tr>
+								<p>Transports :</p>
+							</tr>
+							<tr>
+								<p class="resultBold">{{ footprintByCategory[1] | round(0, 'common') | number_format(0, ',', ' ') }}
+									kg eq.CO2</p>
+							</tr>
+						</table>
+					</div>
 
-				<div class="resultsByCategory">
-					<p>Alimentation :
-						{{ footprintByCategory[0] | round(0, 'common') | number_format(0, ',', ' ') }}
-						kg eq.CO2</p>
-					<p>Transports :
-						{{ footprintByCategory[1] | round(0, 'common') | number_format(0, ',', ' ') }}
-						kg eq.CO2</p>
-					<p>Logement :
-						{{ footprintByCategory[2] | round(0, 'common') | number_format(0, ',', ' ') }}
-						kg eq.CO2</p>
-					<p>Numérique :
-						{{ footprintByCategory[3] | round(0, 'common') | number_format(0, ',', ' ') }}
-						kg eq.CO2</p>
+					<div class="resultsByCategory col-sm">
+						<table>
+							<tr>
+								<p>Logement :</p>
+							</tr>
+							<tr>
+								<p class="resultBold">{{ footprintByCategory[2] | round(0, 'common') | number_format(0, ',', ' ') }}
+									kg eq.CO2</p>
+							</tr>
+							<tr>
+								<p>Numérique :</p>
+							</tr>
+							<tr>
+								<p class="resultBold">{{ footprintByCategory[3] | round(0, 'common') | number_format(0, ',', ' ') }}
+									kg eq.CO2</p>
+							</tr>
+						</table>
+					</div>
 				</div>
 				<div class="resultsTotal">
 					<h2>Total</h2>
-					<h2>{{ (totalFootprint /1000) | round(2, 'common') | number_format(2, ',', ' ') }}
+					<h2 class="resultBold">{{ (totalFootprint /1000) | round(2, 'common') | number_format(2, ',', ' ') }}
 						tonnes eq.CO2</h2>
 				</div>
 
@@ -86,7 +110,6 @@
 		</div>
 	</main>
 {% endblock %}
-
 {% block javascript %}
 	<script type="text/javascript" src="assets/js/loading.js"></script>
 {% endblock %}
