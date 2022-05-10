@@ -55,7 +55,7 @@ create table user_results
 -- Creating datasets
 insert into projet2.user (mail, password)
 values  ('test@test.com', '$argon2i$v=19$m=16,t=2,p=1$ZUthZkdSWFY0R2tRbktESQ$U21Avh4mjs07RXYutKG53g'),
-        ('vin.diesel@wanadoo.fr', '$argon2i$v=19$m=16,t=2,p=1$VmFCUTdMaFVScHBNU3BwYw$lky9RdbxEIgHs6HtEGwcLQ');
+        ('vin.diesel@wanadoo.fr', '$argon2i$v=19$m=16,t=2,p=1$WHd3Z3JFaWJBeHNUSGhKRQ$QMEb2/Uk5kdd4wUxOAcY2w');
 
 insert into projet2.answer (answer_value, label)
 values  (1404, 'q1_choice1'),
