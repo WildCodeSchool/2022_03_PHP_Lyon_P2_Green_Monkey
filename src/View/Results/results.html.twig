@@ -7,19 +7,24 @@
 {% block content %}
 	<main id="loading">
 		<div class="MainConnection">
-			<div class="d-flex justify-content-center">
+			<div class="d-flex justify-content-center spinningMonkeContainer">
 				<div class="LoginContainer">
 					<div class="d-flex justify-content-center">
 						<h2>Calcul des résultats...</h2>
 					</div>
-					<div class="spinningMonke">
-						<img src="assets/images/spinningmonke.gif"></div>
+					<div>
+						<img class="spinningMonke" src="assets/images/spinningmonke.gif"></div>
 				</div>
 			</div>
 		</div>
 	</main>
 
 	<main class="MainResultsContainer" id="results">
+		<div class="d-flex justify-content-center">
+			<div class="pageTitleContainer">
+				<h1 class="pt-5 pt-lg-20 text-center pageTitle">Résultats</h1>
+			</div>
+		</div>
 		<div class="results">
 			<div class="resultsContainer">
 				<h1>
@@ -56,19 +61,19 @@
 							à la moyenne française (9 t). Joli !
 						{% endif %}
 					</p>
-					<p class="resultsComment">Il
+					<p class="resultsComment">
 						{% if totalFootprint > 9000 %}
-							est donc très nettement
+							Il est donc très nettement
 							<span class="resultHigher">supérieur</span>
 							à l'objectif (2,5 t).
 						{% elseif totalFootprint > 2500 and totalFootprint < 9000 %}
-							reste cependant
+							Il reste cependant
 							<span class="resultHigher">supérieur</span>
 							à l'objectif... (2,5 t)
 						{% else %}
-							est également
+							Il est également
 							<span class="resultLower">inférieur</span>
-							à l'objectif (2,5 t) ! Vous êtes plutôt exemplaire, dans le genre.
+							à l'objectif (2,5 t) !<br>Vous êtes plutôt exemplaire, dans le genre.
 						{% endif %}
 					</p>
 				</div>
