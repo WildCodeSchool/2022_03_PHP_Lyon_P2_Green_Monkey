@@ -236,7 +236,7 @@ body {
 }
 
 .HomeH2TextFormat {
-    margin-top: -0.2em;
+    margin-top: -0.29em;
 }
 
 /* ---------- CALCULATOR PAGE ---------- */
@@ -579,6 +579,10 @@ h2 {
 .resultParagraph {
     font-size: 1.6rem;
     list-style-type: none;
+}
+
+.myChart {
+    max-width: 80%;
 }
 
 /*--------- ADMIN RESULTS PAGE ----------------------*/
