@@ -7,11 +7,12 @@
 
 {% block content %}
 
-	<main class="mainStatsContainer flex-column d-flex align-items-center">
-		<div class="adminTitleContainer">
+	<main class="mainStatsContainer">
+	
+		<div class="adminTitleContainer d-flex flex-column align-items-center">
 			<h1 class="display-1">Statistiques</h1>
 		</div>
-		<div class="container-fluid statsContainer">
+		<div class="container-fluid statsContainer sm-m-5">
 			<div id="sumAnswers">
 				<h2 class="display-2">Nombre de répondants</h2>
 				<p class="statsTitle">{{ total.increment }}</p>
@@ -26,7 +27,7 @@
 				<p class="statsTitle">{{ totalAvg }}
 					kg eq. CO2</p>
 			</div>
-			<div id="averageByCategory">
+			<div id="averageByCategory d-flex">
 				<h2 class="display-2">Moyenne par catégorie</h2>
 
 				<canvas id="myChart"></canvas>

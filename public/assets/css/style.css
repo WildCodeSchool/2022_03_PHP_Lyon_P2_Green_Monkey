@@ -336,8 +336,7 @@ body {
     justify-content: center;
 }
 
-.resultsContainer,
-.statsContainer {
+.resultsContainer {
     background-color: var(--bs-yellow-light);
     margin: 1em;
     padding: 3vh;
@@ -550,6 +549,19 @@ h2 {
 }
 
 /*--------- ADMIN STATS PAGE ----------------------*/
+.statsContainer {
+    background-color: var(--bs-yellow-light);
+    margin: 1em;
+    padding: 3vh;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    font-family: var(--font-family);
+    margin: auto;
+    box-shadow: 3px 1px 10px black;
+    margin-top: 10vh;
+}
+
 .adminTitleContainer {
     background-color: var(--bs-green-dark);
     padding: 2em 5em;
