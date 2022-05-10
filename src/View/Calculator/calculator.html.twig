@@ -25,14 +25,15 @@
 						<div class="carousel-item {% if loop.index == 1 %}active{% endif %}" id="slide{{ loop.index }}">
 							<form action="results" method="post">
 								<div class="carousel-block d-flex justify-content-center">
-									<div class="p-4 m-3 question w-50">
-										<div>
+
+									<div class="p-4 question">
+										<div class="questionContenair d-flex flex-column justify-content-center">
 											<p>
 												<h2 class="questionTitle">
 													{{ loop.index }}.{{ question.title }}
 												</h2>
 											</p>
-											<div class="d-flex flex-column justify-content-end align-items-start mt-4">
+											<div class="questionList d-flex flex-column justify-content-end align-items-start mt-4">
 												<p class="form-check questionChoice">
 													<input class="{% if not loop.last %}calc-input{% endif %} {% if loop.last %}calc-final{% endif %} form-check-input calculatorCheck" type="radio" id="q{{ loop.index }}-choice1" name="q{{ loop.index }}" value="q{{ loop.index }}_choice1" required>
 													<label class="form-check-label" for="q{{ loop.index }}-choice1">{{ question.choice1 }}</label>
@@ -54,7 +55,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="p-4 funfact m-3 w-25 d-none d-sm-block">
+									<div class="speechBubble d-none d-xl-block align-self-end">
 										<h2>Le saviez-vous ?</h2>
 										<p>{{ question.fact }}</p>
 										<a href="{{ question.source }}" target="_blank">Source</a>
