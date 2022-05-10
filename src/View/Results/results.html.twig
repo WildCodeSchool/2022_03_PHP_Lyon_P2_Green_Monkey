@@ -28,22 +28,49 @@
 
 				<div class="resultsByCategory">
 					<p>Alimentation :
-						{{ footprintByCategory[0] }}
+						{{ footprintByCategory[0] | round(0, 'common') | number_format(0, ',', ' ') }}
 						kg eq.CO2</p>
 					<p>Transports :
-						{{ footprintByCategory[1] }}
+						{{ footprintByCategory[1] | round(0, 'common') | number_format(0, ',', ' ') }}
 						kg eq.CO2</p>
 					<p>Logement :
-						{{ footprintByCategory[2] }}
+						{{ footprintByCategory[2] | round(0, 'common') | number_format(0, ',', ' ') }}
 						kg eq.CO2</p>
 					<p>Numérique :
-						{{ footprintByCategory[3]}}
+						{{ footprintByCategory[3] | round(0, 'common') | number_format(0, ',', ' ') }}
 						kg eq.CO2</p>
 				</div>
-				<div class="ResultsTotal">
+				<div class="resultsTotal">
 					<h2>Total</h2>
-					<h2>{{ (totalFootprint /1000) | round(2, 'common') }}
+					<h2>{{ (totalFootprint /1000) | round(2, 'common') | number_format(2, ',', ' ') }}
 						tonnes eq.CO2</h2>
+				</div>
+
+				<div class="resultsCommentContainer">
+					<p class="resultsComment">Votre résultat est
+						{% if totalFootprint > 9000 %}
+							<span class="resultHigher">supérieur</span>
+							à la moyenne française (9 t).
+						{% else %}
+							<span class="resultLower">inférieur</span>
+							à la moyenne française (9 t). Joli !
+						{% endif %}
+					</p>
+					<p class="resultsComment">Il
+						{% if totalFootprint > 9000 %}
+							est donc très nettement
+							<span class="resultHigher">supérieur</span>
+							à l'objectif (2,5 t).
+						{% elseif totalFootprint > 2500 and totalFootprint < 9000 %}
+							reste cependant
+							<span class="resultHigher">supérieur</span>
+							à l'objectif... (2,5 t)
+						{% else %}
+							est également
+							<span class="resultLower">inférieur</span>
+							à l'objectif (2,5 t) ! Vous êtes plutôt exemplaire, dans le genre.
+						{% endif %}
+					</p>
 				</div>
 
 				<div class="resultsButtons">
