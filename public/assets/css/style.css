@@ -280,6 +280,10 @@ body {
     background-color: var(--bs-yellow-darker);
 }
 
+.calculatorCheck {
+    cursor: pointer!important;
+}
+
 .listingQuestion {
     font-size: 2rem;
 }
@@ -313,6 +317,7 @@ body {
     color: var(--text-color);
     width: 200px;
 }
+
 #final-button {
     display: none;
     margin-top: 10vh;
@@ -359,7 +364,9 @@ h2 {
     font-size: 2.5em;
 }
 
-.resultsByCategory, .resultsTotal, .resultsCommentContainer {
+.resultsByCategory,
+.resultsTotal,
+.resultsCommentContainer {
     margin-bottom: 3vh;
     margin-top: 3vh;
 }
@@ -536,7 +543,8 @@ h2 {
 }
 
 .adminBtn {
-    height:auto;
+    height: auto;
+    box-shadow: var(--box-shadow);
 }
 
 .admin-input {
@@ -576,17 +584,8 @@ h2 {
     margin-bottom: 3vh;
 }
 
-#resultCategories {
-    background-color: var(--bs-green-dark);
-    box-shadow: var(--box-shadow);
-    border-radius: 15px;
-    padding: 0.8em;
-    color: var(--text-color);
-    font-size: 1.5rem;
-}
-
-#resultCategories:hover {
-    background-color: var(--bs-green-darker);
+.statsContainer {
+    margin-top: 0vh;
 }
 
 .resultParagraph {
@@ -613,7 +612,7 @@ td {
 
 .tableContainer {
     width: 100vw;
-    overflow:auto;
+    overflow: auto;
 }
 
 .table-results {
