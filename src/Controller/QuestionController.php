@@ -18,7 +18,7 @@ class QuestionController extends AbstractController
             "source" => "https://www.nature.com/articles/s43016-021-00358-x.epdf",
         ],
         [
-            "title" => "Vous consommez des boissons froides (sodas, sirops, alcool) :",
+            "title" => "Vous consommez des boissons type sodas ou alcool :",
             "choice1" => "Plus de 10 verres par semaine",
             "choice2" => "Entre 5 et 10 verres par semaine",
             "choice3" => "Moins de 5 verres",
@@ -66,10 +66,10 @@ class QuestionController extends AbstractController
             "source" => "https://www.hellocarbo.com/blog/calculer/empreinte-carbone-avion/",
         ],
         [
-            "title" => "Quel moyen de transport utilisez-vous pour partir en vacances (le plus souvent) ?",
-            "choice1" => "Avion",
-            "choice2" => "Voiture",
-            "choice3" => "Train",
+            "title" => "Comment partez-vous en vacances ?",
+            "choice1" => "En avion",
+            "choice2" => "En voiture",
+            "choice3" => "En train",
             "choice4" => "Je ne pars pas en vacances",
             "fact" => "Le train émet 14 grammes de CO2/passager/km, contre 285 grammes pour l'avion",
             "source" => "https://tinyurl.com/2p9ky492",
@@ -153,7 +153,7 @@ class QuestionController extends AbstractController
             "source" => "https://tinyurl.com/3hfnpwfw",
         ],
         [
-            "title" => "Combien d'heures passez-vous sur internet (hors travail) ?",
+            "title" => "Quel temps passez-vous sur internet (hors travail) ?",
             "choice1" => "Plus de 5h par jour",
             "choice2" => "Environ 5h par jour",
             "choice3" => "Environ 2h par jour",
