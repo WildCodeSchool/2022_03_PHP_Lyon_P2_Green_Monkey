@@ -294,12 +294,12 @@ body {
     font-size: 2rem;
 }
 
-.speech-bubble p {
+.speechBubble p {
     font-size: 2rem;
     line-height: 1.3em;
 }
 
-.speech-bubble h2 {
+.speechBubble h2 {
     font-size: 4em;
 }
 
@@ -345,7 +345,7 @@ body {
     font-size: 3rem;
 }
 
-.speech-bubble a {
+.speechBubble a {
     text-decoration: none;
     font-size: 2.5em;
     font-weight: bold;

@@ -32,7 +32,7 @@ class ResultController extends AbstractController
                 'footprintByCategory' => $footprintByCategory
             ]);
         }
-        header("location: /calculator");
+        header("location: calculator");
         return null;
     }
 }
