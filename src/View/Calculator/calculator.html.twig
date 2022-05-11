@@ -15,7 +15,7 @@
 		<div class="container-fluid question-page">
 			<div class="d-flex justify-content-center">
 				<div class="pageTitleContainer">
-					<h1 class="pt-5 pt-lg-20 text-center pageTitle">Calculez votre empreinte carbone</h1>
+					<h1 class="pt-5 pt-lg-20 text-center pageTitle">Calculateur</h1>
 				</div>
 			</div>
 
@@ -24,13 +24,14 @@
 					{% for question in questions %}
 						<div class="carousel-item {% if loop.index == 1 %}active{% endif %}" id="slide{{ loop.index }}">
 							<form action="results" method="post">
-								<div class="carousel-block d-flex justify-content-center">
+								<div class="carousel-block d-flex justify-content-center questionBlock">
 
 									<div class="p-4 question">
-										<div class="questionContenair d-flex flex-column justify-content-center">
+										<div class="d-flex flex-column justify-content-center">
 											<p>
 												<h2 class="questionTitle">
-													{{ loop.index }}.{{ question.title }}
+													{{ loop.index }}.
+													{{ question.title }}
 												</h2>
 											</p>
 											<div class="questionList d-flex flex-column justify-content-end align-items-start mt-4">

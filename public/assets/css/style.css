@@ -207,7 +207,7 @@ body {
 
 .HomeArticleFontResizeDesktopView {
     font-size: 2em;
-
+    text-align: justify;
 }
 
 .HomeCenterTitleDesktopView {
@@ -223,9 +223,9 @@ body {
     font-weight: bold;
 }
 
-
 .HomeArticleWidthHistory {
     margin: 3em;
+    margin-right: 7em;
 }
 
 .HomeArticleWidthWelcome {
@@ -244,7 +244,7 @@ body {
 
 /* ---------- CALCULATOR PAGE ---------- */
 .question {
-        background-color: var(--bs-yellow-light);
+    background-color: var(--bs-yellow-light);
     color: var(--bs-green-darker);
     margin-right: 5em;
     border-radius: 25px;
@@ -252,14 +252,10 @@ body {
     min-height: 30vh;
     min-width: 25vh;
     width: 100em;
-    margin-top: 12em;
+    margin-top: 8vw;
     margin-left: 5em;
     margin-bottom: 1em;
 }
-.questionContainer {
-    height: 26em;
-}
-
 
 .questionTitle {
     font-size: 2.5rem;
@@ -320,17 +316,20 @@ body {
     margin-bottom: 15em;
     margin-right: 5em;
 }
+
 .speechBubble:before, .speechBubble:after {
     position: absolute;
     z-index: -1;
     content: '';
 }
+
 .speechBubble:after {
     top: 0; right: 0; bottom: 0; left: 0;
     border-radius: inherit;
     transform: rotate(2deg) translate(.35em, -.15em) scale(1.02);
     background: var(--bs-green-light);
 }
+
 .speechBubble:before {
 	content: '';
     position: absolute;
@@ -394,8 +393,11 @@ body {
     text-align: center;
     font-family: var(--font-family);
     width: auto;
-    margin-top: 10vh;
     color: var(--bs-green-darker);
+}
+
+.spinningMonkeContainer {
+    padding-top: 18vh;
 }
 
 .resultsContainer h1,
@@ -405,9 +407,21 @@ h2 {
 
 .resultsByCategory {
     font-size: 2.5em;
+    display: block;
 }
 
-.resultsByCategory,
+.resultsByCategory table {
+    display: block;
+}
+
+.resultsTitle {
+    margin-bottom: 3vh;
+}
+
+.resultBold {
+    font-weight: bold;
+}
+
 .resultsTotal,
 .resultsCommentContainer {
     margin-bottom: 3vh;
@@ -641,6 +655,10 @@ td {
     text-align: center;
     width: 5.55%;
     min-width: 35px;
+}
+
+.spinningMonke {
+    max-width: 100%;
 }
 
 .firstCol {

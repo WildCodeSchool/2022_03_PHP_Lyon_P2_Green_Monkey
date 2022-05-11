@@ -52,12 +52,12 @@ create table user_results
 );
 
 
--- Creating datasets
-insert into projet2.user (mail, password)
+-- Importing datasets
+insert into user (mail, password)
 values  ('test@test.com', '$argon2i$v=19$m=16,t=2,p=1$ZUthZkdSWFY0R2tRbktESQ$U21Avh4mjs07RXYutKG53g'),
-        ('vin.diesel@wanadoo.fr', '$argon2i$v=19$m=16,t=2,p=1$VmFCUTdMaFVScHBNU3BwYw$lky9RdbxEIgHs6HtEGwcLQ');
+        ('vin.diesel@wanadoo.fr', '$argon2i$v=19$m=16,t=2,p=1$WHd3Z3JFaWJBeHNUSGhKRQ$QMEb2/Uk5kdd4wUxOAcY2w');
 
-insert into projet2.answer (answer_value, label)
+insert into answer (answer_value, label)
 values  (1404, 'q1_choice1'),
         (759.2, 'q1_choice2'),
         (371.28, 'q1_choice3'),
@@ -123,7 +123,7 @@ values  (1404, 'q1_choice1'),
         (7.3, 'q16_choice3'),
         (7.3, 'q16_choice4');
 
-insert into projet2.user_results (id, date, fp_total, fp_cat1, fp_cat2, fp_cat3, fp_cat4, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16)
+insert into user_results (id, date, fp_total, fp_cat1, fp_cat2, fp_cat3, fp_cat4, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16)
 values  (1, '2022-04-08 14:07:20', 10805.8, 501.28, 2907.76, 7200.5, 196.25, 'q1_choice3', 'q2_choice1', 'q3_choice3', 'q4_choice4', 'q5_choice1', 'q6_choice2', 'q7_choice1', 'q8_choice3', 'q9_choice1', 'q10_choice2', 'q11_choice4', 'q12_choice2', 'q13_choice4', 'q14_choice1', 'q15_choice2', 'q16_choice2'),
         (2, '2022-04-08 16:50:15', 8806.29, 483.49, 987.5, 7169, 166.3, 'q1_choice4', 'q2_choice1', 'q3_choice1', 'q4_choice2', 'q5_choice2', 'q6_choice3', 'q7_choice2', 'q8_choice2', 'q9_choice1', 'q10_choice2', 'q11_choice3', 'q12_choice1', 'q13_choice3', 'q14_choice4', 'q15_choice2', 'q16_choice4'),
         (3, '2022-04-08 21:36:57', 9410.75, 1583, 160, 7200.5, 467.25, 'q1_choice1', 'q2_choice1', 'q3_choice3', 'q4_choice1', 'q5_choice3', 'q6_choice4', 'q7_choice2', 'q8_choice4', 'q9_choice1', 'q10_choice2', 'q11_choice4', 'q12_choice2', 'q13_choice2', 'q14_choice4', 'q15_choice1', 'q16_choice2'),
